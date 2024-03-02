@@ -18,47 +18,11 @@
 </template>
 
 <script>
+import "../styles/components/AboutUs.scss";
 export default {
   name: 'AboutSecond'
 }
 </script>
 
 <style>
-.cf {
-  margin-top: 50px;
-  background-image: url("../assets/Frame 110.png");
-  background-color: #cccccc;
-  height: 581px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;  
-
-
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; */
-
-}
-
-
-.p-tag-class {
-  color: white;
-  width: 634px;
-  font-family: Inter;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-.c {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100vh;
-}
-
 @media (min-width: 769px) and (max-width : 1200px) {}</style>
