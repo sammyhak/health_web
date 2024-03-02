@@ -28,11 +28,11 @@ export default {
   margin-top: 50px;
   background-image: url("../assets/Frame 110.png");
   background-color: #cccccc;
-  height: 100vh;
+  height: 581px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 10px;
+  border-radius: 10px;  
 
 
   /* display: flex;
@@ -45,6 +45,13 @@ export default {
 
 .p-tag-class {
   color: white;
+  width: 634px;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .c {

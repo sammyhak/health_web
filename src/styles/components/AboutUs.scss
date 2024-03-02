@@ -1,0 +1,77 @@
+.carousel {
+  padding: unset;
+  .carousel-inner {
+    .carousel-item {
+      img {
+        height: 580px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .carousel-caption {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        color: #fff;
+        text-align: center;                     
+        width: 611px;   
+        h5 {          
+          font-family: Millik;
+          font-size: 48px;
+          font-weight: 400;
+          line-height: 46px;
+          letter-spacing: 0em;
+          text-align: center;
+        }
+        P {
+          font-family: Lato;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 22px;
+          letter-spacing: 0em;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .carousel {
+    .carousel-control-prev,
+    .carousel-control-next {
+      display: none;
+    }
+    .carousel-inner {
+      .carousel-item {
+        .carousel-caption {
+          transform: translate(-50%, -50%);
+          position: absolute;
+          top: 60%;
+          left: 50%;    
+          width: 327px;
+          padding: 0 20px;
+          h5 {         
+            width: unset;   
+            font-family: Millik;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0em;
+            text-align: center;
+          }
+          P {
+            font-family: Lato;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14px;
+            letter-spacing: 0em;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

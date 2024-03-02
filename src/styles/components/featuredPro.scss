@@ -1,0 +1,10 @@
+.card {
+  &.featured-product-container {
+    .featured-product-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+  }
+}

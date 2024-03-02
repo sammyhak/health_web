@@ -1,5 +1,5 @@
 <template>
-  <div class="font-for-inter">
+  <div class="font-for-inter featuredPro">
 
     <div class="container font-for-inter">
       <h3 class="mt-5 fea te">Featured Products</h3>
@@ -170,6 +170,7 @@
 </template>
 
 <script>
+import '../styles/components/featuredPro.scss';
 export default {
 
   name: 'featuredPro',
@@ -191,13 +192,6 @@ export default {
 .card {
   padding: 0;
 
-}
-
-.card.featured-product-container .featured-product-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
 }
 
 .card-wrapper {}
@@ -233,4 +227,5 @@ export default {
 .carousel-dark .carousel-control-prev-icon,
 .carousel-dark .carousel-control-next-icon {
   filter: invert(1) grayscale(100) hue-rotate(120deg);
-}</style>
+}
+</style>

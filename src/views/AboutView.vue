@@ -1,13 +1,13 @@
 <template>
   <div class="about">
-    
+
     <AboutFirst></AboutFirst>
     <AboutSecond></AboutSecond>
     <ThirdSecond></ThirdSecond>
     <ourproject></ourproject>
     <AboutThird class="mb-5"></AboutThird>
-   
-  
+
+
   </div>
 </template>
 <script>
@@ -18,10 +18,10 @@ import ourproject from '@/components/ourProject.vue';
 import AboutThird from '@/components/AboutThird.vue';
 
 export default {
- name:'AboutView',
+  name: 'AboutView',
 
- components:{
-      AboutFirst,AboutSecond,ThirdSecond,ourproject,AboutThird,
- }
+  components: {
+    AboutFirst, AboutSecond, ThirdSecond, ourproject, AboutThird,
+  }
 }
 </script>
