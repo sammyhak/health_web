@@ -8,24 +8,31 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="card-wrapper container-sm d-flex  justify-content-around">
-            <div class="card  " style="width: 18rem;">
-              <img src="../assets/para.png" class="card-img-top" alt="...">
+            <div class="card featured-product-container" style="width: 430px; height: 480px">
+              <div class="featured-product-img">
+                <img src="../assets/para.png" style="width:260px; height:260px" class="card-img-top" alt="...">
+              </div>
               <div class="card-body">
                 <h5 class="card-title"> Paracetamol</h5>
                 <p>pain relief</p>
 
               </div>
             </div>
-            <div class="card" style="width: 18rem;">
-              <img src="../assets/download__30_-removebg-preview.png" class="card-img-top" alt="...">
+            <div class="card featured-product-container" style="width: 430px; height: 480px">
+              <div class="featured-product-img">
+                <img src="../assets/download__30_-removebg-preview.png" style="width:260px; height:260px"
+                  class="card-img-top" alt="...">
+              </div>
               <div class="card-body">
                 <h5 class="card-title"> Paracetamol</h5>
                 <p>pain relief</p>
 
               </div>
             </div>
-            <div class="card" style="width: 18rem;">
-              <img src="../assets/chd.png" class="card-img-top" alt="...">
+            <div class="card featured-product-container" style="width: 430px; height: 480px">
+              <div class="featured-product-img">
+                <img src="../assets/chd.png" style="width:260px; height:260px" class="card-img-top" alt="...">
+              </div>
               <div class="card-body">
                 <h5 class="card-title"> Paracetamol</h5>
                 <p>pain relief</p>
@@ -36,8 +43,11 @@
         </div>
         <div class="carousel-item">
           <div class="card-wrapper container-sm d-flex   justify-content-around">
-            <div class="card  " style="width: 18rem;">
-              <img src="../assets/download__22_-removebg-preview (1).png" class="card-img-top img-fluid" alt="...">
+            <div class="card featured-product-container" style="width: 430px; height: 480px">
+              <div class="featured-product-img">
+                <img src="../assets/download__22_-removebg-preview (1).png" style="width:260px; height:260px"
+                  class="card-img-top" alt="...">
+              </div>
               <div class="card-body">
 
                 <h5 class="card-title"> Paracetamol</h5>
@@ -45,8 +55,11 @@
 
               </div>
             </div>
-            <div class="card" style="width: 18rem;">
-              <img src="../assets/download__23_-removebg-preview (1).png" class="card-img-top" alt="...">
+            <div class="card featured-product-container" style="width: 430px; height: 480px">
+              <div class="featured-product-img">
+                <img src="../assets/download__23_-removebg-preview (1).png" style="width:260px; height:260px"
+                  class="card-img-top" alt="...">
+              </div>
               <div class="card-body">
                 <h5 class="card-title"> Paracetamol</h5>
                 <p>pain relief</p>
@@ -54,8 +67,11 @@
 
               </div>
             </div>
-            <div class="card" style="width: 18rem;">
-              <img src="../assets/download__32_-removebg-preview.png" class="card-img-top" alt="...">
+            <div class="card featured-product-container" style="width: 430px; height: 480px">
+              <div class="featured-product-img">
+                <img src="../assets/download__32_-removebg-preview.png" style="width:260px; height:260px"
+                  class="card-img-top" alt="...">
+              </div>
               <div class="card-body">
                 <h5 class="card-title"> Paracetamol</h5>
                 <p>pain relief</p>
@@ -67,22 +83,28 @@
         </div>
         <!-- <div class="carousel-item">
       <div class="card-wrapper container-sm d-flex  justify-content-around">
-      <div class="card " style="width: 18rem;">
-  <img src="../assets/para.png" class="card-img-top" alt="...">
+      <div class="card " style="width: 430px; height: 480px">
+        <div class="featured-product-img">
+  <img src="../assets/para.png" style="width:260px; height:260px" class="card-img-top" alt="...">
+  </div>
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     
   </div>
 </div>
-        <div class="card" style="width: 18rem;">
-  <img src="../assets/para.png" class="card-img-top" alt="...">
+        <div class="card featured-product-container" style="width: 430px; height: 480px">
+          <div class="featured-product-img">
+  <img src="../assets/para.png" style="width:260px; height:260px" class="card-img-top" alt="...">
+  </div>
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     
   </div>
         </div>
-        <div class="card" style="width: 18rem;">
-  <img src="../assets/para.png" class="card-img-top" alt="...">
+        <div class="card featured-product-container" style="width: 430px; height: 480px">
+          <div class="featured-product-img">
+  <img src="../assets/para.png" style="width:260px; height:260px" class="card-img-top" alt="...">
+  </div>
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     
@@ -169,6 +191,13 @@ export default {
 .card {
   padding: 0;
 
+}
+
+.card.featured-product-container .featured-product-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .card-wrapper {}
