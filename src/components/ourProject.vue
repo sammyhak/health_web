@@ -101,7 +101,11 @@ export default {
 }
 
 @media (max-width:767px) {	
-	
+	@keyframes animate {
+		100% {
+			transform: translate3d(-600px, 0, 0);
+		}
+	}
 }
 
 .tex {
