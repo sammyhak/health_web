@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container" id="section1">
+    <div class="container company" id="section1">
     <div class="row g-0">
         <div class="col-md-4 col-12">
             <div>
@@ -26,12 +26,12 @@
             </div>
           
         </div>
-        <div class="col-md-4 col-12">
+        <div class="col-md-4 col-12 company-photos">
             <img src="../assets/DSC_0019 1.png" class="container-fluid id">
             <img src="../assets/Frame 1171276973.png" class="container-fluid">
             
         </div>
-        <div class="col-md-4 col-12">
+        <div class="col-md-4 col-12 company-photos">
             <!-- <img src="../assets/DSC_0042 1.png " class="container-fluid"> -->
             <img src="../assets/DSC_0042 1.png" class="container-fluid id">
             <img src="../assets//Frame 1171276974.png" class="container-fluid">
@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import "../styles/components/AboutUs.scss";
 export default {
   nam:'AboutThird'
 }
