@@ -281,8 +281,7 @@
           line-height: 37px;
           letter-spacing: 0em;
           text-align: left;
-          color: #258576;
-          margin: unset !important;
+          color: #258576;          
           width: unset;
           height: unset;
         }
@@ -401,6 +400,8 @@
   .company {
     .row {
       .company-photos {
+        padding: unset;
+        margin: unset;
         img {    
           width: 100%;      
           height: 263px;
