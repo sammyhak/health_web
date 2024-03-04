@@ -292,8 +292,7 @@
       }
     }
 
-    .core-values {     
-      margin-top: -100px;
+    .core-values {           
       .row {        
         display: grid;
         justify-content: center;
@@ -397,7 +396,7 @@
       .company-photos {
         img {          
           height: 263px;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
     }
