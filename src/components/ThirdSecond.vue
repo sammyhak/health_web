@@ -26,7 +26,7 @@
       </div>
       <div class="row ow">
 
-        <div class="col-12 core-value">
+        <div class="col-md-3 col-12 core-value">
           <div class="card car">
 
 
@@ -38,7 +38,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 core-value">
+        <div class="col-md-3 col-12 core-value">
           <div class="card car">
             <!-- style="width: 16rem;" -->
             <div class="card-body text-center">
@@ -49,7 +49,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 core-value">
+        <div class="col-md-3 col-12 core-value">
           <div class="card car">
 
             <div class="card-body text-center">
@@ -60,7 +60,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 core-value">
+        <div class="col-md-3 col-12 core-value">
           <div class="card car">
 
             <div class="card-body text-center">
