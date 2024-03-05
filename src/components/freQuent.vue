@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
 
       <div class="faqs">
-        <div class="container">
+        <div class="container1">
           <div class="faq-question">
             <img src="../assets/Plus.svg" alt="faq-plus">
             <p>How do I get my Products delivered to my location.</p>
