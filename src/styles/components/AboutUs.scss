@@ -400,12 +400,13 @@
   .company {
     .row {
       .company-photos {
+        display: grid;
         padding: unset;
-        margin: unset;
+        margin: unset;       
+        margin-top: 20px; 
         img {    
-          width: 100%;      
-          height: 263px;
-          object-fit: contain;
+          max-width: 327px;                
+          object-fit: cover;
         }
       }
     }
