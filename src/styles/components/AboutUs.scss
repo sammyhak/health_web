@@ -399,12 +399,17 @@
 
   .company {
     .row {
+      margin: unset !important;
+      padding: unset !important;
       .company-photos {
         display: grid;
+        justify-content: center;
         padding: unset;
         margin: unset;       
         margin-top: 20px; 
         img {    
+          margin: unset;
+          padding: unset;
           width: 327px;                
           object-fit: cover;
         }
