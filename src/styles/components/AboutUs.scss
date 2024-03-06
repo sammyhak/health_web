@@ -166,6 +166,9 @@
   .row {
     width: 932px;
     div {
+      &:nth-child(1) {
+        margin-top: 50px;
+      }
       h3 {
         font-family: Millik;
         font-size: 38px;
@@ -207,7 +210,7 @@
 .company {
   .row {
     .company-photos {
-      img {        
+      img {
       }
     }
   }
@@ -281,7 +284,7 @@
           line-height: 37px;
           letter-spacing: 0em;
           text-align: left;
-          color: #258576;          
+          color: #258576;
           width: unset;
           height: unset;
         }
@@ -297,20 +300,20 @@
       }
     }
 
-    .core-values {           
-      .row {        
+    .core-values {
+      .row {
         display: grid;
         justify-content: center;
         align-items: center;
         padding: unset;
-        .core-value{
+        .core-value {
           height: 195px;
           max-width: 295px;
           margin-top: 30px;
-          &:nth-child(1){
+          &:nth-child(1) {
             margin-top: -30px;
           }
-          &:nth-child(4){
+          &:nth-child(4) {
             margin-bottom: 50px;
           }
         }
@@ -364,6 +367,9 @@
     .row {
       width: 327px;
       div {
+        &:nth-child(1) {
+          margin-top: 30px;
+        }
         h3 {
           font-size: 22px;
           font-weight: 400;
@@ -405,12 +411,12 @@
         display: grid;
         justify-content: center;
         padding: unset;
-        margin: unset;       
-        margin-top: 20px; 
-        img {    
+        margin: unset;
+        margin-top: 20px;
+        img {
           margin: unset;
           padding: unset;
-          width: 327px;                
+          width: 327px;
           object-fit: cover;
         }
       }

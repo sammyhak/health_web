@@ -1,172 +1,69 @@
 <template>
-  <div class="font-for-inter featuredPro">
-
-    <div class="container font-for-inter">
-      <h3 class="mt-5 fea te">Featured Products</h3>
-    </div>
-    <div id="carouselExampleControls" class="carousel carousel-dark slide d-none d-lg-block" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="card-wrapper container-sm d-flex  justify-content-around">
-            <div class="card featured-product-container" style="width: 430px; height: 480px">
-              <div class="featured-product-img">
-                <img src="../assets/para.png" style="width:260px; height:260px" class="card-img-top" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"> Paracetamol</h5>
-                <p>pain relief</p>
-
-              </div>
-            </div>
-            <div class="card featured-product-container" style="width: 430px; height: 480px">
-              <div class="featured-product-img">
-                <img src="../assets/download__30_-removebg-preview.png" style="width:260px; height:260px"
-                  class="card-img-top" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"> Paracetamol</h5>
-                <p>pain relief</p>
-
-              </div>
-            </div>
-            <div class="card featured-product-container" style="width: 430px; height: 480px">
-              <div class="featured-product-img">
-                <img src="../assets/chd.png" style="width:260px; height:260px" class="card-img-top" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"> Paracetamol</h5>
-                <p>pain relief</p>
-
-              </div>
-            </div>
-          </div>
+  <section class='featured-products'>
+    <div class="featured-product-container">
+      <div class="header">
+        <h3>Featured Products</h3>
+        <div class="controls">
+          <img src="../assets/previous.svg" alt="previous">
+          <img src="../assets/next.svg" alt="next">
         </div>
-        <div class="carousel-item">
-          <div class="card-wrapper container-sm d-flex   justify-content-around">
-            <div class="card featured-product-container" style="width: 430px; height: 480px">
-              <div class="featured-product-img">
-                <img src="../assets/download__22_-removebg-preview (1).png" style="width:260px; height:260px"
-                  class="card-img-top" alt="...">
-              </div>
-              <div class="card-body">
-
-                <h5 class="card-title"> Paracetamol</h5>
-                <p>pain relief</p>
-
-              </div>
-            </div>
-            <div class="card featured-product-container" style="width: 430px; height: 480px">
-              <div class="featured-product-img">
-                <img src="../assets/download__23_-removebg-preview (1).png" style="width:260px; height:260px"
-                  class="card-img-top" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"> Paracetamol</h5>
-                <p>pain relief</p>
-
-
-              </div>
-            </div>
-            <div class="card featured-product-container" style="width: 430px; height: 480px">
-              <div class="featured-product-img">
-                <img src="../assets/download__32_-removebg-preview.png" style="width:260px; height:260px"
-                  class="card-img-top" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"> Paracetamol</h5>
-                <p>pain relief</p>
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="carousel-item">
-      <div class="card-wrapper container-sm d-flex  justify-content-around">
-      <div class="card " style="width: 430px; height: 480px">
-        <div class="featured-product-img">
-  <img src="../assets/para.png" style="width:260px; height:260px" class="card-img-top" alt="...">
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    
-  </div>
-</div>
-        <div class="card featured-product-container" style="width: 430px; height: 480px">
-          <div class="featured-product-img">
-  <img src="../assets/para.png" style="width:260px; height:260px" class="card-img-top" alt="...">
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    
-  </div>
-        </div>
-        <div class="card featured-product-container" style="width: 430px; height: 480px">
-          <div class="featured-product-img">
-  <img src="../assets/para.png" style="width:260px; height:260px" class="card-img-top" alt="...">
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    
-  </div>
-</div>
-    </div>
-  </div> -->
-
       </div>
 
-      <button class="carousel-control-prev bu firstbu" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
-
-        <span class="carousel-control-prev-icon bu firstbu .carousel-success " aria-hidden="true"><font-awesome-icon
-            :icon="['fas', 'less-than']" /></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next bu" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon firsttwo" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-
-    </div>
-
-
-
-
-    <div class="d-block d-md-none">
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../assets/para.png" class="d-block w-100" alt="..">
+      <div class="products">
+        <div class="featured-product">
+          <div class="img-container">
+            <img src="../assets/para.png" alt="drug">
           </div>
-          <div class="carousel-item">
-            <img src="../assets/chd.png" class="d-block w-100" alt="...">
+          <div class="title">
+            Paracetamol
+            <div class="price">N2000</div>
           </div>
-          <div class="carousel-item">
-            <img src="../assets/download__30_-removebg-preview.png" class="d-block w-100" alt="...">
+          <div class="description">
+            Pain relief
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+
+        <div class="featured-product">
+          <div class="img-container">
+            <img src="../assets/para.png" alt="drug">
+          </div>
+          <div class="title">
+            Paracetamol
+            <div class="price">N2000</div>
+          </div>
+          <div class="description">
+            Pain relief
+          </div>
+        </div>
+
+        <div class="featured-product">
+          <div class="img-container">
+            <img src="../assets/para.png" alt="drug">
+          </div>
+          <div class="title">
+            Paracetamol
+            <div class="price">N2000</div>
+          </div>
+          <div class="description">
+            Pain relief
+          </div>
+        </div>
+
+        <div class="featured-product">
+          <div class="img-container">
+            <img src="../assets/para.png" alt="drug">
+          </div>
+          <div class="title">
+            Paracetamol
+            <div class="price">N2000</div>
+          </div>
+          <div class="description">
+            Pain relief
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
