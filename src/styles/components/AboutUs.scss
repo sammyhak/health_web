@@ -418,6 +418,9 @@
           padding: unset;
           width: 327px;
           object-fit: cover;
+          &:nth-child(2){
+            margin-top: 20px;
+          }
         }
       }
     }

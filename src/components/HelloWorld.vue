@@ -28,16 +28,16 @@
               <div class="row my-4">
                 <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                   <div class="list-group list-group-flush">
-                    <a href="/product" class="list-group-item list-group-item-action"><router-link to="/product" class="rou">Anti-histamines</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product" class="rou">Anti Retrovial</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product" class="rou">Anti-biotics</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product" class="rou">Anti platelet</router-link></a>
+                    <a href="/product" class="list-group-item list-group-item-action"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Suppressant" class="rou">Surpressant</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Calcium" class="rou">Calcium</router-link></a>
                     <!-- <a href="" class="list-group-item list-group-item-action"><router-link to="/product" class="rou">Anti-histamines</router-link>Adipisicing elit</a> -->
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                   <div class="list-group list-group-flush">
-                    <a href="" class="list-group-item list-group-item-action">Anti hypentensive</a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Antihypertensive">Anti Hypertensive</router-link></a>
                     <a href="" class="list-group-item list-group-item-action">Anti-fibrinolytic</a>
                     <a href="" class="list-group-item list-group-item-action">Anti thrombolytic</a>
                     <a href="" class="list-group-item list-group-item-action">Blood tonics</a>
