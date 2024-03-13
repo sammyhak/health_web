@@ -38,26 +38,24 @@
                 <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                   <div class="list-group list-group-flush">
                     <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Antihypertensive">Anti Hypertensive</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action">Anti-fibrinolytic</a>
-                    <a href="" class="list-group-item list-group-item-action">Anti thrombolytic</a>
-                    <a href="" class="list-group-item list-group-item-action">Blood tonics</a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Antihistamine">Antihistamine</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Anti-inflammatory">Anti-inflammatory</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Anti-anemic">Anti-anemic</router-link></a>
                     <!-- <a href="" class="list-group-item list-group-item-action">Provident dolor</a> -->
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                   <div class="list-group list-group-flush">
-                    <a href="" class="list-group-item list-group-item-action">Disinfectant</a>
-                    <a href="" class="list-group-item list-group-item-action">Dermato-cosmetics</a>
-                    <a href="" class="list-group-item list-group-item-action">Iron Injection</a>
-                    <a href="" class="list-group-item list-group-item-action">Oral Care</a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Blood-tonic">Blood-tonic</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Dental">Dental</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Skincare">Skincare</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Iron-Replacement">Iron-Replacement</router-link></a>
                     <!-- <a href="" class="list-group-item list-group-item-action">Laboriosam</a> -->
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                   <div class="list-group list-group-flush">
-                    <a href="" class="list-group-item list-group-item-action">NSAID</a>
-                    <a href="" class="list-group-item list-group-item-action"></a>
-                   
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Wound-Dressing">Wound-Dressing</router-link></a>                                       
                   </div>
                 </div>
               </div>
@@ -69,21 +67,19 @@
         <b-nav-item-dropdown text="Products" right  class="ml-5 mar  d-sm-block d-md-none d-md-block d-lg-none" 
     menu-class="w-100">
           <div class="">
-            <div class="col-2"> <b-dropdown-item href="#">Anti hypentensive</b-dropdown-item></div>
-            <div class="col-2"> <b-dropdown-item href="#">Anti Retrovial</b-dropdown-item></div>
-            <div class="col-2"> <b-dropdown-item href="#">Anti-biotics</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Anti platelet</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Anti hypentensive</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Anti-fibrinolytic</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Anti thrombolytic</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Blood tonics</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Provident dolor</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Disinfectant</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Dermato-cosmetics</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Iron Injection</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Oral Care</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">Laboriosam</b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#">NSAID</b-dropdown-item></div>
+            <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></b-dropdown-item></div>
+            <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></b-dropdown-item></div>
+            <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Suppressant" class="rou">Surpressant</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Calcium" class="rou">Calcium</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Antihypertensive" class="rou">Anti Hypertensive</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Antihistamine" class="rou">Antihistamine</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Anti-inflammatory" class="rou">Anti-inflammatory</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Anti-anemic" class="rou">Anti-anemic</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Blood-tonic" class="rou">Blood-tonic</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Dental" class="rou">Dental</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Skincare" class="rou">Skincare</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Iron-Replacement" class="rou">Iron-Replacement</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Wound-Dressing" class="rou">Wound-Dressing</router-link></b-dropdown-item></div>
           </div>
           
          
