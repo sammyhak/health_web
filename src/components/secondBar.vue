@@ -8,15 +8,15 @@
 
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="">
-              <b-nav-item href="#" class="ma ml-5 pharnav"><router-link to="/"
+              <b-nav-item href="#" class="ma ml-5 pharnav"><router-link to="#"
                   class="rou pharnav">Pharmacy</router-link></b-nav-item>
               <!-- <b-nav-item href="# " class="ml-5  mar ma ">
                 <router-link to="/about" class="rou pharnav">Vitamins & Supplements</router-link></b-nav-item>
 
               <b-nav-item href="# " class="ml-5  mar ma ">
-                <router-link to="/about" class="rou pharnav">Sexual wellbeing</router-link></b-nav-item>
+                <router-link to="/about" class="rou pharnav">Sexual wellbeing</router-link></b-nav-item> -->
               <b-nav-item href="# " class="ml-5  mar ma ">
-                <router-link to="/about" class="rou pharnav">Skincare</router-link></b-nav-item> -->
+                <router-link to="#" class="rou pharnav">{{ currentId }}</router-link></b-nav-item>
 
 
             </b-navbar-nav>
@@ -42,10 +42,10 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="">
             <b-nav-item href="#" class="ma ml-5 "><router-link to="/" class="rou tr">Pharmacy</router-link></b-nav-item>
-            <!-- <b-nav-item href="# " class="ml-5  mar ma ">
-              <router-link to="/about" class="rou tr">Vitamins & Supplements</router-link></b-nav-item>
-
             <b-nav-item href="# " class="ml-5  mar ma ">
+              <router-link to="#" class="rou tr">{{ currentId }}</router-link></b-nav-item>
+
+            <!-- <b-nav-item href="# " class="ml-5  mar ma ">
               <router-link to="/about" class="rou tr">Sexual wellbeing</router-link></b-nav-item> -->
 
 
@@ -67,7 +67,24 @@
 
 <script>
 export default {
-  name: 'secondBar'
+  name: 'secondBar',
+  data() {
+    return {
+      currentId: null,
+    };
+  },
+  created() {
+    // Access the route parameters to get the ID when the component is created
+    this.currentId = this.$route.params.id;
+  },
+
+  watch: {
+    // Watch for changes in the route parameters
+    '$route'(to) {
+      // Update the currentId when the ID in the URL changes
+      this.currentId = to.params.id;
+    }
+  },
 }
 </script>
 
