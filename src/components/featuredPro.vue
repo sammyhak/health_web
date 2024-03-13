@@ -10,122 +10,18 @@
       </div>
 
       <div class="products">
-        <div class="featured-product">
+        <div class="featured-product" v-for="(product, index) in products" :key="index">
           <div class="img-container">
-            <img src="../assets/para.png" alt="drug">
+            <img :src="product.image" alt="drug">
           </div>
           <div class="title">
-            Paracetamol
-            <div class="price">N2000</div>
+            {{product.drug_name}}
+            <div class="price">{{product.price}}</div>
           </div>
           <div class="description">
-            Pain relief 1
+            {{product.category}}
           </div>
-        </div>
-
-        <div class="featured-product">
-          <div class="img-container">
-            <img src="../assets/para.png" alt="drug">
-          </div>
-          <div class="title">
-            Paracetamol
-            <div class="price">N2000</div>
-          </div>
-          <div class="description">
-            Pain relief 2
-          </div>
-        </div>
-
-        <div class="featured-product">
-          <div class="img-container">
-            <img src="../assets/para.png" alt="drug">
-          </div>
-          <div class="title">
-            Paracetamol
-            <div class="price">N2000</div>
-          </div>
-          <div class="description">
-            Pain relief 3
-          </div>
-        </div>
-
-        <div class="featured-product">
-          <div class="img-container">
-            <img src="../assets/para.png" alt="drug">
-          </div>
-          <div class="title">
-            Paracetamol
-            <div class="price">N2000</div>
-          </div>
-          <div class="description">
-            Pain relief 4
-          </div>
-        </div>
-
-        <div class="featured-product">
-          <div class="img-container">
-            <img src="../assets/para.png" alt="drug">
-          </div>
-          <div class="title">
-            Paracetamol
-            <div class="price">N2000</div>
-          </div>
-          <div class="description">
-            Pain relief 5
-          </div>
-        </div>
-
-        <div class="featured-product">
-          <div class="img-container">
-            <img src="../assets/para.png" alt="drug">
-          </div>
-          <div class="title">
-            Paracetamol
-            <div class="price">N2000</div>
-          </div>
-          <div class="description">
-            Pain relief 6
-          </div>
-        </div>
-
-        <div class="featured-product">
-          <div class="img-container">
-            <img src="../assets/para.png" alt="drug">
-          </div>
-          <div class="title">
-            Paracetamol
-            <div class="price">N2000</div>
-          </div>
-          <div class="description">
-            Pain relief 7
-          </div>
-        </div>
-
-        <div class="featured-product">
-          <div class="img-container">
-            <img src="../assets/para.png" alt="drug">
-          </div>
-          <div class="title">
-            Paracetamol
-            <div class="price">N2000</div>
-          </div>
-          <div class="description">
-            Pain relief 8
-          </div>
-        </div>
-
-        <div class="featured-product">
-          <div class="img-container">
-            <img src="../assets/para.png" alt="drug">
-          </div>
-          <div class="title">
-            Paracetamol
-            <div class="price">N2000</div>
-          </div>
-          <div class="description">
-            Pain relief 9
-          </div>
-        </div>
+        </div>        
       </div>
     </div>
   </section>
@@ -134,10 +30,57 @@
 
 <script>
 import '../styles/components/featuredPro.scss';
+import axios from "axios";
 export default {
 
   name: 'featuredPro',
+  methods: {
+    navigateToSpec() {
+      this.$router.push('/spec'); // Navigate to the '/about' route
+    },
+    async fetchProducts() {
+      // Alert the current ID
+      const BASE_URL = 'https://prosperc40.pythonanywhere.com/';
+      let url_extension = 'products';   
+      await axios.get(BASE_URL + url_extension).then(response => {
+        // Handle successful response
+        this.products = response.data.splice(0, 5);
+        return response.data;
+      })
+        .catch(error => {
+          // Handle error
+          this.error = error.message;
+          return error.message;
+        });
+    }
+  },
+  data() {
+    return {           
+      products: [],
+      error: null,
+    };
+  },
+  computed: {
+    paginatedImages() {
+      const startIndex = (this.currentPage - 1) * this.perPage;
+      const endIndex = startIndex + this.perPage;
+      return this.images.slice(startIndex, endIndex);
+    },
+  },
+  created() {
+    // Access the route parameters to get the ID when the component is created
+    this.currentId = this.$route.params.id;
+    this.fetchProducts();
+  },
 
+  watch: {
+    // Watch for changes in the route parameters
+    '$route'(to) {
+      // Update the currentId when the ID in the URL changes
+      this.currentId = to.params.id;
+      this.fetchProducts();
+    }
+  },
 }
 
 document.addEventListener("DOMContentLoaded", function () {
