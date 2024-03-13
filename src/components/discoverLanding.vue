@@ -6,7 +6,7 @@
         <div>
             <h1 class="h1-dis te font-for-our-milki">Discover a world of healthcare solutions at your fingertips.</h1>
         <p class="font-for-inter">Healthline is here to support you on your journey to better health.</p>
-        <button class="btn-lg bt button-nav mar mt-4 text-center font-for-inter">Read More</button>
+        <!-- <button class="btn-lg bt button-nav mar mt-4 text-center font-for-inter">Read More</button> -->
         </div>
       
       </div>
