@@ -10,13 +10,13 @@
             <b-navbar-nav class="">
               <b-nav-item href="#" class="ma ml-5 pharnav"><router-link to="/"
                   class="rou pharnav">Pharmacy</router-link></b-nav-item>
-              <b-nav-item href="# " class="ml-5  mar ma ">
+              <!-- <b-nav-item href="# " class="ml-5  mar ma ">
                 <router-link to="/about" class="rou pharnav">Vitamins & Supplements</router-link></b-nav-item>
 
               <b-nav-item href="# " class="ml-5  mar ma ">
                 <router-link to="/about" class="rou pharnav">Sexual wellbeing</router-link></b-nav-item>
               <b-nav-item href="# " class="ml-5  mar ma ">
-                <router-link to="/about" class="rou pharnav">Skincare</router-link></b-nav-item>
+                <router-link to="/about" class="rou pharnav">Skincare</router-link></b-nav-item> -->
 
 
             </b-navbar-nav>
@@ -42,11 +42,11 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="">
             <b-nav-item href="#" class="ma ml-5 "><router-link to="/" class="rou tr">Pharmacy</router-link></b-nav-item>
-            <b-nav-item href="# " class="ml-5  mar ma ">
+            <!-- <b-nav-item href="# " class="ml-5  mar ma ">
               <router-link to="/about" class="rou tr">Vitamins & Supplements</router-link></b-nav-item>
 
             <b-nav-item href="# " class="ml-5  mar ma ">
-              <router-link to="/about" class="rou tr">Sexual wellbeing</router-link></b-nav-item>
+              <router-link to="/about" class="rou tr">Sexual wellbeing</router-link></b-nav-item> -->
 
 
 
@@ -102,4 +102,5 @@ export default {
   border-radius: 15px;
   padding-top: 2px;
   padding-bottom: 2px;
-}</style>
+}
+</style>
