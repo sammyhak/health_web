@@ -10,7 +10,8 @@
             <img :src="product.image" class="img-fluid im-pro">
           </div>
 
-          <p class="text-center mt-2">{{product.drug_name}}</p>
+          <p class="mt-2">{{product.drug_name}}</p>
+          <p class="mt-2">{{product.category}}</p>
           <p class="av in"><span><img src="../assets/Ellipse 43.png" class="im1"></span>Available for delivery</p>
           <p class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"></span>In stock</p>
         </div>        
