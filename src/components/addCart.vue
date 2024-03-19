@@ -8,13 +8,12 @@
           </div>
           <div class="col-lg-8 col-12">
             <p class="h2-ceph">{{product.drug_name}}</p><br>
-            <!-- <p class="cef">Ceftriaxone for injection USP1.0gIM/IV Use</p> -->
             <p class="cat">Category: {{ product.category }}</p>
             <p class="cat">Presentation: <span class="val">{{ product.presentation }}</span></p>
-            <p ><span class="nu">N {{product.price}}00 </span> <span><button class="ins">In stock</button></span></p>
-            <p class="hy">Quantity</p>
-            <p class=""><span ><button class="minus">-</button></span><span class="forty">40</span><span><button class="minus">+</button></span></p>
-            <button class="er mb-5">Add to cart</button>
+            <p ><span class="nu">{{product.price}}</span> <span><button class="ins">In stock</button></span></p>
+            <!-- <p class="hy">Quantity</p>
+            <p class=""><span ><button class="minus">-</button></span><span class="forty">40</span><span><button class="minus">+</button></span></p> -->
+            <button class="er mb-5" @click="addToCart(product)">Add to cart</button>
           </div>
        </div>
 
@@ -58,7 +57,7 @@
                           <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
                         </div>
                         <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
+                           <p class="mh"> {{produc.price}}</p>
                         </div>
                     </div>
                 </router-link>
@@ -83,6 +82,7 @@
         activeTab: 'tab2',
         product: null,
         similarProducts: null,
+        cart: [],
       };
     },
     mounted() {
@@ -106,6 +106,30 @@
             console.error('Error fetching product:', error);
           });
         },
+        addToCart(post) {
+          const cartItem = this.cart.find(item => item.id === post.id);
+          //   alert(cartItem)
+          if (cartItem) {
+            cartItem.quantity += 1;
+          } else {
+            this.cart.push({
+              id: post.id,
+              name: post.drug_name,
+              price: post.price,
+              image: post.image,
+              presentation: post.presentation,
+              quantity: 1,
+            });
+          }
+          console.log(this.cart);
+          sessionStorage.setItem("cart", JSON.stringify(this.cart));
+
+          // Log the updated cart
+          console.log(this.cart);
+
+          // Save the updated cart to sessionStorage
+          sessionStorage.setItem("cart", JSON.stringify(this.cart));
+        }
     },
   };
 
