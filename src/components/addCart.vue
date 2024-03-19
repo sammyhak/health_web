@@ -1,19 +1,18 @@
 <template>
   <div class="">
-    <secondBar></secondBar>
+    <!-- <secondBar></secondBar> --> <br><br><br>
     <div class="container">
        <div class="row container">
           <div class="col-lg-4 col-12">
-            <img src="../assets/para.png" class=" id" >
+            <img :src="product.image" class=" id" alt="broken">
           </div>
           <div class="col-lg-8 col-12">
-            <p class="h2-ceph">Emceph</p>
-            <p class="cef">Ceftriaxone for injection USP1.0gIM/IV Use</p>
-            <p class="cat">Category:</p>
-            <p class="cat">Presentation: <span class="val">1 val</span></p>
-            <p ><span class="nu">N 2,800.00 </span> <span><button class="ins">In stock</button></span></p>
+            <p class="h2-ceph">{{product.drug_name}}</p><br>
+            <!-- <p class="cef">Ceftriaxone for injection USP1.0gIM/IV Use</p> -->
+            <p class="cat">Category: {{ product.category }}</p>
+            <p class="cat">Presentation: <span class="val">{{ product.presentation }}</span></p>
+            <p ><span class="nu">N {{product.price}}00 </span> <span><button class="ins">In stock</button></span></p>
             <p class="hy">Quantity</p>
-           
             <p class=""><span ><button class="minus">-</button></span><span class="forty">40</span><span><button class="minus">+</button></span></p>
             <button class="er mb-5">Add to cart</button>
           </div>
@@ -26,51 +25,35 @@
         <div>
     <b-tabs v-model="activeTab" card active-nav-item-class="text-success"  class="text-dark">
       <b-tab title="COMPOSITION" event-key="tab1" >
-        <p class="ea mt-3">Each vial contains:sterile Ceftrixone sodium USP equivalent to ceftriaxone 1.0g,</p>
-        <p class="ea">Each ampule contains:sterile injection USP 10ml</p>
-        <p class="ea mb-3">Emceph is a sterile,semisynthetic,broad-spectrum cephalosporin antibotic for intravenous or intramuscular administration.</p>
+        <br>
+        <p class="ea mt-3">{{ product.composition }}</p>
+        <br>
       </b-tab>
       <b-tab title="INDICATIONS" event-key="tab2">
-        <ul>
-          <li class="ea">Lower Respiratory Tract Infections</li>
-          <li class="ea">Acute bacterial otitis media</li>
-          <li class="ea">Skin and skin structure infections</li>
-          <li class="ea">Urinary tract infections</li>
-          <li class="ea">Uncomplicated gonorrhea</li>
-          <li class="ea" >Bacterial septicemia</li>
-          <li class="ea">Bone and joint infections</li>
-          <li class="ea" >Intra-abdominal infections</li>
-          <li class="ea">meningitis</li>
-          <li class="ea">Surgical Prophylaxis</li>
-          
+        <br>
+        <ul v-if="product.indications"> 
+          <div v-for="indications in product.indications" :key="indications">
+            <li class="ea" v-for="indication in indications" :key="indication">
+              {{ indication }}
+            </li>
+          </div>
         </ul>
+        <br>
       </b-tab>
      
     </b-tabs>
-
-
-
-
-   
-
   </div>
-       
-
-
-
-
-
        </div>
 
        <div>
         <div class="row mt-3 mb-5">
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
+            <div class ="col-md-3 col-12" v-for="produc in similarProducts.slice(0, 4)" :key="produc.id">
+              <router-link :to="`/add/${produc.id}`" class="rou" style="text-decoration: none; color: #000;">
+                    <img :src="produc.image" class="container-fluid we" height="192" width="155" alt="broken">
                     <div class="row">
                         <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
+                          <p class="myh">{{ produc.drug_name }}</p>
+                          <p class="ni">{{ produc.category }}</p>
                           <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
                           <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
                         </div>
@@ -78,55 +61,7 @@
                            <p class="mh"> ₦ 2,800</p>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
+                </router-link>
             </div>
         </div>
        </div>
@@ -135,21 +70,45 @@
 </template>
 
 <script>
+  import axios from 'axios';
+  // import secondBar from './secondBar.vue';
 
-import secondBar from './secondBar.vue';
-export default {
-   name:'addCart',
-   components:{
-    secondBar
-   },
-   data() {
-    return {
-      activeTab: 'tab1'
-    };
-  
-  },
-  
-}
+  export default {
+    name:'addCart',
+    components:{
+      // secondBar
+    },
+    data() {
+      return {
+        activeTab: 'tab2',
+        product: null,
+        similarProducts: null,
+      };
+    },
+    mounted() {
+      this.fetchProductData();
+    },
+    methods: {
+        fetchProductData() {
+          let productId = this.$route.params.id;
+          const BASE_URL = 'https://prosperc40.pythonanywhere.com/products';
+
+          axios
+          .get(BASE_URL + '/' + productId).then(response => {
+            this.product = response.data;
+            axios
+            .get(BASE_URL + '?category=' + this.product.category).then(response => {
+              this.similarProducts = response.data;
+              console.log(this.similarProducts);
+            })
+          })
+          .catch(error => {
+            console.error('Error fetching product:', error);
+          });
+        },
+    },
+  };
+
 </script>
 
 <style>
@@ -200,6 +159,7 @@ export default {
   line-height: 1.2;
   margin-bottom:12px !important;
 }
+
 .h2-ceph + .cef{
   margin-top: 0; /* Remove the top margin of the second paragraph */
   margin-bottom: 10px; }
@@ -211,8 +171,6 @@ export default {
 }  
 
 .er{
-  
-  
   background-color:#258576;
   color:white;
   border:0;
@@ -222,6 +180,7 @@ export default {
   padding-right:20px;
   border-radius:15px;
 }
+
 .ins{
   background-color: white;
   border:1px solid #1DCA58;

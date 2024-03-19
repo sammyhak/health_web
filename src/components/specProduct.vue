@@ -11,18 +11,16 @@
       <div class="row mt-3">
         <div class="col-md-3 col-12" v-for="post in this.posts " :key="post.id">
           <div class>
-            <!-- <img src="../assets/chd.png" class="container-fluid we" >  -->
-            <img :src="post.image" class="img-fluid">
+            <img :src="post.image"  height="175" width="216">
             <div class="row">
               <div class="col-7">
                 <p class="myh">{{ post.drug_name }}</p>
-                <p class="ni">Anti-removal</p>
+                <p class="ni">{{ post.category }}</p>
                 <p class="av in"><span><img src="../assets/Ellipse 43.png" class="im1"></span>Available for delivery</p>
                 <p class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"></span>In stock</p>
               </div>
               <div class="col-5">
                 <button class="buy" @click="addToCart(post)">Add to cart</button>
-                <!-- <p class="mh"> ₦ 2,800</p> -->
               </div>
 
             </div>
@@ -251,6 +249,7 @@ export default {
           name: post.drug_name,
           price: post.price,
           image: post.image,
+          presentation: post.presentation,
           quantity: 1,
         });
       }
@@ -290,9 +289,9 @@ export default {
   },
   mounted() {
     axios.get('https://prosperc40.pythonanywhere.com/products', {
-      headers: {
-        'Authorization': 'Token ' + '6124bc0794931a48a4665935619ee039bb7be277'
-      }
+      // headers: {
+      //   'Authorization': 'Token ' + '6124bc0794931a48a4665935619ee039bb7be277'
+      // }
     }
     )
       .then(response => {

@@ -6,15 +6,17 @@
       <h3 class="mt-5 pr">Products</h3>
       <div class="row">
         <div v-for="(product, index) in products" :key="index" class="col-12 col-md-4">
-          <div class="image-container">
-            <img :src="product.image" class="img-fluid im-pro">
-          </div>
+            <router-link :to="`/add/${product.id}`" class="rou" style="text-decoration: none; color: #000;">
+              <div class="image-container">
+                <img :src="product.image" class="img-fluid im-pro" alt="broken">
+              </div>
 
-          <p class="mt-2">{{product.drug_name}}</p>
-          <p class="mt-2">{{product.category}}</p>
-          <p class="av in"><span><img src="../assets/Ellipse 43.png" class="im1"></span>Available for delivery</p>
-          <p class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"></span>In stock</p>
-        </div>        
+              <p class="mt-2">{{product.drug_name}}</p>
+              <p class="mt-2">{{product.category}}</p>
+              <p class="av in"><span><img src="../assets/Ellipse 43.png" class="im1"></span>Available for delivery</p>
+              <p class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"></span>In stock</p>
+            </router-link>
+        </div>
       </div>
       <nav aria-label="Page navigation example  mt-5">
         <ul class="pagination justify-content-center">

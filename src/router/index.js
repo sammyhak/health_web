@@ -41,7 +41,7 @@ const routes = [
   },
   
   {
-    path: '/add',
+    path: '/add/:id',
     name: 'addView',
     component: addView
   },
