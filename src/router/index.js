@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import specView from '../views/specView.vue'
+import SearchView from '../views/SearchView.vue'
 import addView  from '@/views/AddView.vue'
 import CartView from '@/views/CartView.vue'
 import CartChoView from '../views/CartChoView.vue'
@@ -39,7 +40,11 @@ const routes = [
     name: 'specView',
     component: specView
   },
-  
+  {
+    path: '/search',
+    name: 'SearchView',
+    component: SearchView
+  },
   {
     path: '/add/:id',
     name: 'addView',

@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <!-- <secondBar></secondBar> --> <br><br><br>
+    <secondBar></secondBar>
     <div class="container">
        <div class="row container">
           <div class="col-lg-4 col-12">
@@ -71,12 +71,12 @@
 
 <script>
   import axios from 'axios';
-  // import secondBar from './secondBar.vue';
+  import secondBar from './secondBar.vue';
 
   export default {
     name:'addCart',
     components:{
-      // secondBar
+      secondBar
     },
     data() {
       return {
