@@ -1,45 +1,44 @@
 <script>
 
 import landingPage from '@/components/landingpage.vue';
-import featuredPro from '@/components/featuredPro.vue'; 
+import featuredPro from '@/components/featuredPro.vue';
 // import blogPro from '@/components/blogPro.vue';
 import discoverLanding from '@/components/discoverLanding.vue';
- import ourProject from '../components/ourProject.vue';
+import ourProject from '../components/ourProject.vue';
 
 import freQuent from '@/components/freQuent.vue';
+import chatComponent from '@/components/chatComponent.vue';
 
 // import thirdProducts from '@/components/thirdProduct.vue';
 
 
 export default {
-   name: 'HelloView',
-             
+  name: 'HelloView',
+
   components: {
-    landingPage,featuredPro,
+    landingPage, featuredPro, chatComponent,
     // blogPro
-    discoverLanding,freQuent,ourProject
-    
+    discoverLanding, freQuent, ourProject,
   },
 }
 </script>
 
 
 <template>
- 
-  <div class="">
- 
-     <landingPage></landingPage>
-     <featuredPro></featuredPro>
-     <!-- <blogPro></blogPro> -->
-     <discoverLanding></discoverLanding>
-     <ourProject></ourProject> 
-     <freQuent></freQuent>
-    <!-- <thirdProducts></thirdProducts> -->
-     
- </div>
- 
- 
- </template>
-<style>
 
-</style>
+  <div class="">
+
+    <landingPage></landingPage>
+    <featuredPro></featuredPro>
+    <!-- <blogPro></blogPro> -->
+    <discoverLanding></discoverLanding>
+    <ourProject></ourProject>
+    <freQuent></freQuent>
+    <chatComponent></chatComponent>
+    <!-- <thirdProducts></thirdProducts> -->
+
+  </div>
+
+
+</template>
+<style></style>
