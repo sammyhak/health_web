@@ -1,6 +1,7 @@
 <template>
   <div class="">
     <secondBar></secondBar>
+    <ToastNotification ref="toast" message="Item added!" type="success"/>
     <div class="container">
        <div class="row container">
           <div class="col-lg-4 col-12">
@@ -13,7 +14,7 @@
             <p ><span class="nu">{{product.price}}</span> <span><button class="ins">In stock</button></span></p>
             <!-- <p class="hy">Quantity</p>
             <p class=""><span ><button class="minus">-</button></span><span class="forty">40</span><span><button class="minus">+</button></span></p> -->
-            <button class="er mb-5" @click="addToCart(product)">Add to cart</button>
+            <button class="er mb-5" @click="addToCart(product)">Add to cart</button> 
           </div>
        </div>
 
@@ -71,11 +72,13 @@
 <script>
   import axios from 'axios';
   import secondBar from './secondBar.vue';
+  import ToastNotification from './ToastNotification.vue';
 
   export default {
     name:'addCart',
     components:{
-      secondBar
+      secondBar,
+      ToastNotification,
     },
     data() {
       return {
@@ -107,28 +110,30 @@
           });
         },
         addToCart(post) {
-          const cartItem = this.cart.find(item => item.id === post.id);
-          //   alert(cartItem)
+          // Retrieve existing cart from sessionStorage
+          let cart = JSON.parse(sessionStorage.getItem("cart")) || []; // Initialize as empty if none exists
+
+          const cartItem = cart.find(item => item.id === post.id);
+          
+          // this.$root.$refs.toast.showToast();
+          this.$nextTick(() => {
+            console.log(this.$root.$refs.toast.showToast());
+          });
+
           if (cartItem) {
             cartItem.quantity += 1;
           } else {
-            this.cart.push({
+            cart.push({
               id: post.id,
               name: post.drug_name,
               price: post.price,
               image: post.image,
               presentation: post.presentation,
-              quantity: 1,
+              quantity: 1, 
             });
           }
-          console.log(this.cart);
-          sessionStorage.setItem("cart", JSON.stringify(this.cart));
-
-          // Log the updated cart
-          console.log(this.cart);
-
           // Save the updated cart to sessionStorage
-          sessionStorage.setItem("cart", JSON.stringify(this.cart));
+          sessionStorage.setItem("cart", JSON.stringify(cart));
         }
     },
   };

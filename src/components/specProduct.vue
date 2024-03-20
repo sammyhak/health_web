@@ -58,28 +58,26 @@ export default {
     },
     // working
     addToCart(post) {
-      const cartItem = this.cart.find(item => item.id === post.id);
-      //   alert(cartItem)
+      // Retrieve existing cart from sessionStorage
+      let cart = JSON.parse(sessionStorage.getItem("cart")) || []; // Initialize as empty if none exists
+
+      const cartItem = cart.find(item => item.id === post.id);
+
       if (cartItem) {
         cartItem.quantity += 1;
       } else {
-        this.cart.push({
+        cart.push({
           id: post.id,
           name: post.drug_name,
           price: post.price,
           image: post.image,
           presentation: post.presentation,
-          quantity: 1,
+          quantity: 1, 
         });
       }
-      console.log(this.cart);
-      sessionStorage.setItem("cart", JSON.stringify(this.cart));
-
-      // Log the updated cart
-      console.log(this.cart);
 
       // Save the updated cart to sessionStorage
-      sessionStorage.setItem("cart", JSON.stringify(this.cart));
+      sessionStorage.setItem("cart", JSON.stringify(cart));
     }
 
   },

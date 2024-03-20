@@ -119,7 +119,7 @@
       },
   methods:{
   async sendEmail() {
-  this.formdata.prescription = this.cartItems.map(cart => cart.name).join(', ');
+  this.formdata.prescription = this.cartItems.map(cart => cart.name + ` x${cart.quantity}`).join(', ');
     axios.post('https://prosperc40.pythonanywhere.com/api/send-email/', this.formdata)
       .then(response => {
         console.log(response);
