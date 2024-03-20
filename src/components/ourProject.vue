@@ -96,7 +96,7 @@ export default {
 	}
 
 	100% {
-		transform: translate3d(-1500px, 0, 0);
+		transform: translate3d(-700px, 0, 0);
 	}
 }
 
