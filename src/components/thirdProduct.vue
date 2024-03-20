@@ -38,7 +38,6 @@ export default {
   name: 'thirdProducts',
   components: {
     secondBar
-
   },
   methods: {
     navigateToSpec() {
@@ -52,7 +51,8 @@ export default {
       await axios.get(BASE_URL + url_extension + category).then(response => {
         // Handle successful response
         this.products = response.data;
-        return response.data;
+        console.log(response);
+        return response.data;        
       })
         .catch(error => {
           // Handle error
