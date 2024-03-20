@@ -37,25 +37,25 @@
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                   <div class="list-group list-group-flush">
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Antihypertensive">Anti Hypertensive</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Antihistamine">Antihistamine</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Anti-inflammatory">Anti-inflammatory</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Anti-anemic">Anti-anemic</router-link></a>
+                    <a href="#" class="list-group-item list-group-item-action"><router-link to="/product/Antihypertensive">Anti Hypertensive</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Antihistamine">Antihistamine</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-inflammatory">Anti-inflammatory</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-anaemic">Anti-anaemic</router-link></a>
                     <!-- <a href="" class="list-group-item list-group-item-action">Provident dolor</a> -->
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                   <div class="list-group list-group-flush">
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Blood-tonic">Blood-tonic</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Dental">Dental</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Skincare">Skincare</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Iron-Replacement">Iron-Replacement</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Blood-tonic">Blood-tonic</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Dental">Dental</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Skincare">Skincare</router-link></a>
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Iron-Replacement">Iron-Replacement</router-link></a>
                     <!-- <a href="" class="list-group-item list-group-item-action">Laboriosam</a> -->
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                   <div class="list-group list-group-flush">
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/products/Wound-Dressing">Wound-Dressing</router-link></a>                                       
+                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Wound-Dressing">Wound-Dressing</router-link></a>                                       
                   </div>
                 </div>
               </div>
@@ -64,7 +64,7 @@
         </li></b-nav-item>
        
 
-        <b-nav-item-dropdown text="Products" right  class="ml-5 mar  d-sm-block d-md-none d-md-block d-lg-none" 
+        <!-- <b-nav-item-dropdown text="Products" right  class="ml-5 mar  d-sm-block d-md-none d-md-block d-lg-none" 
     menu-class="w-100">
           <div class="">
             <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></b-dropdown-item></div>
@@ -85,8 +85,7 @@
          
          
           
-        </b-nav-item-dropdown>
-        <!-- <b-nav-item href="#"  class="ml-5  mar ma">Blog</b-nav-item> -->
+        </b-nav-item-dropdown> -->
        
       </b-navbar-nav>
       

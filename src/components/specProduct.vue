@@ -11,205 +11,22 @@
       <div class="row mt-3">
         <div class="col-md-3 col-12" v-for="post in this.posts " :key="post.id">
           <div class>
-            <!-- <img src="../assets/chd.png" class="container-fluid we" >  -->
-            <img :src="post.image" class="img-fluid">
+            <img :src="post.image"  height="175" width="216">
             <div class="row">
               <div class="col-7">
                 <p class="myh">{{ post.drug_name }}</p>
-                <p class="ni">Anti-removal</p>
+                <p class="ni">{{ post.category }}</p>
                 <p class="av in"><span><img src="../assets/Ellipse 43.png" class="im1"></span>Available for delivery</p>
                 <p class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"></span>In stock</p>
               </div>
               <div class="col-5">
                 <button class="buy" @click="addToCart(post)">Add to cart</button>
-                <!-- <p class="mh"> ₦ 2,800</p> -->
               </div>
 
             </div>
           </div>
         </div>
-        <!-- <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/chd.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3 ">
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class ="col-md-3 col-12">
-                <div class>
-                    <img src="../assets/para.png" class="container-fluid we" >
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">MyHep DVIR</p>
-                          <p class="ni">Anti-removal</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> ₦ 2,800</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+       
       </div>
     </div>
   </div>
@@ -241,58 +58,34 @@ export default {
     },
     // working
     addToCart(post) {
-      const cartItem = this.cart.find(item => item.id === post.id);
-      //   alert(cartItem)
+      // Retrieve existing cart from sessionStorage
+      let cart = JSON.parse(sessionStorage.getItem("cart")) || []; // Initialize as empty if none exists
+
+      const cartItem = cart.find(item => item.id === post.id);
+
       if (cartItem) {
         cartItem.quantity += 1;
       } else {
-        this.cart.push({
+        cart.push({
           id: post.id,
           name: post.drug_name,
           price: post.price,
           image: post.image,
-          quantity: 1,
+          presentation: post.presentation,
+          quantity: 1, 
         });
       }
-      console.log(this.cart);
-      sessionStorage.setItem("cart", JSON.stringify(this.cart));
-      // }
-
-      // addToCart(post) {
-      //     // Push a new object representing the item to the cart
-      //     this.cart.push({
-      //         id: post.id,
-      //         name: post.drug_name,
-      //         price: post.price,
-      //         image: post.image,
-      //         quantity: 1,
-      //     });
-
-      // Log the updated cart
-      console.log(this.cart);
 
       // Save the updated cart to sessionStorage
-      sessionStorage.setItem("cart", JSON.stringify(this.cart));
+      sessionStorage.setItem("cart", JSON.stringify(cart));
     }
 
-    //  addToCart(product){
-    //   this.cart.push(product);
-    //     console.log(this.cart);
-    //    sessionStorage.setItem(this.cart.id,this.cart);
-    //   }
-
-    // addToCart(product) {
-    //   this.cart.push(product);
-    //   console.log(this.cart);
-    //   // Emit an event with the updated cart data
-    //   this.$emit('cart-updated', this.cart);
-    // },
   },
   mounted() {
     axios.get('https://prosperc40.pythonanywhere.com/products', {
-      headers: {
-        'Authorization': 'Token ' + '6124bc0794931a48a4665935619ee039bb7be277'
-      }
+      // headers: {
+      //   'Authorization': 'Token ' + '6124bc0794931a48a4665935619ee039bb7be277'
+      // }
     }
     )
       .then(response => {

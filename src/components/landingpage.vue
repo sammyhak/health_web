@@ -41,7 +41,7 @@ export default {
   name: 'LandingPage',
   methods: {
     navigateToAbout() {
-      this.$router.push('/product'); // Navigate to the '/about' route
+      this.$router.push('/spec'); // Navigate to the '/about' route
     },
   },
 }

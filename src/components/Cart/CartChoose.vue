@@ -9,12 +9,11 @@
         <div class="col-md-7 col-12  " >
             <div class="row container mr mt-3" v-for="cart in cartItems" :key="cart.id" >
                 <div class="col-md-2 mt-4 col-12" >
-                    <img src="../../assets/para.png"  class="ts" >
+                    <img :src="cart.image"  class="ts" >
                 </div>
                 <div class="col-md-9 col-12 pb-3">
                     <h5 class="mt-3 mk pt-3" >{{ cart.name }}</h5>
-                    <p class="cef">Ceftriaxone for injection USP1.0gIM/IV Use</p>
-                    <p class=""><span class="io">Presentation</span> :<span class="pre">1 Vail</span></p>
+                    <p class=""><span class="io">Presentation</span> :<span class="pre">{{ cart.presentation }}</span></p>
                     <p class="pre">Quantity</p>
                     <p class=""><span >
                         <button class="minus" @click="minus(cart.id)">-</button>
@@ -23,13 +22,8 @@
                     </p>
                 </div>
                 <div class="col-md-1 col-12 lo">
-                    <div class="lo"><button class="lo" @click="remove(index)"><span class="material-symbols-outlined">
-close
-</span></button>
-                        
-
-                    <p class="lo">₦2,800.00</p></div></div>
-                    
+                    <div class="lo"><button class="lo" @click="remove(index)"><span class="material-symbols-outlined">close</span></button></div>
+                  </div>  
             </div>
         </div>
          <div class="col-md-1 col-12"></div> 
@@ -37,237 +31,158 @@ close
         <div class="row container  ">
             <h5 class="pt-3">Order Summary </h5>
             <div class="col-5 ">
-                
                 <P>No of items</P>
                 <!-- <p>Total </p> -->
             </div>
             <div class="col-6 lo">
-                
                 <P class="">{{ totalItems }}</P>
-                <!-- <p>2000</p> -->
             </div>
-            <!-- <button class="fh ">Place Order</button> -->
             <div>
-  <b-button v-b-modal.modal-1 class="fh "  >Place Order</b-button>
+  <b-button v-b-modal.modal-1 class="fh">Place Order</b-button>
 
   <b-modal id="modal-1" title="Place Order" hide-footer="true">
     <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
-        
-    <input type="email" class="form-control" id="exampleInputEmail1" v-model="formdata.email" aria-describedby="emailHelp" placeholder="Enter email">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1 mt-5">Drug</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" v-model="formdata.drug" placeholder="Drug">
-    {{ nameofperson }} {{ email }}
-  </div>
- 
-  <button type="submit" class="btn fh mt-3" @click.prevent="sendEmail">Submit</button>
-</form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" v-model="formdata.name" aria-describedby="customerName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" v-model="formdata.email" aria-describedby="email" required>
+      </div>
+      <div class="form-group">
+        <label for="tel">Phone Number:</label>
+        <input type="tel" class="form-control" id="tel" v-model="formdata.phone" aria-describedby="phone">
+      </div>
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" class="form-control" id="state" v-model="formdata.state" aria-describedby="state">
+      </div>
+      <div class="form-group">
+        <label for="lga">Local Government:</label>
+        <input type="text" class="form-control" id="lga" v-model="formdata.lga" aria-describedby="LGA">
+      </div>
+      <div class="form-group">
+        <label for="address">Home Address:</label>
+        <textarea id="address"  v-model="formdata.address" class="form-control" required></textarea> 
+      </div>
+      <div class="form-group">
+        <label for="add_info">Additional Information:</label>
+        <textarea id="add_info"  v-model="formdata.add_info" class="form-control"></textarea> 
+      </div>
+      <div class="form-group">
+        <label for="drug">Drug:</label>
+        <input type="text" class="form-control" id="drug" v-model="formdata.prescription" readonly>
+        {{ nameofperson }} {{ email }}
+      </div>  
+      <button type="submit" class="btn fh mt-3" @click.prevent="sendEmail">Submit</button>
+    </form>
   </b-modal>
 </div>
         </div>
         </div>
       </div>
-      <!-- <div class="row mt-4 mb-5">
-        <div class="col-md-7 col-12 mr">
-            <div class="row container">
-                <div class="col-md-2 mt-4 col-12">
-                    <img src="../../assets/para.png" class="ts" >
-                </div>
-                <div class="col-md-9 col-12">
-                    <h4 class="mt-3 mk">Emeceph</h4>
-                    <p class="cef">Ceftriaxone for injection USP1.0gIM/IV Use</p>
-                    <p class=""><span class="io">Presentation</span> :<span class="pre">1 Vail</span></p>
-                    <p class="pre">Quantity</p>
-                    <p class=""><span ><button class="minus">-</button></span><span class="forty">40</span><span><button class="minus">+</button></span></p>
-                </div>
-                <div class="col-md-1 col-12 lo">
-                    <div class="lo"><p class="lo">X</p> 
-                    <p class="lo">₦2,800.00</p></div></div>
-                    
-            </div>
-        </div>
-        <div class="col-md-1 col-12 ">
-        
-    </div>
-        <div class="col-md-4 col-12 ">
-        
-        </div>
-      </div> -->
     </div>
     </div>
  
 </template>
 
 <script>
-import secondbar from '../secondBar.vue';
-import axios from 'axios';
-// import * as EmailJS from 'emailjs-com';
-// import { SMTPClient } from 'emailjs';
-// import * as EmailJS from 'emailjs-com';
-//  import smtp from 'smtp.js';
-export default {
-name:'CartChoose',
-components:{
-    secondbar,
-   
+  import secondbar from '../secondBar.vue';
+  import axios from 'axios';
 
-},
-data(){
-    return{
-        // cartItems:JSON.parse(sessionStorage.getItem("cart")),
+  export default {
+  name:'CartChoose',
+  components:{
+      secondbar,
+  },
+  data(){
+      return{
         cartItems:[],
         nameofperson:"",
         formdata:{
-            email:"",
-        drug:"",
-     
+          prescription: "",
+          name: "",
+          email: "",
+          phone: "",
+          state: "",
+          lga: "",
+          address: "",
+          add_info: "",
         },
-        // email:"",
-       
-    }
-},
-computed: {
-        totalItems() {
-            return this.cartItems.reduce((total, cart) => total + cart.quantity, 0);
+      }
+  },
+  computed: {
+          totalItems() {
+              return this.cartItems.reduce((total, cart) => total + cart.quantity, 0);
+          }
+      },
+  methods:{
+  async sendEmail() {
+  this.formdata.prescription = this.cartItems.map(cart => cart.name + ` x${cart.quantity}`).join(', ');
+    axios.post('https://prosperc40.pythonanywhere.com/api/send-email/', this.formdata)
+      .then(response => {
+        console.log(response);
+        // Display congratulatory message in modal
+        alert('Congratulations! Your order will be delivered.');
+
+        // Clear form data
+        this.formdata.prescription = "",
+        this.formdata.name = "",
+        this.formdata.email = "",
+        this.formdata.phone = "",
+        this.formdata.state = "",
+        this.formdata.lga = "",
+        this.formdata.address = "",
+        this.formdata.add_info = "",
+
+        // Update cart items to zero
+        this.cartItems = [];
+
+        // Close the modal
+        this.$bvModal.hide('modal-1');
+      })
+      .catch(error => console.log(error));
+  },
+
+
+      remove(index) {
+              this.cartItems.splice(index, 1);
+              this.updateSessionStorage();
+              window.location.reload();
+          },
+      plus(cartId){
+          const productToUpdate = this.cartItems.find(cart => cart.id === cartId);
+        if (productToUpdate) {
+          productToUpdate.quantity += 1;
+          // Update session storage
+          this.updateSessionStorage();
         }
-    },
-methods:{
-   
-//     async sendEmail() {
-//   const emailData = {
-//     from: 'Sender Name <nancee801@gmail.com>',
-//     to: 'prosperc40@gmail.com',
-//     subject: 'Test Email',
-//     text: 'This is a test email sent from Vue.js frontend using Mailgun.'
-//   };
+      },
+      minus(cartId){
+          const productToUpdate = this.cartItems.find(cart => cart.id === cartId);
+        if (productToUpdate.quantity>0) {
+          productToUpdate.quantity -= 1;
+          // Update session storage
+          this.updateSessionStorage();
+        }
+        
+      },
+      updateSessionStorage() {
+        sessionStorage.setItem('cart', JSON.stringify(this.cartItems));
+      },
+      delete(){
 
-//   try {
-//     const response = await axios.post('https://api.mailgun.net/v3/your-domain.com/messages', emailData, {
-//       auth: {
-//         username: 'api',
-//         password: '3de6b66a321321a89451d09cfb6dc01b-408f32f3-d2c355bc'
-//       }
-//     });
+      }
+  },
 
-//     if (response.status === 200) {
-//       alert('Email sent successfully!');
-//     } else {
-//       console.error('Failed to send email:', response.data);
-//       alert('Failed to send email');
-//     }
-//   } catch (error) {
-//     console.error('Error sending email:', error);
-//     alert('Error sending email. Please try again later.');
-//   }
-// },
-
-async sendEmail() {
-//   const emailData = {
-//     from: 'nancee801@gmail.com',
-//     to: 'prosperc40@gmail.com',
-//     subject: 'Test Email',
-//     text: 'This is a test email sent from Vue.js frontend using Mailgun.'
-//   };
-
-//   try {
-//     const response = await axios.post('https://prosperc40.pythonanywhere.com/api/send-email/', emailData, {
-//       auth: {
-//         username: 'moses',
-//         password: '771f9f51da3894470667836dbdf2a2a8-408f32f3-bc019a5b'
-//       }
-//     });
-
-//     if (response.status === 200) {
-//       alert('Email sent successfully!');
-//     } else {
-//       console.error('Failed to send email:', response.data);
-//       alert('Failed to send email');
-//     }
-//   } catch (error) {
-//     console.error('Error sending email:', error);
-//     alert('Error sending email. Please try again later.');
-//   }
-this.formdata.drug = this.cartItems.map(cart => cart.name).join(', ');
-  axios.post('https://prosperc40.pythonanywhere.com/api/send-email/', this.formdata)
-    .then(response => 
-        console.log(response)
-    )
-    .catch(error => console.log(error));
-    try {
-    // Assuming the email data is properly formatted in this.formdata
-    const response = await axios.post('https://prosperc40.pythonanywhere.com/api/send-email/', this.formdata);
-
-    if (response.status === 200) {
-      // Display congratulatory message in modal
-      alert('Congratulations! Your order will be delivered.');
-
-      // Clear form data
-      this.formdata.email = '';
-      this.formdata.drug = '';
-
-      // Update cart items to zero
-      this.cartItems = [];
-
-      // Close the modal
-      this.$bvModal.hide('modal-1');
-    } else {
-      console.error('Failed to send email:', response.data);
-      alert('Failed to send email');
-    }
-  } catch (error) {
-    console.error('Error sending email:', error);
-    alert('Error sending email. Please try again later.');
+  mounted(){
+      const cartItems = sessionStorage.getItem('cart');
+      if (cartItems) {
+        this.cartItems = JSON.parse(cartItems);
+      }
   }
-},
-
-
-    remove(index) {
-            this.cartItems.splice(index, 1);
-            this.updateSessionStorage();
-            window.location.reload();
-        },
-    plus(cartId){
-        const productToUpdate = this.cartItems.find(cart => cart.id === cartId);
-      if (productToUpdate) {
-        productToUpdate.quantity += 1;
-        // Update session storage
-        this.updateSessionStorage();
-      }
-    },
-    minus(cartId){
-        const productToUpdate = this.cartItems.find(cart => cart.id === cartId);
-      if (productToUpdate.quantity>0) {
-        productToUpdate.quantity -= 1;
-        // Update session storage
-        this.updateSessionStorage();
-      }
-      
-    },
-    updateSessionStorage() {
-      sessionStorage.setItem('cart', JSON.stringify(this.cartItems));
-    },
-    delete(){
-
-    }
-},
-
-mounted(){
-    const cartItems = sessionStorage.getItem('cart');
-    if (cartItems) {
-      this.cartItems = JSON.parse(cartItems);
-    }
-}
-}
-// ,
-// mounted(){
-//     cartItems:JSON.parse(sessionStorage.getItem("cart"))
-   
-// }}
-
+  }
 </script>
 
 <style>

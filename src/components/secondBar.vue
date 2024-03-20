@@ -3,65 +3,33 @@
     <div class="">
       <div class="container">
         <b-navbar class="d-none d-md-block">
-
           <b-navbar-toggle type="light" variant="light" target="nav-collapse"></b-navbar-toggle>
-
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="">
               <b-nav-item href="#" class="ma ml-5 pharnav"><router-link to="#"
                   class="rou pharnav">Pharmacy</router-link></b-nav-item>
-              <!-- <b-nav-item href="# " class="ml-5  mar ma ">
-                <router-link to="/about" class="rou pharnav">Vitamins & Supplements</router-link></b-nav-item>
-
-              <b-nav-item href="# " class="ml-5  mar ma ">
-                <router-link to="/about" class="rou pharnav">Sexual wellbeing</router-link></b-nav-item> -->
-              <b-nav-item href="# " class="ml-5  mar ma ">
+              <b-nav-item href="#" class="ml-5 mar ma">
                 <router-link to="#" class="rou pharnav">{{ currentId }}</router-link></b-nav-item>
-
-
             </b-navbar-nav>
-
-
             <b-navbar-nav class="ms-auto">
-              <!-- <b-form-input class="uy" placeholder="Search" ></b-form-input> -->
-              <input class="uy" placeholder="search">
-
+              <input type="text" v-model="searchTerm" @keyup.enter="submitSearch" class="uy" placeholder="search">
             </b-navbar-nav>
           </b-collapse>
         </b-navbar>
       </div>
 
-
-
-
       <!-- Navbar for small screen -->
       <b-navbar class="d-md-none bn">
-
         <b-navbar-toggle type="light" variant="light" target="nav-collapse"></b-navbar-toggle>
-
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="">
             <b-nav-item href="#" class="ma ml-5 "><router-link to="/" class="rou tr">Pharmacy</router-link></b-nav-item>
             <b-nav-item href="# " class="ml-5  mar ma ">
               <router-link to="#" class="rou tr">{{ currentId }}</router-link></b-nav-item>
-
-            <!-- <b-nav-item href="# " class="ml-5  mar ma ">
-              <router-link to="/about" class="rou tr">Sexual wellbeing</router-link></b-nav-item> -->
-
-
-
           </b-navbar-nav>
-
-
         </b-collapse>
       </b-navbar>
-
-
-
     </div>
-
-
-
   </div>
 </template>
 
@@ -71,13 +39,13 @@ export default {
   data() {
     return {
       currentId: null,
+      searchTerm: '',
     };
   },
   created() {
     // Access the route parameters to get the ID when the component is created
     this.currentId = this.$route.params.id;
   },
-
   watch: {
     // Watch for changes in the route parameters
     '$route'(to) {
@@ -85,6 +53,14 @@ export default {
       this.currentId = to.params.id;
     }
   },
+  methods: {
+    submitSearch() {
+      this.$router.push({
+        path: '/search',
+        query: { q: this.searchTerm }
+      });
+    }
+  }
 }
 </script>
 

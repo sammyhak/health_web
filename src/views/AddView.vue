@@ -5,15 +5,13 @@
 </template>
 
 <script>
-import addCart from '../components/addCart.vue'
-export default {
-
-name:'addView',
-
-components:{
-    addCart
-}
-}
+  import addCart from '../components/addCart.vue'
+  export default {
+    name:'addView',
+    components:{
+      addCart
+    }
+  }
 </script>
 
 <style>

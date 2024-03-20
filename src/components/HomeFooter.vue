@@ -31,7 +31,7 @@
     </div>
     
     <hr class="hr-class">
-    <p class="p20">©2024 company name. All r~ights reserved.</p>
+    <p class="p20">©2024 company name. All rights reserved.</p>
   </div>
 </template>
 
