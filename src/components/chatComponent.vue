@@ -88,6 +88,17 @@ export default {
         toggleChatVisibility() {
             // Toggle the visibility state
             this.isChatVisible = !this.isChatVisible;
+
+            const body = document.body;
+
+            // Check if scrolling is currently enabled
+            if (body.style.overflow === 'hidden') {
+                // If scrolling is disabled, enable it
+                body.style.overflow = '';
+            } else {
+                // If scrolling is enabled, disable it
+                body.style.overflow = 'hidden';
+            }
         },
         toggleMoreHeaderVisibility() {
             // Toggle the visibility state
