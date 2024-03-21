@@ -1,14 +1,14 @@
 .chatSection {
-  margin-top: 10px;
+  margin-top: calc(10px / var(--size-divisor));
   display: grid;
   position: fixed;
   z-index: 10000;
   top: 0%;
-  left: 70%;
+  right: 20px;
   .chatContainer {
     position: relative;
-    width: 399px;
-    height: 500px;
+    width: calc(399px / var(--size-divisor));
+    height: calc(500px / var(--size-divisor));
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 10px 10px 0 0;
@@ -32,11 +32,11 @@
         margin-top: 50px;
         margin-left: 10px;
         padding: 10px 20px;
-        width: 225px;
+        width: calc(225px / var(--size-divisor));
         font-family: Inter;
-        font-size: 14px;
+        font-size: calc(14px / var(--size-divisor));
         font-weight: 400;
-        line-height: 26.6px;
+        line-height: calc(26.6px / var(--size-divisor));
         text-align: left;
         color: #202020b2;
       }
@@ -44,10 +44,10 @@
       .message-date {
         text-align: center;
         border-bottom: 1px solid #eee;
-        line-height: 0.1em;
-        font-size: 14px;
+        line-height: calc(0.1em / var(--size-divisor));
+        font-size: calc(14px / var(--size-divisor));
         font-weight: 500;
-        margin: 36px 0;
+        margin: calc(36px / var(--size-divisor)) 0;
         width: 100%;
         color: #202020b2;
         span {
@@ -66,12 +66,12 @@
           margin-top: 10px;
           .userImage {
             background: #b5b5b5;
-            width: 50px;
-            height: 50px;
+            width: calc(50px / var(--size-divisor));
+            height: calc(50px / var(--size-divisor));
             border-radius: 50%;
             img {
-              width: 50px;
-              height: 50px;
+              width: calc(50px / var(--size-divisor));
+              height: calc(50px / var(--size-divisor));
               border-radius: 50%;
             }
           }
@@ -80,15 +80,15 @@
             display: grid;
             margin-left: 5px;
             .message {
-              max-width: 170px;
+              max-width: calc(170px / var(--size-divisor));
               border: 1px solid #e0e0e0;
               padding: 10px 20px 10px 20px;
               border-radius: 0px 20px 20px 20px;
               opacity: 0px;
               font-family: Inter;
-              font-size: 14px;
+              font-size: calc(14px / var(--size-divisor));
               font-weight: 400;
-              line-height: 26.6px;
+              line-height: calc(26.6px / var(--size-divisor));
               text-align: left;
               color: #202020b2;
             }
@@ -96,9 +96,9 @@
             .message-time {
               margin-top: 5px;
               font-family: Inter;
-              font-size: 10px;
+              font-size: calc(10px / var(--size-divisor));
               font-weight: 400;
-              line-height: 12.1px;
+              line-height: calc(12.1px / var(--size-divisor));
               text-align: left;
               color: #bababa;
             }
@@ -113,14 +113,14 @@
           .message-container {
             .message {
               border: 1px solid #e0e0e0;
-              max-width: 248px;
+              max-width: calc(248px / var(--size-divisor));
               padding: 10px 20px 10px 20px;
               border-radius: 20px 0px 20px 20px;
               opacity: 0px;
               font-family: Inter;
-              font-size: 14px;
+              font-size: calc(14px / var(--size-divisor));
               font-weight: 400;
-              line-height: 16.94px;
+              line-height: calc(16.94px / var(--size-divisor));
               text-align: left;
               color: #202020b2;
             }
@@ -130,7 +130,7 @@
               font-family: Inter;
               font-size: 10px;
               font-weight: 400;
-              line-height: 12.1px;
+              line-height: calc(12.1px / var(--size-divisor));
               text-align: left;
               color: #bababa;
             }
@@ -141,7 +141,7 @@
 
     .sendMessage {
       position: absolute;
-      top: 59%;
+      top: calc(62% / var(--size-divisor));
       background: #fff;
       width: 100%;
       z-index: 9999999;
@@ -154,9 +154,9 @@
           border-bottom: 1px solid #e0e0e0;
           &::placeholder {
             font-family: Inter;
-            font-size: 14px;
+            font-size: calc(14px / var(--size-divisor));
             font-weight: 300;
-            line-height: 26.6px;
+            line-height: calc(26.6px / var(--size-divisor));
             text-align: left;
             color: #20202080;
           }
@@ -170,21 +170,21 @@
           resize: none;
           border: none;
           outline: none;
-          padding: 10px;
+          padding: calc(10px / var(--size-divisor));
 
           &::placeholder {
             font-family: Inter;
-            font-size: 14px;
+            font-size: calc(14px / var(--size-divisor));
             font-weight: 300;
-            line-height: 26.6px;
+            line-height: calc(26.6px / var(--size-divisor));
             text-align: left;
             color: #20202080;
           }
         }
         .sendMessageBtn {
           img {
-            width: 50px;
-            height: 50px;
+            width: calc(50px / var(--size-divisor));
+            height: calc(50px / var(--size-divisor));
             position: absolute;
             right: 10px;
             bottom: 10px;
@@ -195,6 +195,8 @@
     }
   }
   img {
+    width: calc(80px / var(--size-divisor));
+    height: calc(80px / var(--size-divisor));
     display: flex;
     margin-left: auto;
     margin-top: 10px;
@@ -202,14 +204,57 @@
 
     &.reposition {
       position: fixed;
-      right: 40px;
-      top: 66%;
+      right: calc(40px / var(--size-divisor));
+      top: calc(66% / var(--size-divisor));
     }
   }
 }
 
-@media screen and (max-width: 768px){
-  .chatSection{
+@media screen and (max-width: 768px) {
+  .chatSection {
     display: none;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+  :root {
+    --size-divisor: 2;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  :root {
+    --size-divisor: 2;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  :root {
+    --size-divisor: 2;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  :root {
+    --size-divisor: 1.1;
+  }
+}
+@media ((min-width: 1200px) and (max-width:1370px)) {
+  :root {
+    --size-divisor: 1.2;
+  }
+}
+@media (min-width: 1370px) and (max-width: 1800px) {
+  :root {
+    --size-divisor: 1;
+  }
+}
+@media ((min-width: 1800px) and (max-width: 3200px)) {
+  :root {
+    --size-divisor: 0.69;
+  }
+}
+
+@media ((min-width: 3200px)) {
+  :root {
+    --size-divisor: 0.38;
   }
 }
