@@ -1,5 +1,5 @@
 <template>
-  <div class="container cf">
+  <div class="container cf" style="background-attachment: fixed;">
     <div class="row container c">
       <div class="col-md-6 col-12">
 

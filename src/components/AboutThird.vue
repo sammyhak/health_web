@@ -27,14 +27,13 @@
           
         </div>
         <div class="col-md-4 col-12 company-photos">
-            <img src="../assets/DSC_0019 1.png" class="container-fluid id">
-            <img src="../assets/Frame 1171276973.png" class="container-fluid">
+            <img src="../assets/DSC_0019 1.png" height="252" style="padding: 7px; width: 100%;">
+            <img src="../assets/Frame 1171276973.png" height="252" style="padding: 7px; width: 100%;">
             
         </div>
         <div class="col-md-4 col-12 company-photos">
-            <!-- <img src="../assets/DSC_0042 1.png " class="container-fluid"> -->
-            <img src="../assets/DSC_0042 1.png" class="container-fluid id">
-            <img src="../assets//Frame 1171276974.png" class="container-fluid">
+            <img src="../assets/DSC_0042 1.png" height="252" style="padding: 7px; width: 100%;">
+            <img src="../assets//Frame 1171276974.png" height="252" style="padding: 7px; width: 100%;">
         </div>
     </div>
     </div>

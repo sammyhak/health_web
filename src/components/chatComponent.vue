@@ -1,62 +1,88 @@
 <template>
     <section class="chatSection">
-        <div class="chatContainer" v-if="isChatVisible">
+        <div class="chatContainer bg-cover" v-if="isChatVisible">
             <div class="chatHeader">
-                <div class="chatHeaderText">
-                    Chat with us
-                </div>
+                <div class="chatHeaderText">Chat with us</div>
             </div>
             <div class="chatContent" v-if="this.chatStatus === 'approved'">
-                <!-- <div class="message-head">
-                    Hi there, How can we help?
-                </div> -->
-
                 <div class="message-date">
-                    <span>Connected with {{backofficeAdmin}}</span>
+                    <span>Connected with {{ backofficeAdmin }}</span>
                 </div>
                 <div class="chat-inner">
-                    <div v-for="message in messages" :key="message.id" :class="`message-${message.content_type === 15 ? 'right' : 'left'}`"> 
+                    <div v-for="message in messages" :key="message.id" :class="`message-${message.content_type === 15 ? 'right' : 'left'}`">
                         <div class="userImage">
                             <!-- <img src="" alt=""> -->
                         </div>
                         <div class="message-container">
-                            <div class="message">{{ message.text }}</div>
+                            <div class="message" style="background-color: #fff; opacity:1;">{{ message.text }}</div>
                             <div class="message-time">
-                                {{ message.sender.name }}  {{ formatTimestamp(message.timestamp) }} 
+                                {{ message.sender.name }} {{ formatTimestamp(message.timestamp) }}
                             </div>
                         </div>
                     </div>
-                    <br><br>
-                    <form>
-                        <textarea cols="30" rows="5" v-model="formdata3.text" placeholder="Write your message..."></textarea>
-                        <button class="sendMessageBtn" @click.prevent="sendText">
-                            <img src="../assets/send.svg" alt="sendIcon">
-                        </button>
-                    </form>
                 </div>
             </div>
             <div class="request-pending" v-if="this.chatStatus === 'pending'">
-                Request Pending... 
+                Request Pending...
             </div>
-            <form class="sendMessage" v-if="this.chatStatus === 'null' || this.chatStatus === 'rejected'">
-                <div class="message-head">
-                    <input type="text" name="name" id="name" v-model="formdata.name" placeholder="Name">
+            <form class="sendMessage">
+                <div class="sendMessageContainer" v-if="this.chatStatus === 'null' || this.chatStatus === 'rejected'">
+                    <div class="message-head">
+                        <input type="text" name="name" id="name" v-model="formdata.name" placeholder="Name"/>
+                    </div>
+                    <div class="message-head">
+                        <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        v-model="formdata.email"
+                        placeholder="email@example.com"/>
+                    </div>
+                    <div class="textarea-container">
+                        <textarea
+                            name=""
+                            id=""
+                            cols="30"
+                            rows="5"
+                            v-model="formdata2.message"
+                            placeholder="Write your message...">
+                        </textarea>
+                        <button class="sendMessageBtn" @click.prevent="sendRequest">
+                            <img src="../assets/send.svg" alt="sendIcon" />
+                        </button>
+                    </div>
                 </div>
-                <div class="message-head">
-                    <input type="text" name="email" id="email" v-model="formdata.email" placeholder="email@example.com">
-                </div>
-                <div class="textarea-container">
-                    <textarea name="" id="" cols="30" rows="5" v-model="formdata2.message" placeholder="Write your message..."></textarea>
-                    <button class="sendMessageBtn" @click.prevent="sendRequest">
-                        <img src="../assets/send.svg" alt="sendIcon">
-                    </button>
-                </div>
+                <form>
+                    <div
+                        class="sendMessageContainer"
+                        v-if="this.chatStatus === 'approved'">
+                        <div class="textarea-container">
+                            <textarea
+                                cols="30"
+                                rows="5"
+                                v-model="formdata3.text"
+                                placeholder="Write your message...">
+                            </textarea>
+                            <button class="sendMessageBtn" @click.prevent="sendText">
+                                <img src="../assets/send.svg" alt="sendIcon" />
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </form>
         </div>
-        <img :class="{ 'reposition': !isChatVisible }" @click="toggleChatVisibility" src="../assets/chatIcon.svg"
-            alt="chat-icon">
+        <img :class="{ reposition: !isChatVisible }" @click="toggleChatVisibility" src="../assets/chatIcon.svg" alt="chat-icon"/>
     </section>
 </template>
+
+<style>
+.bg-cover{
+    background-image: url('../../src/assets/image.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-size: 120px 137px !important;
+    background-position: center !important;
+}
+</style>
 
 <script>
 import axios from "axios";
