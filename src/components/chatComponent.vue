@@ -29,7 +29,6 @@
               </div>
             </div>
           </div>
-          <br /><br />
         </div>
       </div>
       <div class="request-pending" v-if="this.chatStatus === 'pending'">
