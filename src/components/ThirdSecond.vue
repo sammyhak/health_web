@@ -15,7 +15,7 @@
 
       </div>
       <div class="col">
-        <img class="rounded float-end" style="height: 100% !important; width: 100%;" src="../../dist/img/IMG_8734.jpg" alt="#">
+        <img class="rounded float-end" style="height: 100% !important; width: 100%;" src="/assets/img/IMG_8734.jpg" alt="#">
       </div>
     </div>
 
