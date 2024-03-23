@@ -145,50 +145,52 @@
       background: #fff;
       width: 100%;
       z-index: 9999999;
-      .message-head {
-        input {
-          width: 100%;
-          border: none;
-          outline: none;
-          padding: 10px;
-          border-bottom: 1px solid #e0e0e0;
-          &::placeholder {
-            font-family: Inter;
-            font-size: calc(14px / var(--size-divisor));
-            font-weight: 300;
-            line-height: calc(26.6px / var(--size-divisor));
-            text-align: left;
-            color: #20202080;
+      .sendMessageContainer {
+        .message-head {
+          input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+            &::placeholder {
+              font-family: Inter;
+              font-size: calc(14px / var(--size-divisor));
+              font-weight: 300;
+              line-height: calc(26.6px / var(--size-divisor));
+              text-align: left;
+              color: #20202080;
+            }
           }
         }
-      }
-      .textarea-container {
-        textarea {
-          overflow-y: auto;
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-          resize: none;
-          border: none;
-          outline: none;
-          padding: calc(10px / var(--size-divisor));
+        .textarea-container {
+          textarea {
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            resize: none;
+            border: none;
+            outline: none;
+            padding: calc(10px / var(--size-divisor));
 
-          &::placeholder {
-            font-family: Inter;
-            font-size: calc(14px / var(--size-divisor));
-            font-weight: 300;
-            line-height: calc(26.6px / var(--size-divisor));
-            text-align: left;
-            color: #20202080;
+            &::placeholder {
+              font-family: Inter;
+              font-size: calc(14px / var(--size-divisor));
+              font-weight: 300;
+              line-height: calc(26.6px / var(--size-divisor));
+              text-align: left;
+              color: #20202080;
+            }
           }
-        }
-        .sendMessageBtn {
-          img {
-            width: calc(50px / var(--size-divisor));
-            height: calc(50px / var(--size-divisor));
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-            cursor: pointer;
+          .sendMessageBtn {
+            img {
+              width: calc(50px / var(--size-divisor));
+              height: calc(50px / var(--size-divisor));
+              position: absolute;
+              right: 10px;
+              bottom: 10px;
+              cursor: pointer;
+            }
           }
         }
       }
