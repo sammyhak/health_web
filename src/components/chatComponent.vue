@@ -38,12 +38,14 @@
             <div class="request-pending" v-if="this.chatStatus === 'pending'">
                 Request Pending... 
             </div>
-            <form class="sendMessage" v-if="this.chatStatus === 'null' || this.chatStatus === 'rejected'">
-                <div class="message-head">
-                    <input type="text" name="name" id="name" v-model="formdata.name" placeholder="Name">
-                </div>
-                <div class="message-head">
-                    <input type="text" name="email" id="email" v-model="formdata.email" placeholder="email@example.com">
+            <form class="sendMessage">
+                <div class="sendMessageContainer"  v-if="this.chatStatus === 'null' || this.chatStatus === 'rejected'">
+                    <div class="message-head">
+                        <input type="text" name="name" id="name" v-model="formdata.name" placeholder="Name">
+                    </div>
+                    <div class="message-head">
+                        <input type="text" name="email" id="email" v-model="formdata.email" placeholder="email@example.com">
+                    </div>
                 </div>
                 <div class="textarea-container">
                     <textarea name="" id="" cols="30" rows="5" v-model="formdata2.message" placeholder="Write your message..."></textarea>
