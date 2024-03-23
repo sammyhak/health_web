@@ -88,151 +88,172 @@
 import axios from "axios";
 import "../styles/components/chatComponent.scss";
 export default {
-    name: 'ChatComponent',
-    data() {
-        return {
-            isChatVisible: false, // Initial visibility state
-            isMoreHeaderVisible: false,
-            chatStatus: sessionStorage.getItem('requestStatus'),
-            formdata:{
-                name: "",
-                email: "",
-            },
-            formdata2:{
-                customer: "",
-                message: "",
-            },
-            pollingStarted: false,
-            messages: [],
-            backofficeAdmin: "",
-            formdata3:{
-                text: "",
-                content_type: 15,
-                object_id: "",
-                session: "",
-            }
-        };
+  name: "ChatComponent",
+  data() {
+    return {
+      isChatVisible: false, // Initial visibility state
+      isMoreHeaderVisible: false,
+      chatStatus: sessionStorage.getItem("requestStatus"),
+      formdata: {
+        name: "",
+        email: "",
+      },
+      formdata2: {
+        customer: "",
+        message: "",
+      },
+      pollingStarted: false,
+      messages: [],
+      backofficeAdmin: "",
+      formdata3: {
+        text: "",
+        content_type: 15,
+        object_id: "",
+        session: "",
+      },
+    };
+  },
+  methods: {
+    formatTimestamp(timestampString) {
+      const date = new Date(timestampString);
+      return date.toLocaleString(); // Basic formatting
     },
-    methods: {
-        formatTimestamp(timestampString) {
-            const date = new Date(timestampString);
-            return date.toLocaleString(); // Basic formatting
-        },
-        toggleChatVisibility() {
-            // Toggle the visibility state
-            this.isChatVisible = !this.isChatVisible;
-            const body = document.body;
+    toggleChatVisibility() {
+      // Toggle the visibility state
+      this.isChatVisible = !this.isChatVisible;
+      const body = document.body;
 
-            // Check if scrolling is currently enabled
-            if (body.style.overflow === 'hidden') {
-                // If scrolling is disabled, enable it
-                body.style.overflow = '';
-            } else {
-                // If scrolling is enabled, disable it
-                body.style.overflow = 'hidden';
-            }
-        },
-        toggleMoreHeaderVisibility() {
-            // Toggle the visibility state
-            this.isMoreHeaderVisible = !this.isMoreHeaderVisible;
-        },
-        async sendRequest(){
-            const BASE_URL = "https://prosperc40.pythonanywhere.com/customers";
-            axios
-            .post(BASE_URL, this.formdata).then(response=> {
-                sessionStorage.setItem('customerId', response.data.id);
-                this.formdata2.customer = response.data.id
-                axios
-                .post('https://prosperc40.pythonanywhere.com/chat-requests', this.formdata2).then(response => {
-                    this.formdata.name = "";
-                    this.formdata.email = "";
-                    this.formdata2.customer = "";
-                    this.formdata2.message = "";
-                    sessionStorage.setItem('requestStatus', 'pending');
-                    sessionStorage.setItem('requestId', response.data.id);
-                    this.chatStatus = sessionStorage.getItem('requestStatus');
-                    this.startRequestStatusPolling();
-                }).catch(error => console.log(error))
+      // Check if scrolling is currently enabled
+      if (body.style.overflow === "hidden") {
+        // If scrolling is disabled, enable it
+        body.style.overflow = "";
+      } else {
+        // If scrolling is enabled, disable it
+        body.style.overflow = "hidden";
+      }
+    },
+    toggleMoreHeaderVisibility() {
+      // Toggle the visibility state
+      this.isMoreHeaderVisible = !this.isMoreHeaderVisible;
+    },
+    async sendRequest() {
+      const BASE_URL = "https://prosperc40.pythonanywhere.com/customers";
+      axios
+        .post(BASE_URL, this.formdata)
+        .then((response) => {
+          sessionStorage.setItem("customerId", response.data.id);
+          this.formdata2.customer = response.data.id;
+          axios
+            .post(
+              "https://prosperc40.pythonanywhere.com/chat-requests",
+              this.formdata2
+            )
+            .then((response) => {
+              this.formdata.name = "";
+              this.formdata.email = "";
+              this.formdata2.customer = "";
+              this.formdata2.message = "";
+              sessionStorage.setItem("requestStatus", "pending");
+              sessionStorage.setItem("requestId", response.data.id);
+              this.chatStatus = sessionStorage.getItem("requestStatus");
+              this.startRequestStatusPolling();
             })
-            .catch(error => console.log(error));
-        },
-        async checkForRequestStatus() {
-            const id = sessionStorage.getItem('requestId');
-            const url = `https://prosperc40.pythonanywhere.com/chat/status/${id}/`;
-
-            try {
-                const response = await axios.get(url);
-                if (response.data.status === 'a') {
-                    sessionStorage.setItem('requestStatus', 'approved');
-                    sessionStorage.setItem('chatSessionId', response.data.session)
-                    this.chatStatus = sessionStorage.getItem('requestStatus');
-                    this.fetchMessages();
-                } else if (response.data.status === 'p') {
-                    sessionStorage.setItem('requestStatus', 'pending');
-                    this.chatStatus = sessionStorage.getItem('requestStatus');
-                } else if (response.data.status === 'r') {
-                    sessionStorage.setItem('requestStatus', 'rejected');
-                    this.chatStatus = sessionStorage.getItem('requestStatus');
-                }
-            } catch (error) { 
-                console.log(error);
-                sessionStorage.setItem('requestStatus', null);
-                this.chatStatus = sessionStorage.getItem('requestStatus');
-            }
-        },
-        startRequestStatusPolling() {
-            const pollingInterval = 5000; // 5 seconds (adjust as needed)
-
-            this.pollingIntervalId = setInterval(() => {
-                this.checkForRequestStatus();
-            }, pollingInterval); 
-        },
-        stopRequestStatusPolling() { 
-            clearInterval(this.pollingIntervalId);
-        },
-        async fetchMessages() {
-            let chat_session_id = sessionStorage.getItem('chatSessionId');
-            try {
-                const response = await axios.get(`https://prosperc40.pythonanywhere.com/chat-sessions/${chat_session_id}`);
-                let adminid = response.data.backoffice_user;
-                const response2 = await axios.get(`https://prosperc40.pythonanywhere.com/users/${adminid}`);
-                this.backofficeAdmin = response2.data.name;
-            } catch (error) {
-                console.error('Error fetching messages:', error);
-            }
-            try {
-                const response = await axios.get(`https://prosperc40.pythonanywhere.com/chat-messages?session=${chat_session_id}`);
-                this.messages = response.data;
-            } catch (error) {
-                console.error('Error fetching messages:', error);
-            }
-        },
-        async sendText() {
-            this.formdata3.object_id = sessionStorage.getItem('customerId');
-            this.formdata3.session = sessionStorage.getItem('chatSessionId');
-
-            axios
-            .post('https://prosperc40.pythonanywhere.com/chat-messages', this.formdata3).then(response => {
-                console.log(response);
-                this.formdata3.text = "";
-                this.fetchMessages();
-            }).catch(error => console.log(error))
-        }
+            .catch((error) => console.log(error));
+        })
+        .catch((error) => console.log(error));
     },
-    mounted() {
+    async checkForRequestStatus() {
+      const id = sessionStorage.getItem("requestId");
+      const url = `https://prosperc40.pythonanywhere.com/chat/status/${id}/`;
+
+      try {
+        const response = await axios.get(url);
+        if (response.data.status === "a") {
+          sessionStorage.setItem("requestStatus", "approved");
+          sessionStorage.setItem("chatSessionId", response.data.session);
+          this.chatStatus = sessionStorage.getItem("requestStatus");
+          this.fetchMessages();
+        } else if (response.data.status === "p") {
+          sessionStorage.setItem("requestStatus", "pending");
+          this.chatStatus = sessionStorage.getItem("requestStatus");
+        } else if (response.data.status === "r") {
+          sessionStorage.setItem("requestStatus", "rejected");
+          this.chatStatus = sessionStorage.getItem("requestStatus");
+        }
+      } catch (error) {
+        console.log(error);
+        sessionStorage.setItem("requestStatus", null);
+        this.chatStatus = sessionStorage.getItem("requestStatus");
+      }
+    },
+    startRequestStatusPolling() {
+      const pollingInterval = 5000; // 5 seconds (adjust as needed)
+
+      this.pollingIntervalId = setInterval(() => {
         this.checkForRequestStatus();
-        if (sessionStorage.getItem('requestStatus') === 'pending' || sessionStorage.getItem('requestStatus') === 'approved'){
-            if (!this.pollingStarted) { // Check if polling has already begun
-                this.startRequestStatusPolling();
-                this.pollingStarted = true; // Set flag to prevent restarting
-            }
-        }
-        if (sessionStorage.getItem('requestStatus') === 'approved'){
-            this.fetchMessages();
-        }
+      }, pollingInterval);
     },
-    beforeDestroy() {
-        this.stopRequestStatusPolling();
+    stopRequestStatusPolling() {
+      clearInterval(this.pollingIntervalId);
+    },
+    async fetchMessages() {
+      let chat_session_id = sessionStorage.getItem("chatSessionId");
+      try {
+        const response = await axios.get(
+          `https://prosperc40.pythonanywhere.com/chat-sessions/${chat_session_id}`
+        );
+        let adminid = response.data.backoffice_user;
+        const response2 = await axios.get(
+          `https://prosperc40.pythonanywhere.com/users/${adminid}`
+        );
+        this.backofficeAdmin = response2.data.name;
+      } catch (error) {
+        console.error("Error fetching messages:", error);
+      }
+      try {
+        const response = await axios.get(
+          `https://prosperc40.pythonanywhere.com/chat-messages?session=${chat_session_id}`
+        );
+        this.messages = response.data;
+      } catch (error) {
+        console.error("Error fetching messages:", error);
+      }
+    },
+    async sendText() {
+      this.formdata3.object_id = sessionStorage.getItem("customerId");
+      this.formdata3.session = sessionStorage.getItem("chatSessionId");
+
+      axios
+        .post(
+          "https://prosperc40.pythonanywhere.com/chat-messages",
+          this.formdata3
+        )
+        .then((response) => {
+          console.log(response);
+          this.formdata3.text = "";
+          this.fetchMessages();
+        })
+        .catch((error) => console.log(error));
+    },
+  },
+  mounted() {
+    this.checkForRequestStatus();
+    if (
+      sessionStorage.getItem("requestStatus") === "pending" ||
+      sessionStorage.getItem("requestStatus") === "approved"
+    ) {
+      if (!this.pollingStarted) {
+        // Check if polling has already begun
+        this.startRequestStatusPolling();
+        this.pollingStarted = true; // Set flag to prevent restarting
+      }
     }
+    if (sessionStorage.getItem("requestStatus") === "approved") {
+      this.fetchMessages();
+    }
+  },
+  beforeDestroy() {
+    this.stopRequestStatusPolling();
+  },
 };
 </script>
