@@ -74,7 +74,7 @@
         <form>
           <div
             class="sendMessageContainer"
-            v-if="this.chatStatus !== 'null' || this.chatStatus !== 'rejected'"
+            v-if="this.chatStatus === 'approved'"
           >
             <div class="textarea-container">
               <textarea
