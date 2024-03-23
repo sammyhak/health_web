@@ -26,13 +26,6 @@
                             </div>
                         </div>
                     </div>
-                    <br><br>
-                    <form>
-                        <textarea cols="30" rows="5" v-model="formdata3.text" placeholder="Write your message..."></textarea>
-                        <button class="sendMessageBtn" @click.prevent="sendText">
-                            <img src="../assets/send.svg" alt="sendIcon">
-                        </button>
-                    </form>
                 </div>
             </div>
             <div class="request-pending" v-if="this.chatStatus === 'pending'">
