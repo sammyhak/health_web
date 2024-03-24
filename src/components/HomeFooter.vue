@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row container">
       <div class="col-12 col-md-4">
         <img src="../assets/Frame 8.png" class="im" />
         <p class="mt-3">29 Adeniyi Jones Avenue,Ikeja-Lagos,Nigeria</p>

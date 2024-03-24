@@ -1,7 +1,7 @@
 <template>
   <div class="main-div">
     <div class="container di">
-      <div class="row container">
+      <div class="row container" style="margin: 50px 0px;">
       <div class="col-md-6 col-12 di">
         <div>
             <h1 class="h1-dis te font-for-our-milki">Discover a world of healthcare solutions at your fingertips.</h1>

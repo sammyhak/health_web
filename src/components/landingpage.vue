@@ -1,9 +1,9 @@
 <template>
   <div class="container te">
-    <div class="row">
+    <div class="row container-sm">
       <div class="col-md-6 col-12">
-        <div class="ft mt-5">
-
+        <br><br>
+        <div class="ft">
           <h2 class="mt-5 te font-for-our-milki">Our love for <span class="humanity">Humanity</span> drives our <span
               class="passion">passion</span> for <span class="healthcare">healthcare.</span> </h2>
           <br>
@@ -63,6 +63,8 @@ export default {
 
 .font-for-inter {
   font-family: facee;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .what {
@@ -75,12 +77,13 @@ export default {
 
 .button-nav {
   background-color: #258576 !important;
-  width: 135px;
-  height: 42px;
+  width: 196px;
+  height: 46px;
   border: 0px;
-  border-radius: 34px;
+  border-radius: 62px;
   color: white !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
+  font-weight:500;
 }
 
 .ft {
@@ -106,17 +109,25 @@ export default {
 }
 
 h2 {
-  font-size: 50px !important;
-
-
+  font-size: 48px !important;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
+  h2{
+    font-size: 28px !important;
+  }
+  .font-for-inter {
+    font-size: 18px;
+  }
+  .button-nav{
+    font-size: 14px !important;
+  }
+}
+</style>
+<!-- @media screen and (max-width: 600px) {
   #app > div:nth-child(2) > div.container.te > div.mt-5 > div{
     padding: unset;
     margin:unset;
   }
 }
-
-.te {}
-</style>
+ -->

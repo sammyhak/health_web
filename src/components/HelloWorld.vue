@@ -2,8 +2,8 @@
    <div>
     <div class="container">
       
-    <div class="navb">
-  <b-navbar toggleable="lg">
+    <div class="navb" style="padding-top: 24px;">
+    <b-navbar toggleable="lg">
     <b-navbar-brand href="#"><img src="../assets/Frame 8.png" class="img-class"></b-navbar-brand>
 
     <b-navbar-toggle  type="light" variant="light" target="nav-collapse" class="mb-2"></b-navbar-toggle>
@@ -61,31 +61,26 @@
               </div>
             </div>
           </div>
-        </li></b-nav-item>
-       
-
-        <!-- <b-nav-item-dropdown text="Products" right  class="ml-5 mar  d-sm-block d-md-none d-md-block d-lg-none" 
-    menu-class="w-100">
+        </li>
+        <b-nav-item-dropdown text="Product" right  class="ml-5 mar container d-sm-block d-md-block d-lg-none" menu-class="w-100">
           <div class="">
             <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></b-dropdown-item></div>
             <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></b-dropdown-item></div>
             <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Suppressant" class="rou">Surpressant</router-link></b-dropdown-item></div>
             <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Calcium" class="rou">Calcium</router-link></b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Antihypertensive" class="rou">Anti Hypertensive</router-link></b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Antihistamine" class="rou">Antihistamine</router-link></b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Anti-inflammatory" class="rou">Anti-inflammatory</router-link></b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Anti-anemic" class="rou">Anti-anemic</router-link></b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Blood-tonic" class="rou">Blood-tonic</router-link></b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Dental" class="rou">Dental</router-link></b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Skincare" class="rou">Skincare</router-link></b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Iron-Replacement" class="rou">Iron-Replacement</router-link></b-dropdown-item></div>
-            <div class="col-2"><b-dropdown-item href="#"><router-link to="/products/Wound-Dressing" class="rou">Wound-Dressing</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Antihypertensive" class="rou">Anti Hypertensive</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Antihistamine" class="rou">Antihistamine</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Anti-inflammatory" class="rou">Anti-inflammatory</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Anti-anemic" class="rou">Anti-anemic</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Blood-tonic" class="rou">Blood-tonic</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Dental" class="rou">Dental</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Skincare" class="rou">Skincare</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Iron-Replacement" class="rou">Iron-Replacement</router-link></b-dropdown-item></div>
+            <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Wound-Dressing" class="rou">Wound-Dressing</router-link></b-dropdown-item></div>
           </div>
           
-         
-         
-          
-        </b-nav-item-dropdown> -->
+        </b-nav-item-dropdown>
+      </b-nav-item>
        
       </b-navbar-nav>
       
@@ -132,12 +127,13 @@
       </button>
     </router-link> -->
   </div></b-nav-item>
-        <b-nav-item href="#" class="mt-2 ma"><router-link to="/cart" class="rou"><img src="../assets/ShoppingCart.png" class="imgf ml-5"></router-link></b-nav-item>
+        
       
 
        
       </b-navbar-nav>
     </b-collapse>
+    <div href="#" class="mt-2 ma"><router-link to="/cart" class="rou"><img src="../assets/ShoppingCart.png" class="imgf ml-5"></router-link></div>
   </b-navbar>
 
   
@@ -163,6 +159,23 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+@media only screen and (max-width: 988px) {
+  a {
+    text-transform: uppercase;
+  }
+}
+button[data-v-469af010] { 
+    border: none;
+    padding-right: 0px;
+    padding-left: 10px;
+    /* padding-bottom: 0px !important; */
+    margin-top: 3px;
+}
+#app > div:nth-child(1) > div > div > nav > button[data-v-469af010]:focus {
+    border: none !important;
+    outline: none;
+    box-shadow: none;
+}
 .font-for-inter{
   font-family: facee;
 }
@@ -213,7 +226,8 @@ b-navbar-nav{
 
 .img-class{
   width: 183.58px;
-      height: 19.16px;
+  height: 19.16px;
+  margin-left: 40px !important;
       /* border: 10px solid blue; */
 }
 .ml-auto, .mx-auto {

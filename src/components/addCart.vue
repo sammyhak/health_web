@@ -35,7 +35,7 @@
                   <div style="color: rgba(32, 32, 32, 0.80); font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">COMPOSITION</div>
                 </div>
               </div>
-              <div style="width: auto; color: rgba(32, 32, 32, 0.90); font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">{{ product.composition }}</div>
+              <div style="width: 100%; color: rgba(32, 32, 32, 0.90); font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">{{ product.composition }}</div>
             </div>
             <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
               <div style="width: 100%; border-bottom: 1px rgba(32, 32, 32, 0.30) solid; justify-content: flex-start; align-items: center; display: inline-flex">
@@ -81,9 +81,9 @@
     <div>
         <div class="row mt-3 mb-5">
           <p style="font-size: 22px; font-weight:normal;">More Products</p><br>
-            <div class ="col-md-3 col-12" v-for="produc in similarProducts.slice(0, 4)" :key="produc.id">
+            <div class ="col-md-3 col-6" v-for="produc in similarProducts.slice(0, 4)" :key="produc.id">
               <router-link :to="`/add/${produc.id}`" class="rou" style="text-decoration: none; color: #000;">
-                    <img :src="produc.image" class="container-fluid we" height="192" width="155" alt="broken">
+                    <img :src="produc.image" class="container-fluid img-fluid we" height="192" width="155" alt="broken">
                     <div class="row">
                         <div class="col-8">
                           <p class="myh">{{ produc.drug_name }}</p>
@@ -224,6 +224,7 @@
 .fr{
   border:1px solid #E0E0E0;
   border-radius: 10px;
+  width: 100% !important;
 }
 .val{
   color:black;

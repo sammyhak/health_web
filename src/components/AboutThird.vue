@@ -2,7 +2,7 @@
   <div>
     <div class="container company" id="section1">
     <div class="row g-0">
-        <div class="col-md-4 col-12">
+        <!-- <div class="col-md-4 col-12">
             <div>
                 <h6 class="hyu">
                 Head Office
@@ -25,7 +25,7 @@
             
             </div>
           
-        </div>
+        </div> -->
         <div class="col-md-4 col-12 company-photos">
             <img src="../assets/DSC_0019 1.png" height="252" style="padding: 7px; width: 100%;">
             <img src="../assets/Frame 1171276973.png" height="252" style="padding: 7px; width: 100%;">
