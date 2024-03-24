@@ -263,7 +263,7 @@ pointer-events: none;
 #app > div:nth-child(1) > div > div > nav > button{
   border: none !important;
   position: absolute !important;
-  margin-top: 10px !important;
+  top: 10px !important;
 }
 
 #app > div:nth-child(1) > div > div > nav > a > img{
