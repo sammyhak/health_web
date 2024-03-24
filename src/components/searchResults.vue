@@ -12,7 +12,7 @@
             </div>
             <br><br>
             <div class="container row">
-                <div  v-for="result in searchResults" :key="result.id" class="col-12 col-md-3">
+                <div  v-for="result in searchResults" :key="result.id" class="col-6 col-md-3">
                     <router-link :to="`/add/${result.id}`" class="rou" style="text-decoration: none; color: #000;">
                         <div class="image-container">
                             <img :src="result.image" class="img-fluid im-pro" alt="broken">

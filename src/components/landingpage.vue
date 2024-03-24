@@ -18,17 +18,16 @@
     </div>
 
     <div class="mt-5 ">
-      <div class="row row-color mt-3 container">
-
-        <div class="col-lg-5 col-12 mt-5 pt-5">
+      <div style="border-radius: 20px;" class="row row-color container-sm">
+        <div class="col-md-6 col-12 mt-5 pt-5"><br><br>
           <h5 class="what font-for-inter ">What we do</h5>
-          <p class="mt-3 font-for-inter">We are a pharmaceutical company focused on the marketing and distribution of
+          <p style="font-size: larger;" class="mt-3 fs-6 font-for-inter">We are a pharmaceutical company focused on the marketing and distribution of
             pharmaceutical healthcare products. But Also involved in bridging unmet healthcare needs in medical tourism,
             providing Diagnostic Equipment's for medical institutions and medical training's( for Medical Personnel &
             Para-Medics) thereby ensuring a more knowledgeable and skillful health team.</p>
           <!-- <button class="btn-lg bt button-nav mar mt-5 font-for-inter" @click="navigateToAbout">Read More</button> -->
         </div>
-        <div class="col-lg-7 col-12 mt-5">
+        <div class="col-md-6 col-12 mt-5">
           <img src="../assets/Group 3.png" class="img-fluid">
         </div>
       </div>

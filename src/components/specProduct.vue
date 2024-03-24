@@ -9,9 +9,9 @@
 
 
       <div class="row mt-3">
-        <div class="col-md-3 col-12" v-for="post in this.posts " :key="post.id">
+        <div class="col-md-3 col-6" v-for="post in this.posts " :key="post.id">
           <div class>
-            <img :src="post.image"  height="175" width="216">
+            <img :src="post.image" class="img-fluid">
             <div class="row">
               <div class="col-7">
                 <p class="myh">{{ post.drug_name }}</p>

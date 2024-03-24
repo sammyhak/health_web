@@ -1,7 +1,7 @@
 <template>
   <section class='featured-products'>
     <div class="featured-product-container">
-      <div class="header">
+      <div class="container header">
         <h3>Featured Products</h3>
         <div class="controls">
           <img src="../assets/previous.svg" alt="previous" class="previous">

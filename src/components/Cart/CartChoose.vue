@@ -15,10 +15,14 @@
                     <h5 class="mt-3 mk pt-3" >{{ cart.name }}</h5>
                     <p class=""><span class="io">Presentation</span> :<span class="pre">{{ cart.presentation }}</span></p>
                     <p class="pre">Quantity</p>
-                    <p class=""><span >
+                    <p class="">
+                      <span>
                         <button class="minus" @click="minus(cart.id)">-</button>
-                    </span><span class="forty">{{ cart.quantity}}</span><span>
-                        <button class="minus" @click="plus(cart.id)">+</button></span>
+                      </span>
+                      <span class="forty">{{cart.quantity}}</span>
+                      <span>
+                        <button class="minus" @click="plus(cart.id)">+</button>
+                      </span>
                     </p>
                 </div>
                 <div class="col-md-1 col-12 lo">
@@ -147,12 +151,13 @@
 
 
       remove(index) {
-              this.cartItems.splice(index, 1);
-              this.updateSessionStorage();
-              window.location.reload();
-          },
+        this.cartItems.splice(index, 1);
+        this.updateSessionStorage();
+        window.location.reload();
+      },
       plus(cartId){
           const productToUpdate = this.cartItems.find(cart => cart.id === cartId);
+          console.log(productToUpdate);
         if (productToUpdate) {
           productToUpdate.quantity += 1;
           // Update session storage
@@ -161,6 +166,7 @@
       },
       minus(cartId){
           const productToUpdate = this.cartItems.find(cart => cart.id === cartId);
+          console.log(productToUpdate);
         if (productToUpdate.quantity>0) {
           productToUpdate.quantity -= 1;
           // Update session storage
@@ -193,8 +199,8 @@
     background-color:white;
 }
 .fh{
-    background-color: #258576 !important ;
-    color: white !important; ;
+    background-color: #258576 !important;
+    color: white !important;
     border:none;
     border-radius:8px;
 }

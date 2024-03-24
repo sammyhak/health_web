@@ -29,12 +29,17 @@ export default {
   <div class="">
 
     <landingPage></landingPage>
+    <br><br>
     <featuredPro></featuredPro>
     <!-- <blogPro></blogPro> -->
+    <br><br>
     <discoverLanding></discoverLanding>
+    <br><br>
     <ourProject></ourProject>
+    <br><br><br><br>
     <freQuent></freQuent>
     <chatComponent></chatComponent>
+    <br><br><br><br><br><br>
     <!-- <thirdProducts></thirdProducts> -->
 
   </div>
