@@ -253,6 +253,10 @@ pointer-events: none;
   .dropdown-hover:hover>.dropdown-menu{
     display:block;
   }
+
+  .button-nav{
+    width: 100%;
+  }
 }
 
 .nav-item-for-drop {
@@ -260,5 +264,23 @@ pointer-events: none;
 }
 
 
+#app > div:nth-child(1) > div > div > nav > button{
+  border: none !important;
+  position: absolute !important;
+  top: 10px !important;
+  outline: none;
+}
 
+#app > div:nth-child(1) > div > div > nav > a > img{
+  margin-left: 50px;
+}
+
+#nav-collapse > ul.navbar-nav.mx-auto > li > a > a{
+  font-family: Inter;
+font-size: 16px !important;
+font-weight: 400 !important;
+line-height: 19.36px !important;
+text-align: left !important;
+margin-left: 10px !important;
+}
 </style>
