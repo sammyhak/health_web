@@ -112,5 +112,12 @@ h2 {
 
 }
 
+@media screen and (max-width: 600px) {
+  #app > div:nth-child(2) > div.container.te > div.mt-5 > div{
+    padding: unset;
+    margin:unset;
+  }
+}
+
 .te {}
 </style>
