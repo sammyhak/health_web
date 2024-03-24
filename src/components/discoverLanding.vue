@@ -2,7 +2,7 @@
   <div class="main-div">
     <div class="container di">
       <div class="row container">
-      <div class="col-6 di">
+      <div class="col-12  col-md-6 di mt-3">
         <div>
             <h1 class="h1-dis te font-for-our-milki">Discover a world of healthcare solutions at your fingertips.</h1>
         <p class="font-for-inter">Healthline is here to support you on your journey to better health.</p>
@@ -10,7 +10,7 @@
         </div>
       
       </div>
-      <div class="col-6 di">
+      <div class="col-12 col-md-6 di">
         <img src="../assets/newes.png" class="img-fluid">
       </div>
     </div>
