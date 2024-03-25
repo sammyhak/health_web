@@ -113,4 +113,7 @@ export default {
 
 	font-weight: bold;
 }
+.our-partners-header .row {
+    width: 100%;
+}
 </style>

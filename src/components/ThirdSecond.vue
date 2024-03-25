@@ -138,6 +138,16 @@ export default {
 
 }
 
+@media (max-width : 576px) {
+  .cu{
+    padding: 20px !important;
+  }
+  .cu h3{
+    font-size: 24px !important;
+    line-height: normal !important;
+  }
+}
+
 .card {
   box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),

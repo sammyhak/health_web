@@ -7,6 +7,7 @@
 </template>
 <script src="https://kit.fontawesome.com/a934b30340.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 <script>
 import HelloWorld from './components/HelloWorld.vue';
 import HomeFooter from './components/HomeFooter.vue';

@@ -9,7 +9,8 @@
             <img :src="product.image" class="id" alt="broken">
           </div>
           <div class="offset-lg-1 col-lg-7 col-md-12 col-12">
-            <p class="h2-ceph">{{product.drug_name}}</p><br>
+            <p class="h2-ceph">{{product.drug_name}}</p>
+            <p class="desc">{{ product.drug_desc }}</p>
             <p class="cat">Category: {{ product.category }}</p>
             <p class="cat">Presentation: <span class="val">{{ product.presentation }}</span></p>
             <p ><span class="nu">{{product.price}}</span> <span><button class="ins">In stock</button></span></p>
@@ -80,23 +81,34 @@
     <br><br>
     <div>
         <div class="row mt-3 mb-5">
-          <p style="font-size: 22px; font-weight:normal;">More Products</p><br>
-            <div class ="col-md-3 col-6" v-for="produc in similarProducts.slice(0, 4)" :key="produc.id">
-              <router-link :to="`/add/${produc.id}`" class="rou" style="text-decoration: none; color: #000;">
-                    <img :src="produc.image" class="container-fluid img-fluid we" height="192" width="155" alt="broken">
-                    <div class="row">
-                        <div class="col-8">
-                          <p class="myh">{{ produc.drug_name }}</p>
-                          <p class="ni">{{ produc.category }}</p>
-                          <p  class="av in"><span><img src="../assets/Ellipse 43.png" class="im1" ></span>Available for delivery</p>
-                          <p  class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"  ></span>In stock</p>
-                        </div>
-                        <div class="col-4">
-                           <p class="mh"> {{produc.price}}</p>
-                        </div>
-                    </div>
-                </router-link>
-            </div>
+          <p style="font-size: 22px; font-weight:normal;">More Products</p>
+            <section class='featured-products'>
+              <div class="featured-product-container featured-product-container2">
+                <div class="header">
+                  <div class="controls">
+                    <img src="../assets/previous.svg" alt="previous" class="previous">
+                    <img src="../assets/next.svg" alt="next" class="next">
+                  </div>
+                </div>
+
+                <div class="products">
+                  <div class="featured-product" v-for="(product, index) in similarProducts" :key="index">
+                    <router-link :to="`/add/${product.id}`" class="rou" style="text-decoration: none; color: #000;">
+                      <div class="img-container">
+                        <img :src="product.image" alt="drug" class="img">
+                      </div>
+                      <div class="title">
+                        {{product.drug_name}}
+                        <div class="price">{{product.price}}</div>
+                      </div>
+                      <div class="description">
+                        {{product.category}}
+                      </div>
+                    </router-link>
+                  </div>        
+                </div>
+              </div>
+            </section>
         </div>
        </div>
        </div>
@@ -123,6 +135,12 @@
         cart: [],
         quantity: 0,
       };
+    },
+    watch: {
+      '$route': 'fetchProductData'
+    },
+    created() {
+      this.fetchProductData();
     },
     mounted() {
       this.fetchProductData();
@@ -232,10 +250,37 @@
 .h2-ceph{
   font-size: 46px;
   font-weight:bold;
+  margin-top: 15px;
   margin-bottom: 0; 
-  padding-bottom: 0; 
+  padding-bottom: 5px; 
   line-height: 1.2;
+  font-family: millik;
 }
+.desc{
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+  .h2-ceph {
+    font-size: 22px;
+  }
+  .desc{
+    font-size: 14px;
+  }
+}
+
+.featured-product-container2{
+  padding-top: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  height: 507px !important;
+}
+
+.img-container{
+  width: 298px !important;
+  height: 241px !important;
+}
+
 .cef{
   font-weight: 20px;
   font-weight: 800px;

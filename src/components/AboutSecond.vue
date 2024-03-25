@@ -1,6 +1,6 @@
 <template>
   <div class="container cf">
-    <div class="row container c">
+    <div class="row c">
       <div class="col-md-6 col-12">
 
         <p class="p-tag-class">Healthline Limited is a company registered in 2008 by Pharm Ramchandra Badgujar and Pharm

@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div class="bottom">
     <div class="container">
       
     <div class="navb" style="padding-top: 24px;">
@@ -14,54 +14,62 @@
         <b-nav-item href="# " class="ml-5 ma ">
            <router-link to="/about" class="rou mar">About Us</router-link></b-nav-item>
         <b-nav-item href="#" class="nav-item-for-drop ml-5" >  <li class="ml-5nav-item dropdown dropdown-hover position-static">
-          <a class="nav-link dropdown-toggle d-none d-lg-block d-xl-block d-xxl-block" href="#" id="navbarDropdown" role="button"
-            data-mdb-toggle="dropdown" aria-expanded="false">
-            Products
-          </a>
+          <div @click="this.clicked">
+            <a class="nav-link dropdown-toggle d-none d-lg-block d-xl-block d-xxl-block" href="#" id="navbarDropdown" role="button"
+              data-mdb-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+          </div>
           <!-- Dropdown menu -->
+          <!-- DESKTOP -->
+          <transition name="dropdown">
+            <div v-if="isDropped" class="dropdown-menu mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                              border-top-right-radius: 0;">
 
-          <div class="dropdown-menu w-90 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
-                            border-top-right-radius: 0;
-                          ">
-
-            <div class="container">
-              <div class="row my-4">
-                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                  <div class="list-group list-group-flush">
-                    <a href="/product" class="list-group-item list-group-item-action"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Suppressant" class="rou">Surpressant</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Calcium" class="rou">Calcium</router-link></a>
-                    <!-- <a href="" class="list-group-item list-group-item-action"><router-link to="/product" class="rou">Anti-histamines</router-link>Adipisicing elit</a> -->
+              <div class="container">
+                <br><br>
+                <div class="container">
+                    <h1>Pharmacy</h1>
                   </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                  <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item list-group-item-action"><router-link to="/product/Antihypertensive">Anti Hypertensive</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Antihistamine">Antihistamine</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-inflammatory">Anti-inflammatory</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-anaemic">Anti-anaemic</router-link></a>
-                    <!-- <a href="" class="list-group-item list-group-item-action">Provident dolor</a> -->
+                <div class="row my-4">
+                  <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="list-group list-group-flush">
+                      <a href="/product" class="list-group-item list-group-item-action"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></a>
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></a>
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Suppressant" class="rou">Surpressant</router-link></a>
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Calcium" class="rou">Calcium</router-link></a>
+                      <!-- <a href="" class="list-group-item list-group-item-action"><router-link to="/product" class="rou">Anti-histamines</router-link>Adipisicing elit</a> -->
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-                  <div class="list-group list-group-flush">
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Blood-tonic">Blood-tonic</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Dental">Dental</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Skincare">Skincare</router-link></a>
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Iron-Replacement">Iron-Replacement</router-link></a>
-                    <!-- <a href="" class="list-group-item list-group-item-action">Laboriosam</a> -->
+                  <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="list-group list-group-flush">
+                      <a href="#" class="list-group-item list-group-item-action"><router-link to="/product/Antihypertensive" class="rou">Anti Hypertensive</router-link></a>
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Antihistamine" class="rou">Antihistamine</router-link></a>
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-inflammatory" class="rou">Anti-inflammatory</router-link></a>
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-anaemic" class="rou">Anti-anaemic</router-link></a>
+                      <!-- <a href="" class="list-group-item list-group-item-action">Provident dolor</a> -->
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                  <div class="list-group list-group-flush">
-                    <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Wound-Dressing">Wound-Dressing</router-link></a>                                       
+                  <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                    <div class="list-group list-group-flush">
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Blood-tonic" class="rou">Blood-tonic</router-link></a>
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Dental" class="rou">Dental</router-link></a>
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Skincare" class="rou">Skincare</router-link></a>
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Iron-Replacement" class="rou">Iron-Replacement</router-link></a>
+                      <!-- <a href="" class="list-group-item list-group-item-action">Laboriosam</a> -->
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                    <div class="list-group list-group-flush">
+                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Wound-Dressing" class="rou">Wound-Dressing</router-link></a>                                       
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </transition>
         </li>
+        <!-- MOBILE -->
         <b-nav-item-dropdown text="Product" right  class="ml-5 mar container d-sm-block d-md-block d-lg-none" menu-class="w-100">
           <div class="">
             <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></b-dropdown-item></div>
@@ -135,12 +143,8 @@
     </b-collapse>
     <div href="#" class="mt-2 ma"><router-link to="/cart" class="rou"><img src="../assets/ShoppingCart.png" class="imgf ml-5"></router-link></div>
   </b-navbar>
-
   
 </div>
-
-
-
 
     
   </div>
@@ -151,13 +155,76 @@
 <script>
 export default {
   name: 'HelloWorld',
-
- 
+  data(){
+    return {
+      log: "logged",
+      isDropped: false,
+    }
+  },
+  watch: {
+    '$route'() {
+      this.dropdownOpen = false;
+    }
+  },
+  mounted() {
+    window.addEventListener('click', this.closeDropdown);
+  },
+  methods:{
+    clicked(){
+      this.isDropped = !this.isDropped
+    },
+    closeDropdown(event) {
+      if (!this.$el.contains(event.target)) {
+        this.isDropped = false;
+      }
+    }
+  },
+  beforeRouteLeave(to, from, next) {
+    console.log('leaving');
+    this.dropdownOpen = false;
+    next();
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.dropdown-menu.mt-0 {
+    position: absolute !important;
+    width: 100% !important;
+    height: 617px !important;
+    right: 0 !important;
+    left: 0 !important;
+    top: 80px !important;
+    background: #FFFFFF;
+    border: none;
+    display: block;
+    border-radius: unset;
+}
+
+.list-group-item{
+  border: none;
+}
+
+.container h1{
+  padding-left: 5px !important;
+  font-weight: bolder !important;
+  font-size: 24px !important;
+}
+
+div.bottom {
+    border-bottom: 2px solid #e0dfdf;
+}
+
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: all 1s;
+}
+.dropdown-enter,
+.dropdown-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
 
 @media only screen and (max-width: 988px) {
   a {
@@ -165,16 +232,15 @@ export default {
   }
 }
 button[data-v-469af010] { 
-    border: none;
-    padding-right: 0px;
-    padding-left: 10px;
-    /* padding-bottom: 0px !important; */
-    margin-top: 3px;
+    border: none !important;
+    padding-right: 0px !important;
+    padding-left: 10px !important;
+    margin-top: 3px !important;
 }
 #app > div:nth-child(1) > div > div > nav > button[data-v-469af010]:focus {
     border: none !important;
-    outline: none;
-    box-shadow: none;
+    outline: none !important;
+    box-shadow: none !important;
 }
 .font-for-inter{
   font-family: facee;
@@ -255,9 +321,9 @@ b-navbar-nav{
 .rou{
   text-decoration: none !important;
 }
-.dropdown-hover:hover>.dropdown-menu {
+/* .dropdown-hover:hover>.dropdown-menu {
 display: inline-block;
-}
+} */
 
 .dropdown-hover>.dropdown-toggle:active {
 /*Without this, clicking will make it sticky*/
