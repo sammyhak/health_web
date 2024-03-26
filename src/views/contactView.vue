@@ -2,14 +2,14 @@
     <div>
         <div class="container mb-5 mt-3"> 
             <h4 class="text-center mb-3 ">Contact Page</h4>
-
-
+            <br>
             <div>
                 <div class="row">
-                    <div class="col-md-5 lg-12">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3114500422394!2d3.339386473213691!3d6.608167322177318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93373c91a795%3A0x4b7774a497af50d!2s29%20Adeniyi%20Jones%2C%20Street%2C%20Ikeja%20100282%2C%20Lagos!5e0!3m2!1sen!2sng!4v1707304144570!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div>
+                        <iframe class="col-12 col-md-6" style="border:0; width: 100%; height: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3114500422394!2d3.339386473213691!3d6.608167322177318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93373c91a795%3A0x4b7774a497af50d!2s29%20Adeniyi%20Jones%2C%20Street%2C%20Ikeja%20100282%2C%20Lagos!5e0!3m2!1sen!2sng!4v1707304144570!5m2!1sen!2sng" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="col-md-7 col-12 text-center">
+                    <!-- <br><br><br><br><br><br><br><br><br><br> -->
+                    <div class="col-md-6 col-12 text-center">
                         <h5 class=" ">Contact details</h5>
                         
                         <p class="heading-contact-page ">Email</p>
@@ -23,6 +23,7 @@
                 </div>
             </div>
         </div>
+        <br>
     </div>
 </template>
   

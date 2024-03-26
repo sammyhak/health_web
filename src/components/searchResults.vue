@@ -1,34 +1,34 @@
 <template>
-    <center>
+    <div>
         <secondBar></secondBar>
-        <div v-if="isLoading">Loading Search Results...</div>
-        <div v-else-if="searchResults && searchResults.length > 0">
-            <div>
-                <div style="width: 499px; height: 34px; justify-content: flex-start; margin-left: -50% !important; align-items: center; gap: 10px; display: inline-flex">
-                <div style="color: rgba(32, 32, 32, 0.60); font-size: 28px; font-family: Inter; font-weight: 400; word-wrap: break-word">Showing Results for</div>
-                <div style="color: #258576; font-size: 28px; font-weight: 400; word-wrap: break-word">“{{ this.searchTerm }}”</div>
-            </div><br>
-            <div style="color: #202020; margin-left: -66.5% !important; font-size: 16px; font-weight: 500; word-wrap: break-word">Found {{ this.searchResults.length }} results relating to “{{ this.searchTerm }}”</div>
-            </div>
-            <br><br>
-            <div class="container row">
-                <div  v-for="result in searchResults" :key="result.id" class="col-6 col-md-3">
-                    <router-link :to="`/add/${result.id}`" class="rou" style="text-decoration: none; color: #000;">
-                        <div class="image-container">
-                            <img :src="result.image" class="img-fluid im-pro" alt="broken">
-                        </div>
+        <div class="container">
+            <div v-if="isLoading">Loading Search Results...</div>
+            <div v-else-if="searchResults && searchResults.length > 0">
+                <br><br class="d-none d-md-block">
+                <div class="container row">
+                    <div>
+                        <span class="res">Showing Results for </span><br class="d-block d-md-none"><span class="term">“{{ this.searchTerm }}”</span>
+                        <div class="nrm d-none d-md-block">Found {{ this.searchResults.length }} results relating to “{{ this.searchTerm }}”</div>
+                    </div>
+                    <br><br><br><br class="d-none d-md-block"><br class="d-none d-md-block"><br class="d-none d-md-block"><br class="d-none d-md-block">
+                    <div  v-for="result in searchResults" :key="result.id" class="col-6 col-md-3">
+                        <router-link :to="`/add/${result.id}`" class="rou" style="text-decoration: none; color: #000;">
+                            <div class="image-container">
+                                <img :src="result.image" class="img-fluid mn im-pro" alt="broken">
+                            </div>
 
-                        <p class="mt-2">{{result.drug_name}}</p>
-                        <p class="mt-2">{{result.category}}</p>
-                        <p class="av in"><span><img src="../assets/Ellipse 43.png" class="im1"></span>Available for delivery</p>
-                        <p class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"></span>In stock</p>
-                    </router-link>
+                            <p class="mt-2">{{result.drug_name}}</p>
+                            <p class="mt-2">{{result.category}}</p>
+                            <p class="av in"><span><img src="../assets/Ellipse 43.png" class="im1"></span>Available for delivery</p>
+                            <p class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"></span>In stock</p>
+                        </router-link>
+                    </div>
                 </div>
             </div>
+            <div v-else>No Results Found.</div>
+            <br><br><br><br><br>
         </div>
-        <div v-else>No Results Found.</div>
-        <br><br><br><br><br>
-    </center>
+    </div>
 </template>
 
 <script>
@@ -48,6 +48,12 @@
                 BASE_URL: 'https://prosperc40.pythonanywhere.com/products?items=',
             }
         },
+        watch: {
+            '$route': 'performSearch'
+        },
+        created() {
+            this.performSearch();
+        },
         mounted() {
             this.performSearch();
         },
@@ -62,3 +68,45 @@
     }
 
 </script>
+
+<style>
+    span.res{
+        font-size: 28px;
+        font-family: inter;
+        color: #202020;
+        opacity: 0.6;
+    }
+    span.term{
+        color: #258576;
+        font-size: 28px;
+        font-family: millik;
+    }
+    div.nrm{
+        font-size: 16px;
+        font-family: inter;
+    }
+    img.mn.im-pro{
+        height: 295px !important;
+        width: 295px !important;
+    }
+    @media only screen and (max-width: 576px) {
+        span.res{
+            font-size: 11px;
+            font-family: inter;
+            color: #202020;
+            opacity: 0.6;
+        }
+        span.term{
+            color: #258576;
+            font-size: 18px;
+            font-family: millik;
+        }
+        img.mn.im-pro{
+            height: 156px !important;
+            width: 156px !important;
+        }
+        p.av{
+            font-size: 8px !important;
+        }
+    }
+</style>

@@ -1,8 +1,7 @@
 <template>
   <div>
+    <secondBar></secondBar>
     <div class="container">
-      <secondBar></secondBar>
-
       <h3 class="mt-5 pr">Products</h3>
       <div class="row">
         <div v-for="(product, index) in products" :key="index" class="col-12 col-md-4">

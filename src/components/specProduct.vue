@@ -2,29 +2,28 @@
   <div>
     <secondBar></secondBar>
     <div class="container mb-5">
-
-
+      <br class="d-none d-md-block">
+      <br class="d-none d-md-block">
       <h3 class="pr mt-3">Products</h3>
-      <p>{{ cart.length }} Items have been added to cart</p>
-
-
+      <br>
+      <!-- <p>{{ cart.length }} Items have been added to cart</p> -->
       <div class="row mt-3">
         <div class="col-md-3 col-6" v-for="post in this.posts " :key="post.id">
-          <div class>
-            <img :src="post.image" class="img-fluid">
+          <router-link :to="`/add/${post.id}`" class="rou" style="text-decoration: none; color: #000;">
+            <img :src="post.image" class="img-fluid mn im-pro">
             <div class="row">
-              <div class="col-7">
+              <div class="col-12">
                 <p class="myh">{{ post.drug_name }}</p>
                 <p class="ni">{{ post.category }}</p>
                 <p class="av in"><span><img src="../assets/Ellipse 43.png" class="im1"></span>Available for delivery</p>
                 <p class="av "><span><img src="../assets/Ellipse 43.png" class=" im1"></span>In stock</p>
               </div>
-              <div class="col-5">
+              <!-- <div class="col-5">
                 <button class="buy" @click="addToCart(post)">Add to cart</button>
-              </div>
+              </div> -->
 
             </div>
-          </div>
+          </router-link>
         </div>
        
       </div>
@@ -36,12 +35,11 @@
 import axios from 'axios'
 import secondBar from './secondBar.vue';
 
-
 export default {
   name: 'specProduct',
   components: {
     secondBar,
-    //   cartview
+    //cartview
 
   },
   data() {
@@ -51,7 +49,6 @@ export default {
       baseUrl: process.env.MAIN_API ? process.env.MAIN_API : "",
     }
   },
-
   methods: {
     updateProfile() {
       alert('Your data: ' + JSON.stringify(this.user))
@@ -99,13 +96,20 @@ export default {
       .catch(error => {
         console.error('Error fetching data:', error);
       })
-
-  }
-
+  },
 }
 </script>
 
 <style>
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
 .buy {
   background-color: #258576;
   border: 0;
@@ -161,6 +165,13 @@ export default {
 }
 
 .pr {
+  font-size: 24px !important;
   color: #258576
+}
+@media only screen and (max-width: 576px) {
+  .pr {
+    font-size: 18px !important;
+    color: #258576
+  }
 }
 </style>
