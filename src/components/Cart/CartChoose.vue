@@ -1,104 +1,103 @@
 <template>
     <div>
-        <secondbar></secondbar>
         <div class="container ">
-
-         <h4 class="mt-3">Pharmacy Cart</h4> 
-        
       <div class="row">
         <div class="col-md-7 col-12  " >
             <div class="row container mr mt-3" v-for="cart in cartItems" :key="cart.id" >
-                <div class="col-md-2 mt-4 col-12" >
-                    <img :src="cart.image"  class="ts" >
+                <div class="container col-md-2 mt-4 col-4" >
+                    <img :src="cart.image" class="ts" >
                 </div>
-                <div class="col-md-9 col-12 pb-3">
-                    <h5 class="mt-3 mk pt-3" >{{ cart.name }}</h5>
-                    <p class=""><span class="io">Presentation</span> :<span class="pre">{{ cart.presentation }}</span></p>
-                    <p class="pre">Quantity</p>
-                    <p class="">
-                      <span>
-                        <button class="minus" @click="minus(cart.id)">-</button>
-                      </span>
-                      <span class="forty">{{cart.quantity}}</span>
-                      <span>
-                        <button class="minus" @click="plus(cart.id)">+</button>
-                      </span>
-                    </p>
+                <div class="col-md-9 col-8">
+                  <button class="lo" @click="remove(index)"><span class="material-symbols-outlined">close</span></button>
+                  <h5 class="mk pt-3" >{{ cart.name }}</h5>
+                  <p class="desc">{{ cart.desc }}</p>
+                  <p class="press"><span class="io">Presentation:</span> <span class="pre">{{ cart.presentation }}</span></p>
+                  <p class="pre">Quantity</p>
+                  <p class="">
+                    <span>
+                      <button class="minus m2" @click="minus(cart.id)">-</button>
+                    </span>
+                    <span class="forty">{{cart.quantity}}</span>
+                    <span>
+                      <button class="minus m2" @click="plus(cart.id)">+</button>
+                    </span>
+                  </p>
                 </div>
-                <div class="col-md-1 col-12 lo">
-                    <div class="lo"><button class="lo" @click="remove(index)"><span class="material-symbols-outlined">close</span></button></div>
-                  </div>  
             </div>
         </div>
          <div class="col-md-1 col-12"></div> 
         <div class="col-md-4  col-12 fd mt-3">
-        <div class="row container  ">
-            <h5 class="pt-3">Order Summary </h5>
-            <div class="col-5 ">
-                <P>No of items</P>
+        <div class="row">
+            <h5 class="pt-3 d-none d-md-block">Order Summary </h5>
+            <div class="col-6">
+              <br class="d-none d-md-block">
+                <P class="noitems">No of items</P>
                 <!-- <p>Total </p> -->
             </div>
             <div class="col-6 lo">
-                <P class="">{{ totalItems }}</P>
+              <br class="d-none d-md-block">
+              <p class="noitems">{{ totalItems }}</p>
             </div>
+            <br><br class="d-none d-md-block"><br class="d-none d-md-block"><br class="d-none d-md-block">
             <div>
-  <b-button v-b-modal.modal-1 class="fh">Place Order</b-button>
-
-  <b-modal id="modal-1" title="Place Order" hide-footer="true">
-    <form>
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name" v-model="formdata.name" aria-describedby="customerName" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" v-model="formdata.email" aria-describedby="email" required>
-      </div>
-      <div class="form-group">
-        <label for="tel">Phone Number:</label>
-        <input type="tel" class="form-control" id="tel" v-model="formdata.phone" aria-describedby="phone">
-      </div>
-      <div class="form-group">
-        <label for="state">State:</label>
-        <input type="text" class="form-control" id="state" v-model="formdata.state" aria-describedby="state">
-      </div>
-      <div class="form-group">
-        <label for="lga">Local Government:</label>
-        <input type="text" class="form-control" id="lga" v-model="formdata.lga" aria-describedby="LGA">
-      </div>
-      <div class="form-group">
-        <label for="address">Home Address:</label>
-        <textarea id="address"  v-model="formdata.address" class="form-control" required></textarea> 
-      </div>
-      <div class="form-group">
-        <label for="add_info">Additional Information:</label>
-        <textarea id="add_info"  v-model="formdata.add_info" class="form-control"></textarea> 
-      </div>
-      <div class="form-group">
-        <label for="drug">Drug:</label>
-        <input type="text" class="form-control" id="drug" v-model="formdata.prescription" readonly>
-        {{ nameofperson }} {{ email }}
-      </div>  
-      <button type="submit" class="btn fh mt-3" @click.prevent="sendEmail">Submit</button>
-    </form>
-  </b-modal>
-</div>
+              <b-button v-b-modal.modal-1 class="fh">Place Order</b-button>
+              <b-modal id="modal-1" hide-footer="true" hide-nav="true">
+                <div class="">
+                  <form class="row g-3">
+                    <legend class="odr">Order Information</legend>
+                    <div class="col-md-12 col-12">
+                      <label for="inputName" class="form-label">Full Name</label>
+                      <input type="text" class="form-control"  v-model="formdata.name" id="inputName">
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <label for="inputEmail" class="form-label">Email</label>
+                      <input type="email" class="form-control" v-model="formdata.email" id="inputEmail">
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <label for="inputPhone" class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" v-model="formdata.phone" id="inputPhone">
+                    </div>
+                    <legend class="odr">Location</legend>
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label">Address</label>
+                      <input type="text" class="form-control" v-model="formdata.address" id="inputAddress">
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <label for="inputState" class="form-label">State</label>
+                      <select id="inputState" v-model="formdata.state" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <label for="inputCity" class="form-label">LGA</label>
+                      <input type="text" class="form-control"  v-model="formdata.lga" id="inputCity">
+                    </div>
+                    <div class="mb-3 col-12">
+                      <label for="inputTextarea" class="form-label">Additional Information</label>
+                      <textarea class="form-control" v-model="formdata.add_info" id="inputTextarea" rows="3"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn stl" @click.prevent="sendEmail">Place Order</button>
+                    </div>
+                  </form>
+                </div>
+              </b-modal>
+            </div>
         </div>
         </div>
       </div>
     </div>
-    </div>
+  </div>
  
 </template>
 
 <script>
-  import secondbar from '../secondBar.vue';
   import axios from 'axios';
 
   export default {
   name:'CartChoose',
   components:{
-      secondbar,
   },
   data(){
       return{
@@ -195,6 +194,44 @@
 /* .er{
     height:auto;
 } */
+input.form-control{
+  border-radius: 16px !important;
+}
+textarea.form-control{
+  border-radius: 16px !important;
+}
+select.form-select{
+  border-radius: 16px !important;
+}
+label.form-label{
+  font-size: 13px !important;
+  color: #757575;
+}
+button.btn.stl{
+  background-color: #202020;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-size: 16px !important;
+  font-weight: lighter !important;
+  float: right;
+}
+legend.odr{
+  font-size: 28px;
+  font-weight: bolder !important;
+  font-family: inter;
+}
+button.close{
+  text-align: right;
+  float: right;
+  border: 0px;
+  background-color: white;
+  font-size: 28.74px !important;
+}
+header#modal-1___BV_modal_header_ {
+    border-bottom: none !important;
+    padding-bottom: 0px !important;
+}
 .material-symbols-outlined{
     background-color:white;
 }
@@ -202,13 +239,20 @@
     background-color: #258576 !important;
     color: white !important;
     border:none;
-    border-radius:8px;
+    border-radius: 34px !important;
+    width: 100%;
+    font-size: 18px !important;
+    padding: 10px 20px !important;
 }
 .fd{
     border:1px solid #E0E0E0;
-    border-radius:10px;
-    height:40vh;
+    border-radius:20px;
+    height: 220px;
     
+}
+.desc{
+  font-size: 20px !important;
+  margin-bottom: 0px !important;
 }
 .lo{
     text-align: right;
@@ -222,14 +266,18 @@
 }
 .mr{
     border:1px solid #E0E0E0;
-    border-radius:10px;
+    border-radius: 20px;
+    height: auto;
 }
 .ts{
     width:62px;
-height: 62px;
+    height: 62px;
+    margin: 20px;
 }
 .mk{
-    font-weight:bold;
+    font-weight :normal !important;
+    font-family: millik;
+    font-size: 32px !important;
 }
 .cef{
     margin-bottom: 0; 
@@ -240,19 +288,97 @@ height: 62px;
   
 }
 .pre{
-    margin-top:-20px;
-  
-  color:#343434;
-  font-size: 13px;
+  margin-top:-20px;
+  color:#202020;
+  font-size: 18px;
   
 }
 .io{
- color:#525252 !important;font-size: 13px;
- 
- margin-bottom: 0; 
+  opacity: 0.5 !important;
+  color:#161616 !important;
+  font-size: 18px !important;
   padding-bottom: 0; 
   line-height: 1.2;
   font-size: 13px;
   margin-top:-10px
+}
+.press{
+  margin-top: 10px !important;
+}
+p.pre{
+  margin-top: -9px !important;
+}
+h5.pt-3{
+  font-size: 18px;
+  font-weight: bold;
+}
+.minus.m2{
+  background-color: #fbfbfb;
+  border: none;
+}
+button.lo{
+    margin-top: 30px !important;
+  }
+@media only screen and (max-width: 576px) {
+  .mr {
+    border: none;
+    border-bottom: 1px solid #e0e0e0 !important;
+    border-radius: 0px !important;
+    height: auto;
+    width: auto !important;
+    line-height: normal;
+  }
+
+  div.col-md-7.col-12 {
+      border-bottom: 1px solid #e0e0e0;
+      border-top: 1px solid #e0e0e0;
+  }
+  .mk{
+    font-weight :normal !important;
+    font-family: millik;
+    font-size: 14px !important;
+  }
+  .desc{
+    font-size: 11px !important;
+    margin-bottom: 0px !important;
+  }
+  .io{
+    font-size: 10px !important;
+  }
+  .pre{
+    font-size: 10px !important;
+  }
+  span.material-symbols-outlined{
+    font-size: 18.74px !important;
+  }
+  .fd{
+    border: none;
+    height: auto !important;
+  }
+  .fh{
+    border-radius: 50px !important;
+    background-color: #18564C !important;
+    font-size: 12px !important;
+  }
+  .noitems{
+    font-size: 12px !important;
+  }
+  legend.odr{
+    font-size: 18px;
+    font-weight: bolder !important;
+    font-family: inter;
+  }
+  label.form-label{
+    font-size: 12px !important;
+    color: #757575;
+  }
+  button.btn.stl{
+    font-size: 12px !important;
+  }
+  
+.modal-dialog .modal-md {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
 }
 </style>

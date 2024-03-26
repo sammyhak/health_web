@@ -1,15 +1,7 @@
 <template>
     <div>
-        <div class="container">
-            <h3 class="mt-3">Pharmacy Cart</h3>
-        </div>
-        
-       
-       <CartLink></CartLink>
-       
-       
-      <FreQuent></FreQuent>
-    
+        <CartLink></CartLink>
+        <FreQuent></FreQuent>
     </div>
 </template>
 

@@ -213,7 +213,7 @@ export default {
 }
 
 div.bottom {
-    border-bottom: 2px solid #e0dfdf;
+    border-bottom: 1px solid #e0dfdf;
 }
 
 .dropdown-enter-active,

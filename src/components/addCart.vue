@@ -208,6 +208,7 @@
             cart.push({
               id: post.id,
               name: post.drug_name,
+              desc: post.drug_desc,
               price: post.price,
               image: post.image,
               presentation: post.presentation,
