@@ -1,7 +1,7 @@
 <template>
   <div class="container mb-5 marge our-vision">
     <div class="row hello">
-      <div style="z-index: 10 !important;" class="col cu">
+      <div style="z-index: 5 !important;" class="col-5 cu">
         <h3 class="mt-3  mb-3 ml-3 mr-3 ">The Vision of the company is to be the leading Healthcare provider in Nigeria
           through Bridging Unmet Healthcare Needs</h3>
         <ul>
@@ -14,7 +14,7 @@
         </ul>
 
       </div>
-      <div style="position: absolute !important;" class="col">
+      <div style="position: absolute !important;" class="col offset-1">
         <img class="rounded float-end" style="height: 100% !important; width: 100%;" src="../assets/IMG_8734.jpg" alt="#">
       </div>
     </div>
