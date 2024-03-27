@@ -190,7 +190,7 @@ export default {
     showSearch() {
       this.visible = true;
       setTimeout(() => {
-        document.querySelector('.search-input').style.width = '327.48px';
+        document.querySelector('.search-input').style.width = '100%';
       }, 100);
     },
     closeSearch() {
