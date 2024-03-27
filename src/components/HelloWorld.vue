@@ -34,34 +34,34 @@
                 <div class="row my-4">
                   <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                     <div class="list-group list-group-flush">
-                      <a href="/product" class="list-group-item list-group-item-action"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></a>
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></a>
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Suppressant" class="rou">Surpressant</router-link></a>
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Calcium" class="rou">Calcium</router-link></a>
+                      <a @click="this.navClicked" href="/product" class="list-group-item list-group-item-action"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Suppressant" class="rou">Surpressant</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Calcium" class="rou">Calcium</router-link></a>
                       <!-- <a href="" class="list-group-item list-group-item-action"><router-link to="/product" class="rou">Anti-histamines</router-link>Adipisicing elit</a> -->
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                     <div class="list-group list-group-flush">
-                      <a href="#" class="list-group-item list-group-item-action"><router-link to="/product/Antihypertensive" class="rou">Anti Hypertensive</router-link></a>
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Antihistamine" class="rou">Antihistamine</router-link></a>
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-inflammatory" class="rou">Anti-inflammatory</router-link></a>
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-anaemic" class="rou">Anti-anaemic</router-link></a>
+                      <a @click="this.navClicked" href="#" class="list-group-item list-group-item-action"><router-link to="/product/Antihypertensive" class="rou">Anti Hypertensive</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Antihistamine" class="rou">Antihistamine</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-inflammatory" class="rou">Anti-inflammatory</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-anaemic" class="rou">Anti-anaemic</router-link></a>
                       <!-- <a href="" class="list-group-item list-group-item-action">Provident dolor</a> -->
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                     <div class="list-group list-group-flush">
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Blood-tonic" class="rou">Blood-tonic</router-link></a>
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Dental" class="rou">Dental</router-link></a>
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Skincare" class="rou">Skincare</router-link></a>
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Iron-Replacement" class="rou">Iron-Replacement</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Blood-tonic" class="rou">Blood-tonic</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Dental" class="rou">Dental</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Skincare" class="rou">Skincare</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Iron-Replacement" class="rou">Iron-Replacement</router-link></a>
                       <!-- <a href="" class="list-group-item list-group-item-action">Laboriosam</a> -->
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-3">
                     <div class="list-group list-group-flush">
-                      <a href="" class="list-group-item list-group-item-action"><router-link to="/product/Wound-Dressing" class="rou">Wound-Dressing</router-link></a>                                       
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Wound-Dressing" class="rou">Wound-Dressing</router-link></a>                                       
                     </div>
                   </div>
                 </div>
@@ -199,8 +199,13 @@ export default {
       }, 500);
     },
     clicked(){
-      this.isDropped = !this.isDropped
+      this.isDropped = !this.isDropped;
     },
+     navClicked(){
+        setTimeout(() => {
+           this.isDropped = false;
+        }, 500);
+     },
     closeDropdown(event) {
       if (!this.$el.contains(event.target)) {
         this.isDropped = false;
