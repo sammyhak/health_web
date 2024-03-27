@@ -128,12 +128,12 @@
         <b-nav-item href="#"> <div></div></b-nav-item>
       </b-navbar-nav>
     </b-collapse>
-    <b-navbar-nav>
+    <b-navbar-nav class="dith1">
       <div class="mt-2 ma">
-        <div v-if="!visible" class="rou d-inline-block d-md-none">
+        <div v-if="!visible" ref="specrou" class="rou d-inline-block d-md-none">
           <img src="../assets/search-black.jpg" @click="showSearch" class="imgf ml-5 side-con" style="cursor: pointer;">
         </div>
-        <div v-if="visible" class="input-wrapper">
+        <div v-if="visible" class="dith2 input-wrapper">
           <input type="text" class="text search-input" v-model="searchTerm" @keyup.enter="submitSearch" placeholder="Type here to search..." />
           <span @click="closeSearch">&times;</span>
         </div>
@@ -191,12 +191,18 @@ export default {
       this.visible = true;
       setTimeout(() => {
         document.querySelector('.search-input').style.width = '100%';
+        document.querySelector('.dith1').style.width = '100%';
+        document.querySelector('.dith2').style.width = '100%';
       }, 100);
     },
     closeSearch() {
       document.querySelector('.search-input').style.width = '0';
+      document.querySelector('.dith1').style.width = '59px';
       setTimeout(() => {
         this.visible = false;
+      }, 300);
+      setTimeout(() => {
+        this.$refs.specrou.setAttribute('style', 'width: 25px');
       }, 500);
     },
     clicked(){

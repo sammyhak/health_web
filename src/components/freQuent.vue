@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <style>
 .faq-answer {
-  transition: height 1s ease-out;
+  transform: translateY(20);
+  transition: all 5s ease-in-out;
 }
 </style>

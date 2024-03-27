@@ -1,77 +1,84 @@
 <template>
-  <div class="container mb-5 marge our-vision">
-    <div class="row hello">
-      <!-- style="z-index: 5 !important;" -->
-      <div class="col-12 col-sm-12 col-md-6 cu">
-        <h3 class="mt-3  mb-3 ml-3 mr-3 ">The Vision of the company is to be the leading Healthcare provider in Nigeria
-          through Bridging Unmet Healthcare Needs</h3>
-        <ul>
-          <li>Hospital Management</li>
-          <li>Medical Tourism</li>
-          <li>Pharmaceutical</li>
-          <li>Diagnostic Equipment's</li>
-          <li>Medical Training (for Medical Personnel & Paramedics)</li>
+  <div>
+    <div class="container our-vision">
+      <div class="row hello" >
+        <!--  -->
+        <div class="col-12 damn" style="z-index: 5 !important; height: 379px !important;">
+          <div class="mt-3 cu">
+            <h3 class="mt-3  mb-3 ml-3 mr-3 ">The Vision of the company is to be the leading Healthcare provider in Nigeria
+              through Bridging Unmet Healthcare Needs</h3>
+            <ul>
+              <li>Hospital Management</li>
+              <li>Medical Tourism</li>
+              <li>Pharmaceutical</li>
+              <li>Diagnostic Equipment's</li>
+              <li>Medical Training (for Medical Personnel & Paramedics)</li>
 
-        </ul>
+            </ul>
 
-      </div>
-      <!-- style="position: absolute !important;" -->
-      <div class="col-12 col-sm-12 col-md-6">
-        <img class="rounded float-end" style="height: 100% !important; width: 100%;" src="../assets/IMG_8734.jpg" alt="#">
+          </div>
+        </div>
+        <!--  -->
+        <div style="float: right !important; " class="col d-block d-sm-none d-lg-block">
+          <img class="img-fluid rounded" src="../assets/IMG_8734.jpg" alt="#">
+        </div>
       </div>
     </div>
+    <br class="d-none d-sm-block d-lg-none">
+    <br class="d-none d-sm-block d-lg-none">
+    <br class="d-none d-sm-block d-lg-none">
+    <br class="d-none d-sm-block d-lg-none">
+    <div class="container mb-5 marge our-vision">
+      <div class="row core-values">
+        <div class="col-12 text-center core-values-container">
+          <h3 class="mt-5 fo">Core Values</h3>
+          <p>In pursuit of bridging unmet healthcare needs in Nigeria we strive to reach higher levels of excellence through our values:</p>
+        </div>
+        <div class="row ow">
+
+          <div class="col-md-3 col-12 core-value">
+            <div class="card car">
 
 
+              <div class="card-body text-center">
+                <h6 class=" cus fo">Customer Service</h6>
+                <p class="">HealthLine Limited prioritizes customer satisfaction and continuously improves its services
+                  based on valuable feedback.</p>
 
-    <div class="row core-values">
-      <div class="col-12 text-center core-values-container">
-        <h3 class="mt-5 fo">Core Values</h3>
-        <p>In pursuit of bridging unmet healthcare needs in Nigeria we strive to reach higher levels of excellence through our values:</p>
-      </div>
-      <div class="row ow">
-
-        <div class="col-md-3 col-12 core-value">
-          <div class="card car">
-
-
-            <div class="card-body text-center">
-              <h6 class=" cus fo">Customer Service</h6>
-              <p class="">HealthLine Limited prioritizes customer satisfaction and continuously improves its services
-                based on valuable feedback.</p>
-
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-3 col-12 core-value">
-          <div class="card car">
-            <!-- style="width: 16rem;" -->
-            <div class="card-body text-center">
-              <h6 class="cus fo">Trust and Reliability</h6>
-              <p class="">We will set the highest standards of Trust and reliability in all our business transactions.
-              </p>
+          <div class="col-md-3 col-12 core-value">
+            <div class="card car">
+              <!-- style="width: 16rem;" -->
+              <div class="card-body text-center">
+                <h6 class="cus fo">Trust and Reliability</h6>
+                <p class="">We will set the highest standards of Trust and reliability in all our business transactions.
+                </p>
 
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-3 col-12 core-value">
-          <div class="card car">
+          <div class="col-md-3 col-12 core-value">
+            <div class="card car">
 
-            <div class="card-body text-center">
-              <h6 class=" cus fo">Innovation</h6>
-              <p class="">HealthLine Limited prioritizes customer satisfaction and continuously improves its services
-                based on valuable feedback.</p>
+              <div class="card-body text-center">
+                <h6 class=" cus fo">Innovation</h6>
+                <p class="">HealthLine Limited prioritizes customer satisfaction and continuously improves its services
+                  based on valuable feedback.</p>
 
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-3 col-12 core-value">
-          <div class="card car">
+          <div class="col-md-3 col-12 core-value">
+            <div class="card car">
 
-            <div class="card-body text-center">
-              <h6 class=" cus fo">Collaboration and team work</h6>
-              <p class="">HealthLine Limited prioritizes customer satisfaction and continuously improves its services
-                based on valuable feedback.</p>
+              <div class="card-body text-center">
+                <h6 class=" cus fo">Collaboration and team work</h6>
+                <p class="">HealthLine Limited prioritizes customer satisfaction and continuously improves its services
+                  based on valuable feedback.</p>
 
+              </div>
             </div>
           </div>
         </div>
@@ -88,6 +95,14 @@ export default {
 </script>
 
 <style>
+@media only screen and (min-width: 982px) {
+  .damn{
+    width: 520px !important;
+  }
+  div.container.mb-5.marge{
+    margin-top: 5rem !important;
+  }
+}
 .ow {
   margin: 0px !important;
 }

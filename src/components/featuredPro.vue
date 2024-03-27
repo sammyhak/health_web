@@ -10,7 +10,7 @@
       </div>
 
       <div class="products">
-        <div class="featured-product" v-for="(product, index) in products" :key="index">
+        <div class="featured-product" style="min-height: 316px !important;" v-for="(product, index) in products" :key="index">
           <div class="img-container">
             <img :src="product.image" alt="drug">
           </div>
