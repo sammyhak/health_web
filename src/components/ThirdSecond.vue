@@ -15,7 +15,8 @@
         </ul>
 
       </div>
-      <div style="position: absolute !important;" class="col-12 col-sm-12 col-md-6">
+      <!-- style="position: absolute !important;" -->
+      <div class="col-12 col-sm-12 col-md-6">
         <img class="rounded float-end" style="height: 100% !important; width: 100%;" src="../assets/IMG_8734.jpg" alt="#">
       </div>
     </div>
