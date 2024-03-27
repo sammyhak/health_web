@@ -47,3 +47,9 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
   </section>
 </template>
+
+<style>
+.faq-answer {
+  transition: height 1s ease-out;
+}
+</style>

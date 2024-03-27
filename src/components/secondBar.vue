@@ -22,7 +22,7 @@
       <b-navbar class="d-md-none bn">
         <b-navbar-toggle type="light" variant="light" target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav class="container">
+          <b-navbar-nav class="container offset-2">
             <b-nav-item href="#" class="ma ml-5 "><router-link to="/" class="rou tr">Pharmacy</router-link></b-nav-item>
             <b-nav-item href="# " class="ml-5  mar ma ">
               <router-link to="#" class="rou tr">{{ currentId }}</router-link></b-nav-item>
