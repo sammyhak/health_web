@@ -138,6 +138,7 @@
           <span @click="closeSearch">&times;</span>
         </div>
         <span v-if="!visible">&nbsp;</span>
+         <span v-if="!visible" class="d-inline-block d-md-none">&nbsp;</span>
         <router-link v-if="!visible" to="/cart" class="rou">
           <img src="../assets/ShoppingCart.png" class="imgf ml-5 side-con">
         </router-link>
@@ -228,8 +229,8 @@ export default {
 }
 @media only screen and (max-width: 576px) {
   .side-con{
-    width: 18px !important;
-    height: 18px !important;
+    width: 25px !important;
+    height: 25px !important;
   } 
 }
 .search-input{
