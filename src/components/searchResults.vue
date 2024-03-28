@@ -2,7 +2,11 @@
     <div>
         <secondBar></secondBar>
         <div class="container">
-            <div v-if="isLoading">Loading Search Results...</div>
+            <center v-if="isLoading">
+                <div style="margin-top: 10rem;" class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </center>
             <div v-else-if="searchResults && searchResults.length > 0">
                 <br><br class="d-none d-md-block">
                 <div class="container row">

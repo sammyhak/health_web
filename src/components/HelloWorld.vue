@@ -5,7 +5,7 @@
     <div class="navb" style="padding-top: 24px;">
     <b-navbar toggleable="lg">
     <b-navbar-brand v-if="!visible" href="#"><img src="../assets/Frame 8.png" class="img-class"></b-navbar-brand>
-    <b-navbar-toggle style="overflow: none !important; padding-right: 0px !important;" v-if="!visible" type="light" variant="light" target="nav-collapse" class="mb-2"></b-navbar-toggle>
+    <b-navbar-toggle style="overflow: none !important; border: none !important; padding-right: 0px !important;" v-if="!visible" type="light" variant="light" target="nav-collapse" class="mb-2"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="mx-auto">
