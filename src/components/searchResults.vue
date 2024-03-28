@@ -13,7 +13,7 @@
                     <br><br><br><br class="d-none d-md-block"><br class="d-none d-md-block"><br class="d-none d-md-block"><br class="d-none d-md-block">
                     <div  v-for="result in searchResults" :key="result.id" class="col-6 col-md-3">
                         <router-link :to="`/add/${result.id}`" class="rou" style="text-decoration: none; color: #000;">
-                            <div class="image-container">
+                            <div class="image-container" style="height: auto !important;">
                                 <img :src="result.image" class="img-fluid mn im-pro" alt="broken">
                             </div>
 

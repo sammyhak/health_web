@@ -4,9 +4,9 @@
     <div class="container">
       <h3 class="mt-5 pr">Products</h3>
       <div class="row">
-        <div v-for="(product, index) in products" :key="index" class="col-12 col-md-4">
+        <div v-for="(product, index) in products" :key="index" class="col-6 col-md-4">
             <router-link :to="`/add/${product.id}`" class="rou" style="text-decoration: none; color: #000;">
-              <div class="image-container">
+              <div class="image-container" style="max-height: 250px !important;">
                 <img :src="product.image" class="img-fluid im-pro" alt="broken">
               </div>
 

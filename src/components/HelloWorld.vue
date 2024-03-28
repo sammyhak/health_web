@@ -5,7 +5,7 @@
     <div class="navb" style="padding-top: 24px;">
     <b-navbar toggleable="lg">
     <b-navbar-brand v-if="!visible" href="#"><img src="../assets/Frame 8.png" class="img-class"></b-navbar-brand>
-    <b-navbar-toggle v-if="!visible" type="light" variant="light" target="nav-collapse" class="mb-2"></b-navbar-toggle>
+    <b-navbar-toggle style="overflow: none !important; padding-right: 0px !important;" v-if="!visible" type="light" variant="light" target="nav-collapse" class="mb-2"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="mx-auto">
@@ -95,20 +95,6 @@
       </b-navbar-nav>
       
       <div>
-  <!-- <b-dropdown
-    text="Block Level Dropdown Menu"
-    block
-    variant="primary"
-    class="dr"
-    menu-class="w-100"
-  >
-  <div class="dr">
-    <b-dropdown-item href="#">Action</b-dropdown-item>
-    <b-dropdown-item href="#">Another action</b-dropdown-item>
-    <b-dropdown-item href="# ">Something else here</b-dropdown-item>
-  </div>
-    
-  </b-dropdown> -->
 
   
 </div>
@@ -162,6 +148,7 @@ export default {
       log: "logged",
       isDropped: false,
       visible: false,
+      shown: false,
       searchTerm: '',
       currentId: null,
     }
@@ -393,6 +380,13 @@ button.button-nav{
   .mar{
   margin-left:20px;
 }
+}
+
+@media screen and (max-width: 576px) {
+  button.button-nav.mar{
+    background-color: #18564C !important;
+    width: 100% !important;
+  }
 }
 
 .rou{

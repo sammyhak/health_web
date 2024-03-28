@@ -18,17 +18,25 @@
     </div>
 
     <div class="mt-5 ">
-      <div style="border-radius: 20px;" class="row row-color container-sm">
-        <div class="col-md-6 col-12 mt-5 pt-5"><br><br>
+      <div style="border-radius: 20px;" class="burn row row-color container-sm">
+        <div class="col-lg-6 col-md-12 col-12 mt-5 pt-5 d-none d-sm-block">
+          <h5 class="what font-for-inter">What we do</h5>
+          <p class="mt-3 fs-6 font-for-inter bud">We are a pharmaceutical company focused on the marketing and distribution of
+            pharmaceutical healthcare products. But Also involved in bridging unmet healthcare needs in medical tourism,
+            providing Diagnostic Equipment's for medical institutions and medical training's( for Medical Personnel &
+            Para-Medics) thereby ensuring a more knowledgeable and skillful health team.</p>
+          <!-- <button class="btn-lg bt button-nav mar mt-5 font-for-inter" @click="navigateToAbout">Read More</button> -->
+        </div>
+        <div class="col-lg-6 col-md-12 col-12 mt-5">
+          <img src="../assets/Group 3.png" class="img-fluid">
+        </div>
+        <div class="col-md-6 col-12 d-block d-sm-none"><br><br>
           <h5 class="what font-for-inter ">What we do</h5>
           <p style="font-size: larger;" class="mt-3 fs-6 font-for-inter">We are a pharmaceutical company focused on the marketing and distribution of
             pharmaceutical healthcare products. But Also involved in bridging unmet healthcare needs in medical tourism,
             providing Diagnostic Equipment's for medical institutions and medical training's( for Medical Personnel &
             Para-Medics) thereby ensuring a more knowledgeable and skillful health team.</p>
           <!-- <button class="btn-lg bt button-nav mar mt-5 font-for-inter" @click="navigateToAbout">Read More</button> -->
-        </div>
-        <div class="col-md-6 col-12 mt-5">
-          <img src="../assets/Group 3.png" class="img-fluid">
         </div>
       </div>
     </div>
@@ -63,8 +71,12 @@ export default {
 
 .font-for-inter {
   font-family: facee;
-  font-size: 20px;
+  font-size: 16px !important;
   font-weight: 400;
+}
+
+.font-for-inter.bud{
+  font-size: 22px !important;
 }
 
 .what {
@@ -112,6 +124,10 @@ h2 {
   font-size: 48px !important;
 }
 
+.burn{
+  padding: 42px !important;
+}
+
 @media screen and (max-width: 576px) {
   h2{
     font-size: 28px !important;
@@ -121,6 +137,11 @@ h2 {
   }
   .button-nav{
     font-size: 14px !important;
+  }
+  .burn{
+    border-radius: 0px !important;
+    width: auto !important;
+    padding: 0px !important;
   }
 }
 </style>

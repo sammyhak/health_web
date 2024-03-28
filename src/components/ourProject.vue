@@ -108,6 +108,17 @@ export default {
 	}
 }
 
+@media (max-width: 576px) {	
+	@keyframes animate {
+		0% {
+			transform: translate3d(300px, 0, 0);
+		}
+		100% {
+			transform: translate3d(-400px, 0, 0);
+		}
+	}
+}
+
 .tex {
 	color: #18564C;
 
