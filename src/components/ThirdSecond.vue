@@ -50,7 +50,7 @@
       <br class="d-none d-sm-block d-lg-none" />
       <br class="d-none d-sm-block d-lg-none" />
       <br class="d-none d-sm-block d-lg-none" />
-      <div class="mb-5 marge our-vision">
+      <div class="mb-5 marge our-vision container">
         <div class="row core-values">
           <div class="col-12 text-center core-values-container">
             <h3 class="mt-5 fo">Core Values</h3>
