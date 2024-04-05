@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @font-face {
   font-family: Millik;
   src: url(../../assets/Millik.otf);
@@ -7,8 +8,89 @@
   font-family: Inter;
   src: url(../../assets/Inter-Regular.otf);
 }
+
+.banner {
+  display: flex;
+  .bigBanner {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 758px !important;
+    background: #2585761c;
+    // padding: 10px;
+    :nth-child(1),
+    :nth-child(2) {
+      padding: 20px;
+    }
+    div{
+      h3 {
+        font-family: Millik;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 46.42px;
+        text-align: left;
+      }
+      p {
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.6px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.difference-container {
+  display: block;
+  position: relative;
+  .row {
+    border: 1px solid #1f2d25;
+    box-shadow: 0px 4px 0px 0px #1f2d25;
+    position: absolute;
+    background: #fff;
+    top: -50%;
+    transform: translateY(-275px);
+    div {
+      :nth-child(1),
+      :nth-child(2) {
+        background: #fff;
+        padding: 10px;
+      }
+      img {
+        width: 600px;
+        height: 360px;
+        padding: 0px 20px 0px 20px;
+        object-fit: contain;
+      }
+
+      h3 {
+        font-family: Millik;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28.8px;
+        letter-spacing: -0.04em;
+        text-align: left;
+        margin-top: 85px;
+      }
+
+      p {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 23.8px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.all {
+  background: #18564c;
+}
 // about second
 .cf {
+  display: none;
   position: relative;
   margin-top: 50px;
   background-image: url("../../assets/Frame 110.png");
@@ -85,30 +167,35 @@
 }
 
 .our-vision {
+  margin-bottom: unset !important;
+  padding: 0 50px;
+  .core-values {
+    margin-top: -80px;
+  }
   .hello {
     .cu {
-      background-color: #18564c;
-      color: white;
-      width: 695px;
-      height: 479px;
-      padding: 50px;
-      border-radius: 20px;
-      gap: 20px;
+      display: flex;
+      color: #fff;
+      width: 95vw;
+      height: auto;
+      padding: 150px 50px 20px 50px;
       h3 {
         font-family: Millik;
         font-size: 38px;
         font-weight: 400;
-        line-height: 37px;
-        letter-spacing: 0em;
+        line-height: 36.75px;
         text-align: left;
+        width: 595px;
+        height: 185px;
       }
       ul {
+        display: grid;
+        align-items: flex-end;
         li {
           font-family: Inter;
           font-size: 24px;
           font-weight: 400;
-          line-height: 29px;
-          letter-spacing: 0em;
+          line-height: 29.05px;
           text-align: left;
         }
       }
@@ -117,6 +204,7 @@
 
   .core-values {
     .core-values-container {
+      display: none;
       .fo {
         // margin-top: 20px !important;
       }
@@ -134,11 +222,14 @@
 
   .card {
     height: 237px;
-    max-width: 295px;
+    height: auto;
+    width: auto;
+    /* max-width: 295px; */
     display: grid;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    margin-top: 170px;
     .card-body {
       h6 {
         font-family: Millik;
@@ -216,9 +307,24 @@
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
+  .bigBanner {
+    display: none !important;
+  }
+  .check-big {
+    width: 100% !important;
+  }
+
+
+  .difference-container {
+    display: none;
+  }
+  .all {
+    background: #fff;
+  }
   // aboutsecond
   .cf {
+    display: block;
     height: 471px;
     .c {
       .p-tag-class {
@@ -247,6 +353,7 @@
           width: 327px;
           padding: 0 20px;
           h5 {
+            display: block;
             width: unset;
             font-family: Millik;
             font-size: 26px;
@@ -256,6 +363,7 @@
             text-align: center;
           }
           P {
+            display: block;
             font-family: Lato;
             font-size: 12px;
             font-weight: 500;
@@ -270,13 +378,22 @@
   .our-vision {
     margin: unset;
     display: grid;
+    margin-bottom: 100px;
+    .core-values {
+      margin: unset;
+      .row {
+        padding: 0 0 0 30px;
+      }
+    }
     .hello {
       margin-top: -15px;
       .cu {
+        display: grid;
         background-color: unset;
         color: #000;
         width: unset;
         height: unset;
+        margin: unset;
         h3 {
           font-family: Millik;
           font-size: 38px;
@@ -319,6 +436,7 @@
         }
       }
       .core-values-container {
+        display: block;
         margin: unset;
         .fo {
           font-size: 24px;
@@ -343,6 +461,7 @@
       justify-content: center;
       align-items: center;
       margin-right: 20px;
+      margin-top: 50px;
       .card-body {
         h6 {
           font-size: 16px;
@@ -418,7 +537,7 @@
           padding: unset;
           width: 327px;
           object-fit: cover;
-          &:nth-child(2){
+          &:nth-child(2) {
             margin-top: 20px;
           }
         }

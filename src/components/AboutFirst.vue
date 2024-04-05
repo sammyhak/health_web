@@ -1,51 +1,106 @@
 <template>
-  <div class="check-big">
-    <div class="row">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+  <div class="banner">
+    <div class="bigBanner">
+      <div>
+        <h3>We offer a wide range of products and services.</h3>
+        <p>
+          medical training , diagnostic equipment,updates on medical
+          breakthrough studies and medical conferences
+        </p>
+      </div>
+    </div>
+    <div class="check-big">
+      <div class="row">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active container-fluid">
+              <img
+                src="../assets/Frame 112.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption check-car">
+                <h5 class="font-for-our-milki">
+                  We offer a wide range of products and services
+                </h5>
+                <p>medical training,diagnostic equipment,updates on medical</p>
+                <p>breakthrough studies and medical conferences</p>
+              </div>
+            </div>
+            <div class="carousel-item active container-fluid">
+              <img
+                src="../assets/Frame 112.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption check-car">
+                <h5 class="font-for-our-milki">
+                  We offer a wide range of products and services
+                </h5>
+                <p>medical training,diagnostic equipment,updates on medical</p>
+                <p>breakthrough studies and medical conferences</p>
+              </div>
+            </div>
+            <div class="carousel-item active container-fluid">
+              <img
+                src="../assets/Frame 112.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption check-car">
+                <h5 class="font-for-our-milki">
+                  We offer a wide range of products and services
+                </h5>
+                <p>medical training,diagnostic equipment,updates on medical</p>
+                <p>breakthrough studies and medical conferences</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active container-fluid">
-            <img src="../assets/Frame 112.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption check-car">
-              <h5 class="font-for-our-milki">We offer a wide range of products and services</h5>
-              <p>medical training,diagnostic equipment,updates on medical</p>
-              <p>breakthrough studies and medical conferences</p>
-            </div>
-          </div>
-          <div class="carousel-item active container-fluid">
-            <img src="../assets/Frame 112.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption check-car">
-              <h5 class="font-for-our-milki">We offer a wide range of products and services</h5>
-              <p>medical training,diagnostic equipment,updates on medical</p>
-              <p>breakthrough studies and medical conferences</p>
-            </div>
-          </div>
-          <div class="carousel-item active container-fluid">
-            <img src="../assets/Frame 112.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption check-car">
-              <h5 class="font-for-our-milki">We offer a wide range of products and services</h5>
-              <p>medical training,diagnostic equipment,updates on medical</p>
-              <p>breakthrough studies and medical conferences</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </div>
   </div>
@@ -53,8 +108,8 @@
 <script>
 import "../styles/components/AboutUs.scss";
 export default {
-  name: 'AboutSecond'
-}
+  name: "AboutSecond",
+};
 </script>
 
 <style scoped>
@@ -92,6 +147,7 @@ export default {
 
 .check-big {
   overflow-x: hidden;
+  width: 60%;
 }
 
 .cf {
@@ -102,7 +158,7 @@ export default {
 .background-div {
   width: 100%;
   /* height: 300px; Set height as needed */
-  background-image: url('../assets/Frame\ 112.png');
+  background-image: url("../assets/Frame\ 112.png");
   /* Replace 'path/to/your/image.jpg' with the path to your image */
   background-size: cover;
   /* Cover the entire area of the div */
@@ -127,11 +183,13 @@ export default {
 }
 
 .carousel-caption h5 {
+  display: none;
   font-family: Millik;
   font-size: 48px;
 }
 
 .carousel-caption p {
+  display: none;
   text-align: center;
   font-family: Lato;
   font-size: 18px;
@@ -140,11 +198,17 @@ export default {
   line-height: normal;
 }
 
-.carousel-indicators>button {
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+}
+
+.carousel-indicators > button {
   border-radius: 50%;
   width: 12px !important;
   height: 12px !important;
 }
 
-@media (min-width: 769px) and (max-width : 1200px) {}
+@media (min-width: 769px) and (max-width: 1200px) {
+}
 </style>
