@@ -144,8 +144,10 @@ export default {
       return date.toLocaleString(); // Basic formatting
     },
     handleBodyClick(event) {
+      const body = document.body;
       // Check if the clicked element is not within the chat component
       if (!this.$el.contains(event.target)) {
+        body.style.overflow = "";
         this.isChatVisible = false; // Close the chat component
       }
     },
