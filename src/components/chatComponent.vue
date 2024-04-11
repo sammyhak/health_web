@@ -1,86 +1,111 @@
 <template>
-    <section class="chatSection">
-        <div class="chatContainer bg-cover" v-if="isChatVisible">
-            <div class="chatHeader">
-                <div class="chatHeaderText">Chat with us</div>
-            </div>
-            <div class="chatContent" v-if="this.chatStatus === 'approved'">
-                <div class="message-date">
-                    <span>Connected with {{ backofficeAdmin }}</span>
-                </div>
-                <div class="chat-inner">
-                    <div v-for="message in messages" :key="message.id" :class="`message-${message.content_type === 15 ? 'right' : 'left'}`">
-                        <div class="userImage">
-                            <!-- <img src="" alt=""> -->
-                        </div>
-                        <div class="message-container">
-                            <div class="message" style="background-color: #fff; opacity:1;">{{ message.text }}</div>
-                            <div class="message-time">
-                                {{ message.sender.name }} {{ formatTimestamp(message.timestamp) }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="request-pending" v-if="this.chatStatus === 'pending'">
-                Request Pending...
-            </div>
-            <form class="sendMessage">
-                <div class="sendMessageContainer" v-if="this.chatStatus === 'null' || this.chatStatus === 'rejected'">
-                    <div class="message-head">
-                        <input type="text" name="name" id="name" v-model="formdata.name" placeholder="Name"/>
-                    </div>
-                    <div class="message-head">
-                        <input
-                        type="text"
-                        name="email"
-                        id="email"
-                        v-model="formdata.email"
-                        placeholder="email@example.com"/>
-                    </div>
-                    <div class="textarea-container">
-                        <textarea
-                            name=""
-                            id=""
-                            cols="30"
-                            rows="5"
-                            v-model="formdata2.message"
-                            placeholder="Write your message...">
-                        </textarea>
-                        <button class="sendMessageBtn" @click.prevent="sendRequest">
-                            <img src="../assets/send.svg" alt="sendIcon" />
-                        </button>
-                    </div>
-                </div>
-                <form>
-                    <div
-                        class="sendMessageContainer"
-                        v-if="this.chatStatus === 'approved'">
-                        <div class="textarea-container">
-                            <textarea
-                                cols="30"
-                                rows="5"
-                                v-model="formdata3.text"
-                                placeholder="Write your message...">
-                            </textarea>
-                            <button class="sendMessageBtn" @click.prevent="sendText">
-                                <img src="../assets/send.svg" alt="sendIcon" />
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </form>
+  <section class="chatSection">
+    <div class="chatContainer bg-cover" v-if="isChatVisible">
+      <div class="chatHeader">
+        <div class="chatHeaderText">Chat with us</div>
+      </div>
+      <div class="chatContent" v-if="this.chatStatus === 'approved'">
+        <div class="message-date">
+          <span>Connected with {{ backofficeAdmin }}</span>
         </div>
-        <img :class="{ reposition: !isChatVisible }" @click="toggleChatVisibility" src="../assets/chatIcon.svg" alt="chat-icon"/>
-    </section>
+        <div class="chat-inner">
+          <div
+            v-for="message in messages"
+            :key="message.id"
+            :class="`message-${message.content_type === 15 ? 'right' : 'left'}`"
+          >
+            <div class="userImage">
+              <!-- <img src="" alt=""> -->
+            </div>
+            <div class="message-container">
+              <div class="message" style="background-color: #fff; opacity: 1">
+                {{ message.text }}
+              </div>
+              <div class="message-time">
+                {{ message.sender.name }}
+                {{ formatTimestamp(message.timestamp) }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="request-pending" v-if="this.chatStatus === 'pending'">
+        Request Pending...
+      </div>
+      <form class="sendMessage">
+        <div
+          class="sendMessageContainer"
+          v-if="this.chatStatus === 'null' || this.chatStatus === 'rejected'"
+        >
+          <div class="message-head">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              v-model="formdata.name"
+              placeholder="Name"
+            />
+          </div>
+          <div class="message-head">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              v-model="formdata.email"
+              placeholder="email@example.com"
+            />
+          </div>
+          <div class="textarea-container">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="5"
+              v-model="formdata2.message"
+              placeholder="Write your message..."
+            >
+            </textarea>
+            <button class="sendMessageBtn" @click.prevent="sendRequest">
+              <img src="../assets/send.svg" alt="sendIcon" />
+            </button>
+          </div>
+        </div>
+        <form>
+          <div
+            class="sendMessageContainer"
+            v-if="this.chatStatus === 'approved'"
+          >
+            <div class="textarea-container">
+              <textarea
+                cols="30"
+                rows="5"
+                v-model="formdata3.text"
+                placeholder="Write your message..."
+              >
+              </textarea>
+              <button class="sendMessageBtn" @click.prevent="sendText">
+                <img src="../assets/send.svg" alt="sendIcon" />
+              </button>
+            </div>
+          </div>
+        </form>
+      </form>
+    </div>
+    <img
+      :class="{ reposition: !isChatVisible }"
+      @click="toggleChatVisibility"
+      src="../assets/chatIcon.svg"
+      alt="chat-icon"
+    />
+  </section>
 </template>
 
 <style>
-.bg-cover{
-    background-image: url('../../src/assets/image.jpg') !important;
-    background-repeat: no-repeat !important;
-    background-size: 120px 137px !important;
-    background-position: center !important;
+.bg-cover {
+  background-image: url("../../src/assets/image.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 120px 137px !important;
+  background-position: center !important;
 }
 </style>
 
@@ -118,9 +143,23 @@ export default {
       const date = new Date(timestampString);
       return date.toLocaleString(); // Basic formatting
     },
+    handleBodyClick(event) {
+      // Check if the clicked element is not within the chat component
+      if (!this.$el.contains(event.target)) {
+        this.isChatVisible = false; // Close the chat component
+      }
+    },
     toggleChatVisibility() {
       // Toggle the visibility state
       this.isChatVisible = !this.isChatVisible;
+
+      if (this.isChatVisible) {
+        // If chat is visible, add event listener to body to handle clicks
+        document.body.addEventListener("click", this.handleBodyClick);
+      } else {
+        // If chat is not visible, remove event listener from body
+        document.body.removeEventListener("click", this.handleBodyClick);
+      }
       const body = document.body;
 
       // Check if scrolling is currently enabled
