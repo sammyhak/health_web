@@ -37,8 +37,8 @@
         </div>
 
         <div class="col-md-4 col-12 company-photos">
-            <img src="../assets/DSC_0019 1.png" height="252" style="padding: 7px; width: 100%;">
-            <img src="../assets/Frame 1171276973.png" height="252" style="padding: 7px; width: 100%;">
+            <img src="../assets/_DSC1848.jpg" height="252" style="padding: 7px; width: 100%;">
+            <img src="../assets/_DSC1656.jpg" height="252" style="padding: 7px; width: 100%;">
             
         </div>
     </div>

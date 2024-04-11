@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <div class="bigBanner">
+    <div class="bigBanner col" style="padding-left: 9% !important;">
       <div>
         <h3>We offer a wide range of products and services.</h3>
         <p>
@@ -9,7 +9,7 @@
         </p>
       </div>
     </div>
-    <div class="check-big">
+    <div class="check-big col">
       <div class="row">
         <div
           id="carouselExampleCaptions"
@@ -41,7 +41,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active container-fluid">
               <img
-                src="../assets/Frame 112.png"
+                src="../assets/_DSC1942.jpg"
                 class="d-block w-100"
                 alt="..."
               />
@@ -55,7 +55,7 @@
             </div>
             <div class="carousel-item active container-fluid">
               <img
-                src="../assets/Frame 112.png"
+                src="../assets/IMG_8706.jpg"
                 class="d-block w-100"
                 alt="..."
               />
@@ -69,7 +69,7 @@
             </div>
             <div class="carousel-item active container-fluid">
               <img
-                src="../assets/Frame 112.png"
+                src="../assets/IMG_8734.jpg"
                 class="d-block w-100"
                 alt="..."
               />

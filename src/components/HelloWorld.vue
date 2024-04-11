@@ -36,7 +36,7 @@
                     <div class="list-group list-group-flush">
                       <a @click="this.navClicked" href="/product" class="list-group-item list-group-item-action"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></a>
                       <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Suppressant" class="rou">Surpressant</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Suppressant" class="rou">Suppressant</router-link></a>
                       <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Calcium" class="rou">Calcium</router-link></a>
                       <!-- <a href="" class="list-group-item list-group-item-action"><router-link to="/product" class="rou">Anti-histamines</router-link>Adipisicing elit</a> -->
                     </div>
@@ -46,7 +46,7 @@
                       <a @click="this.navClicked" href="#" class="list-group-item list-group-item-action"><router-link to="/product/Antihypertensive" class="rou">Anti Hypertensive</router-link></a>
                       <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Antihistamine" class="rou">Antihistamine</router-link></a>
                       <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-inflammatory" class="rou">Anti-inflammatory</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-anaemic" class="rou">Anti-anaemic</router-link></a>
+                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-anaemic" class="rou">Anti-anemic</router-link></a>
                       <!-- <a href="" class="list-group-item list-group-item-action">Provident dolor</a> -->
                     </div>
                   </div>
@@ -75,7 +75,7 @@
             <div class="">
               <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></b-dropdown-item></div>
               <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></b-dropdown-item></div>
-              <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Suppressant" class="rou">Surpressant</router-link></b-dropdown-item></div>
+              <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Suppressant" class="rou">Suppressant</router-link></b-dropdown-item></div>
               <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Calcium" class="rou">Calcium</router-link></b-dropdown-item></div>
               <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Antihypertensive" class="rou">Anti Hypertensive</router-link></b-dropdown-item></div>
               <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Antihistamine" class="rou">Antihistamine</router-link></b-dropdown-item></div>

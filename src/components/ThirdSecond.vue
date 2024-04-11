@@ -22,9 +22,8 @@
       </div>
     </div>
     <div class="all">
-      <div class="our-vision">
+      <div class="container our-vision">
         <div class="row hello">
-          <!--  -->
           <div class="col-12 damn">
             <div class="mt-3 cu">
               <h3 class="mt-3 mb-3 ml-3 mr-3">
@@ -40,10 +39,6 @@
               </ul>
             </div>
           </div>
-          <!--  -->
-          <!-- <div style="float: right !important; " class="col d-block d-sm-none d-lg-block">
-            <img class="img-fluid rounded" src="../assets/IMG_8734.jpg" alt="#">
-          </div> -->
         </div>
       </div>
       <br class="d-none d-sm-block d-lg-none" />
@@ -74,7 +69,6 @@
             </div>
             <div class="col-md-3 col-12 core-value">
               <div class="card car">
-                <!-- style="width: 16rem;" -->
                 <div class="card-body text-center">
                   <h6 class="cus fo">Trust and Reliability</h6>
                   <p class="">
@@ -130,8 +124,6 @@ export default {
   div.container.mb-5.marge {
     margin-top: 5rem !important;
   }
-}
-.ow {
 }
 
 .cus {
