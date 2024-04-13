@@ -15,6 +15,7 @@
           id="carouselExampleCaptions"
           class="carousel slide"
           data-bs-ride="carousel"
+         :data-bs-interval="carouselInterval"
         >
           <div class="carousel-indicators">
             <button
@@ -109,6 +110,11 @@
 import "../styles/components/AboutUs.scss";
 export default {
   name: "AboutSecond",
+  data() {
+    return {
+      carouselInterval: 10000 // Set interval to 5 seconds (in milliseconds)
+    };
+  }
 };
 </script>
 
