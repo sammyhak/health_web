@@ -22,8 +22,6 @@
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
               aria-label="Slide 1"
             ></button>
             <button
@@ -36,6 +34,8 @@
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="2"
+              class="active"
+              aria-current="true"
               aria-label="Slide 3"
             ></button>
           </div>
@@ -108,13 +108,19 @@
 </template>
 <script>
 import "../styles/components/AboutUs.scss";
+import $ from 'jquery';
+
 export default {
   name: "AboutSecond",
   data() {
     return {
-      carouselInterval: 10000 // Set interval to 5 seconds (in milliseconds)
+      carouselInterval: 2000
     };
-  }
+  },
+  mounted () {
+    window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
+    new window.bootstrap.Carousel($("#carouselExampleCaptions")).cycle();
+  },
 };
 </script>
 
