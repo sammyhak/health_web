@@ -68,8 +68,8 @@
               <br>
               <ul v-if="product.indications"> 
                 <div v-for="indications in product.indications" :key="indications">
-                  <li class="ea" v-for="indication in indications" :key="indication">
-                    {{ indication }}
+                  <li class="ea">
+                    {{ indications }}
                   </li>
                 </div>
               </ul>

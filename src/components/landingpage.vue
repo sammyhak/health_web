@@ -20,8 +20,8 @@
     <div class="mt-5 ">
       <div style="border-radius: 20px;" class="burn row row-color container-sm">
         <div class="col-lg-6 col-md-12 col-12 mt-5 pt-5 d-none d-sm-block">
-          <h5 class="what font-for-inter">What we do</h5>
-          <p class="mt-3 fs-6 font-for-inter bud">We are a pharmaceutical company focused on the marketing and distribution of
+          <h5 class="what font-for-inter" style="font-size: 22px !important;">What we do</h5>
+          <p class="mt-3 fs-6 font-for-inter bud" style="font-size: 21px !important;">We are a pharmaceutical company focused on the marketing and distribution of
             pharmaceutical healthcare products. But Also involved in bridging unmet healthcare needs in medical tourism,
             providing Diagnostic Equipment's for medical institutions and medical training's( for Medical Personnel &
             Para-Medics) thereby ensuring a more knowledgeable and skillful health team.</p>

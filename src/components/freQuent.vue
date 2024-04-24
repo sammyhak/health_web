@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="container container1">
           <div class="faq-question">
             <img src="../assets/Plus.svg" alt="faq-plus">
-            <p>How do I get my Products delivered to my location.</p>
+            <p style="font-size: 21px !important;">How do I get my Products delivered to my location.</p>
           </div>
           <div class="faq-answer">
             <p>Our products will be delivered to your request location via our trusted courier agency FEDEX EXPRESS (Red star logistics) with there offices all over the country.</p>
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
           <div class="faq-question">
             <img src="../assets/Plus.svg" alt="faq-plus">
-            <p>Are there extra charges for product delivery.</p>
+            <p style="font-size: 21px !important;">Are there extra charges for product delivery.</p>
           </div>
           <div class="faq-answer">
             <p>No extra charge for product delivery</p>

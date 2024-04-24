@@ -6,7 +6,7 @@
       <div class="row">
         <div v-for="(product, index) in products" :key="index" class="col-6 col-md-4">
             <router-link :to="`/add/${product.id}`" class="rou" style="text-decoration: none; color: #000;">
-              <div class="image-container" style="max-height: 250px !important;">
+              <div class="image-container" style="max-height: 459px !important;">
                 <img :src="product.image" class="img-fluid im-pro" alt="broken">
               </div>
 
@@ -112,7 +112,7 @@ export default {
   width: 100%;
   /* Ensure images fill the container width */
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   /* Allow images to maintain aspect ratio */
 }
 
