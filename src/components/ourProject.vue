@@ -23,7 +23,7 @@
 					<div class="item"><img alt="" src="../assets/f2-min.png" class="img-fluid ml-5 mr-5 ml mtwo "></div>
 					<div class="item"><img alt="" src="../assets/ICPA.png" class="img-fluid ml-5 mr-5 ml mthr">
 					</div>
-					<div class="item"><img alt="" src="../assets/f4-min.png" class="img-fluid ml-5 mr-5 ml mfour"></div>
+					<div class="item"><img alt="" src="../assets/viatris.png" class="img-fluid ml-5 mr-5 ml mfour"></div>
 					<div class="item"><img alt="" src="../assets/f5-min.png" class="img-fluid ml-5 mr-5 "></div>
 					<div class="item"><img alt="" src="../assets/f6-min.png" class="img-fluid ml-5 mr-5 ml msix"></div>
 					<div class="item"><img alt="" src="../assets/f7-min.png" class="img-fluid ml-5 mr-5 ml mseven">
