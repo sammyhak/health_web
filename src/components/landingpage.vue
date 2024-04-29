@@ -9,7 +9,7 @@
           <br>
 
         </div>
-        <p class="font-for-inter">Bridging unmet healthcare need.</p>
+        <p class="font-for-inter">Bridging unmet healthcare needs.</p>
         <button class="btn-lg bt button-nav mar mt-4 font-for-inter " style="color:white" @click="navigateToAbout">View
           products</button>
       </div>
