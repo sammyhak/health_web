@@ -14,7 +14,7 @@
             <p class="cat">Category: {{ product.category }}</p>
             <p class="cat">Presentation: <span class="val">{{ product.presentation }}</span></p>
             <p ><span class="nu">{{product.price}}</span> <span><button class="ins">In stock</button></span></p>
-            <p class="hy">Quantity</p>
+            <!-- <p class="hy">Quantity</p>
             <p class="col-12">
               <span>
                 <button class="minus" @click="minus()">-</button>
@@ -24,7 +24,7 @@
                 <button class="minus" @click="plus()">+</button>
               </span>
             </p>
-            <button ref="addToCartButton" class="er mb-5 col-xl-3 col-lg-4 col-md-5 col-12" @click="addToCart(product)">Add to cart</button> 
+            <button ref="addToCartButton" class="er mb-5 col-xl-3 col-lg-4 col-md-5 col-12" @click="addToCart(product)">Add to cart</button>  -->
           </div>
        </div>
        <div class="container">

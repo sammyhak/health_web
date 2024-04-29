@@ -87,9 +87,9 @@
         </div>
         <span v-if="!visible">&nbsp;</span>
          <span v-if="!visible" class="d-inline-block d-md-none">&nbsp;</span>
-        <router-link v-if="!visible" to="/cart" class="rou">
+        <!-- <router-link v-if="!visible" to="/cart" class="rou">
           <img src="../assets/ShoppingCart.png" class="imgf ml-5 side-con">
-        </router-link>
+        </router-link> -->
       </div>
     </b-navbar-nav>
   </b-navbar>

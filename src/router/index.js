@@ -55,7 +55,6 @@ const routes = [
     name: 'CartView',
     component: CartView
   },
-  
   {
     path: '/cartchoose',
     name: 'CartChoView',
