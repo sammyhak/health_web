@@ -21,10 +21,7 @@
       <div style="border-radius: 20px;" class="burn row row-color container-sm">
         <div class="col-lg-6 col-md-12 col-12 mt-5 pt-5 d-none d-sm-block">
           <h5 class="what font-for-inter" style="font-size: 22px !important;">What we do</h5>
-          <p class="mt-3 fs-6 font-for-inter bud" style="font-size: 21px !important;">We are a pharmaceutical company focused on the marketing and distribution of
-            pharmaceutical healthcare products. But Also involved in bridging unmet healthcare needs in medical tourism,
-            providing Diagnostic Equipment's for medical institutions and medical training's( for Medical Personnel &
-            Para-Medics) thereby ensuring a more knowledgeable and skillful health team.</p>
+          <p class="mt-3 fs-6 font-for-inter bud" style="font-size: 21px !important;">We are a pharmaceutical company focused on the marketing and distribution of pharmaceutical and healthcare products. We also involve in bridging unmet healthcare needs in medical tourism,providing Diagnostics equipment for medical institutions and medical trainings (for Medical Personnel & para-Medics) thereby ensuring a more knowledgeable and skillful health team.</p>
           <!-- <button class="btn-lg bt button-nav mar mt-5 font-for-inter" @click="navigateToAbout">Read More</button> -->
         </div>
         <div class="col-lg-6 col-md-12 col-12 mt-5">
@@ -32,10 +29,7 @@
         </div>
         <div class="col-md-6 col-12 d-block d-sm-none"><br><br>
           <h5 class="what font-for-inter ">What we do</h5>
-          <p style="font-size: larger;" class="mt-3 fs-6 font-for-inter">We are a pharmaceutical company focused on the marketing and distribution of
-            pharmaceutical healthcare products. But Also involved in bridging unmet healthcare needs in medical tourism,
-            providing Diagnostic Equipment's for medical institutions and medical training's( for Medical Personnel &
-            Para-Medics) thereby ensuring a more knowledgeable and skillful health team.</p>
+          <p style="font-size: larger;" class="mt-3 fs-6 font-for-inter">We are a pharmaceutical company focused on the marketing and distribution of pharmaceutical and healthcare products. We also involve in bridging unmet healthcare needs in medical tourism,providing Diagnostics equipment for medical institutions and medical trainings (for Medical Personnel & para-Medics) thereby ensuring a more knowledgeable and skillful health team.</p>
           <!-- <button class="btn-lg bt button-nav mar mt-5 font-for-inter" @click="navigateToAbout">Read More</button> -->
         </div>
       </div>
