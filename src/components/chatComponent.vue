@@ -102,7 +102,7 @@
 
 <style>
 .bg-cover {
-  background-image: url("../../src/assets/image.jpg") !important;
+  background-image: url("../../src/assets/Frame 8 blur.png") !important;
   background-repeat: no-repeat !important;
   background-size: 120px 137px !important;
   background-position: center !important;
