@@ -30,38 +30,13 @@
                 <br><br>
                 <div class="container">
                     <h1>Pharmacy</h1>
-                  </div>
-                <div class="row my-4">
-                  <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                </div>
+                <div class="row my-4" v-for="(group, index) in groupedCategories" :key="index">
+                  <div class="col-md-6 col-lg-3 mb-3 mb-lg-0" v-for="(category, index) in group" :key="index">
                     <div class="list-group list-group-flush">
-                      <a @click="this.navClicked" href="/product" class="list-group-item list-group-item-action"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Suppressant" class="rou">Suppressant</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Calcium" class="rou">Calcium</router-link></a>
-                      <!-- <a href="" class="list-group-item list-group-item-action"><router-link to="/product" class="rou">Anti-histamines</router-link>Adipisicing elit</a> -->
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                    <div class="list-group list-group-flush">
-                      <a @click="this.navClicked" href="#" class="list-group-item list-group-item-action"><router-link to="/product/Antihypertensive" class="rou">Anti Hypertensive</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Antihistamine" class="rou">Antihistamine</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-inflammatory" class="rou">Anti-inflammatory</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Anti-anaemic" class="rou">Anti-anemic</router-link></a>
-                      <!-- <a href="" class="list-group-item list-group-item-action">Provident dolor</a> -->
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-                    <div class="list-group list-group-flush">
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Blood-tonic" class="rou">Blood-tonic</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Dental" class="rou">Dental</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Skincare" class="rou">Skincare</router-link></a>
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Iron-Replacement" class="rou">Iron-Replacement</router-link></a>
-                      <!-- <a href="" class="list-group-item list-group-item-action">Laboriosam</a> -->
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <div class="list-group list-group-flush">
-                      <a @click="this.navClicked" href="" class="list-group-item list-group-item-action"><router-link to="/product/Wound-Dressing" class="rou">Wound-Dressing</router-link></a>                                       
+                      <a @click="navClicked" href="/product" class="list-group-item list-group-item-action">
+                        <router-link :to="'/product/' + category" class="rou">{{ category }}</router-link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -72,22 +47,9 @@
         <!-- MOBILE -->
         <transition name="dropdown">
           <b-nav-item-dropdown text="Product" right  class="ml-5 mar container d-sm-block d-md-block d-lg-none" menu-class="w-100">
-            <div class="">
-              <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Antibiotics" class="rou">Antibiotics</router-link></b-dropdown-item></div>
-              <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Antifibrinolytic" class="rou">Antifibrinolytic</router-link></b-dropdown-item></div>
-              <div class="col-2"> <b-dropdown-item href="#"><router-link to="/product/Suppressant" class="rou">Suppressant</router-link></b-dropdown-item></div>
-              <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Calcium" class="rou">Calcium</router-link></b-dropdown-item></div>
-              <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Antihypertensive" class="rou">Anti Hypertensive</router-link></b-dropdown-item></div>
-              <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Antihistamine" class="rou">Antihistamine</router-link></b-dropdown-item></div>
-              <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Anti-inflammatory" class="rou">Anti-inflammatory</router-link></b-dropdown-item></div>
-              <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Anti-anemic" class="rou">Anti-anemic</router-link></b-dropdown-item></div>
-              <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Blood-tonic" class="rou">Blood-tonic</router-link></b-dropdown-item></div>
-              <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Dental" class="rou">Dental</router-link></b-dropdown-item></div>
-              <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Skincare" class="rou">Skincare</router-link></b-dropdown-item></div>
-              <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Iron-Replacement" class="rou">Iron-Replacement</router-link></b-dropdown-item></div>
-              <div class="col-2"><b-dropdown-item href="#"><router-link to="/product/Wound-Dressing" class="rou">Wound-Dressing</router-link></b-dropdown-item></div>
+            <div class="" v-for="(category, index) in uniqueCategories" :key="index">
+              <div class="col-2"><b-dropdown-item href="#"><router-link :to="'/product/' + category" class="rou">{{ category }}</router-link></b-dropdown-item></div>
             </div>
-            
           </b-nav-item-dropdown>
         </transition>
       </b-nav-item>
@@ -141,6 +103,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'HelloWorld',
   data(){
@@ -151,6 +115,9 @@ export default {
       shown: false,
       searchTerm: '',
       currentId: null,
+      products: [],
+      uniqueCategories: [],
+      groupedCategories: []
     }
   },
   watch: {
@@ -166,8 +133,39 @@ export default {
   created() {
     // Access the route parameters to get the ID when the component is created
     this.currentId = this.$route.params.id;
+    this.fetchCategories();
   },
   methods:{
+    fetchCategories() {
+      axios.get('https://prosperc40.pythonanywhere.com/products')
+        .then(response => {
+          this.products = response.data;
+          this.extractUniqueCategories();
+          this.groupCategories();
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    },
+    extractUniqueCategories() {
+      let categories = this.products.map(product => product.category.toLowerCase());
+      let uniqueCategories = [...new Set(categories)];
+
+      // Filter out categories that are supersets of others
+      this.uniqueCategories = uniqueCategories.filter(category => {
+        for (let otherCategory of uniqueCategories) {
+          if (otherCategory !== category && category.includes(otherCategory)) {
+            return false;
+          }
+        }
+        return true;
+      });
+    },
+    groupCategories() {
+      for (let i = 0; i < this.uniqueCategories.length; i += 4) {
+        this.groupedCategories.push(this.uniqueCategories.slice(i, i + 4));
+      }
+    },
     submitSearch() {
       this.$router.push({
         path: '/search',
@@ -391,6 +389,7 @@ button.button-nav{
 
 .rou{
   text-decoration: none !important;
+  text-transform: capitalize;
 }
 /* .dropdown-hover:hover>.dropdown-menu {
 display: inline-block;
