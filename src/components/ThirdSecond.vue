@@ -83,9 +83,8 @@
                 <div class="card-body text-center">
                   <h6 class="cus fo">Innovation</h6>
                   <p class="">
-                    HealthLine Limited prioritizes customer satisfaction and
-                    continuously improves its services based on valuable
-                    feedback.
+                    We will continuously innovate to bring in latest technology
+                    and products to Nigeria.
                   </p>
                 </div>
               </div>
@@ -95,9 +94,8 @@
                 <div class="card-body text-center">
                   <h6 class="cus fo">Collaboration and team work</h6>
                   <p class="">
-                    HealthLine Limited prioritizes customer satisfaction and
-                    continuously improves its services based on valuable
-                    feedback.
+                    We will leverage expertise and resources from across our global
+                    network to create a seamless distribution system across Nigeria.
                   </p>
                 </div>
               </div>
