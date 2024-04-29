@@ -21,7 +21,7 @@
 				<div class="wrapper">
 					<div class="item"><img alt="" src="../assets/f1-min.png" class="img-fluid "></div>
 					<div class="item"><img alt="" src="../assets/f2-min.png" class="img-fluid ml-5 mr-5 ml mtwo "></div>
-					<div class="item"><img alt="" src="../assets/Group-69-min.png" class="img-fluid ml-5 mr-5 ml mthr">
+					<div class="item"><img alt="" src="../assets/ICPA.png" class="img-fluid ml-5 mr-5 ml mthr">
 					</div>
 					<div class="item"><img alt="" src="../assets/f4-min.png" class="img-fluid ml-5 mr-5 ml mfour"></div>
 					<div class="item"><img alt="" src="../assets/f5-min.png" class="img-fluid ml-5 mr-5 "></div>
