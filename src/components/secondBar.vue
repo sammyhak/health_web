@@ -133,9 +133,10 @@ export default {
   width: 750px !important;
   background-image: none;
 }
-
+@media screen and (max-width: 768px) {
 .background-light, #app > div.about > div > div:nth-child(1) > div > nav{
   background-color: #026640 !important;
+}
 }
 
 </style>

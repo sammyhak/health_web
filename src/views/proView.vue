@@ -17,7 +17,9 @@ export default {
 </script>
 
 <style>
+@media screen and (max-width: 768px) {
 .background-light, #app > div.about > div > div:nth-child(1) > div > nav{
   background-color: #24A6A6 !important;
+}
 }
 </style>

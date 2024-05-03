@@ -383,4 +383,10 @@
 .b-nav-tabs .nav-link.active:focus::before {
   transform: scaleX(1); /* Full underline width on focus */
 }
+
+@media screen and (max-width: 768px) {
+  #app > div:nth-child(2) > div > div:nth-child(1) > div > nav, #nav-collapse{
+    background-color: #24A6A6 !important;
+  } 
+}
 </style>
