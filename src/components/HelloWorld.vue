@@ -4,7 +4,7 @@
       
     <div class="navb" style="padding-top: 24px;">
     <b-navbar toggleable="lg">
-    <b-navbar-brand v-if="!visible" href="#"><img src="../assets/Frame 8.png" class="img-class"></b-navbar-brand>
+    <b-navbar-brand v-if="!visible" href="#"><img src="../assets/healthLogo (2).svg" class="img-class"></b-navbar-brand>
     <b-navbar-toggle style="overflow: none !important; border: none !important; padding-right: 0px !important;" v-if="!visible" type="light" variant="light" target="nav-collapse" class="mb-2"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
@@ -365,7 +365,7 @@ b-navbar-nav{
   
 }
 button.button-nav{
-  background-color: #258576 !important;
+  background-color: #24A6A6 !important;
   width: 135px !important;
   height: 42px !important;
   border: 0px;
@@ -382,7 +382,7 @@ button.button-nav{
 
 @media screen and (max-width: 576px) {
   button.button-nav.mar{
-    background-color: #18564C !important;
+    background-color: #102A38 !important;
     width: 100% !important;
   }
 }

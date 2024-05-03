@@ -71,7 +71,7 @@ export default {
 
 <style>
 .head {
-  background-color: #258576;
+  background-color: #24A6A6;
   ;
 }
 
@@ -99,7 +99,7 @@ export default {
 }
 
 .button-for-login {
-  background-color: #18564C !important;
+  background-color: #102A38 !important;
   color: white !important;
   border-radius: 900px !important;
 }</style>

@@ -111,7 +111,7 @@ export default {
   z-index: 9999;
 }
 .buy {
-  background-color: #258576;
+  background-color: #24A6A6;
   border: 0;
   font-size: 13px;
   padding-left: 10px;
@@ -166,12 +166,12 @@ export default {
 
 .pr {
   font-size: 24px !important;
-  color: #258576
+  color: #24A6A6
 }
 @media only screen and (max-width: 576px) {
   .pr {
     font-size: 18px !important;
-    color: #258576
+    color: #24A6A6
   }
 }
 </style>

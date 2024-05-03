@@ -28,7 +28,7 @@ export default {
 <style>
 .h1-dis{
 
-  color:#18564C;
+  color:#102A38;
   font-weight:bold;
 }
 .di{

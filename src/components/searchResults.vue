@@ -81,7 +81,7 @@
         opacity: 0.6;
     }
     span.term{
-        color: #258576;
+        color: #24A6A6;
         font-size: 28px;
         font-family: millik;
     }
@@ -101,7 +101,7 @@
             opacity: 0.6;
         }
         span.term{
-            color: #258576;
+            color: #24A6A6;
             font-size: 18px;
             font-family: millik;
         }

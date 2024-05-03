@@ -82,7 +82,7 @@ export default {
 }
 
 .button-nav {
-  background-color: #258576 !important;
+  background-color: #24A6A6 !important;
   width: 196px;
   height: 46px;
   border: 0px;
@@ -103,7 +103,7 @@ export default {
 }
 
 .healthcare {
-  color: #258576;
+  color: #24A6A6;
 }
 
 .passion {

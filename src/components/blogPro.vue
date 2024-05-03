@@ -64,7 +64,7 @@ export default {
       margin-top:20px;
 }
 .button-nav{
-  background-color: #258576;
+  background-color: #24A6A6;
   width:135px;
   height:42px;
   border: 0px;
@@ -79,11 +79,11 @@ export default {
 .cont{
   margin-top:50px;
   margin-bottom:30px !important;
-  color:#18564C;
+  color:#102A38;
   font-weight: bold;
 }
 .he{
-  color:#18564C;
+  color:#102A38;
   
 }
 .font-for-inter{

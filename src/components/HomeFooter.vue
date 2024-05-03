@@ -90,7 +90,7 @@ p {
   margin-top: -10px;
 }
 .h {
-  color: #258576;
+  color: #24A6A6;
   font-weight: bold;
   text-decoration: none;
 }
@@ -110,7 +110,7 @@ p {
   }
 
   .h {
-    color: #258576;
+    color: #24A6A6;
     font-weight: bold;
     text-decoration: none;
     font-family: Inter;

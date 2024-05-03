@@ -327,7 +327,7 @@ header#modal-1___BV_modal_header_ {
   background-color: white;
 }
 .fh {
-  background-color: #258576 !important;
+  background-color: #24A6A6 !important;
   color: white !important;
   border: none;
   border-radius: 34px !important;
@@ -445,7 +445,7 @@ button.lo {
   }
   .fh {
     border-radius: 50px !important;
-    background-color: #18564c !important;
+    background-color: #102A38 !important;
     font-size: 12px !important;
   }
   .noitems {
