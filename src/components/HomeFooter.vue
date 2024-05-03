@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row container">
       <div class="col-12 col-md-4">
-        <img src="../assets/Frame 8.png" class="im" />
+        <img src="../assets/healthLogo (2).svg" class="im" />
         <p class="mt-3">29 Adeniyi Jones Avenue,Ikeja-Lagos,Nigeria</p>
         <p class="pt">+234 7081123545 +234 8129937001</p>
         <p class="pt">info@healthlineng.com</p>
