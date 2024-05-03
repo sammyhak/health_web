@@ -21,7 +21,7 @@
       <!-- Navbar for small screen -->
       <b-navbar class="d-md-none bn">
         <b-navbar-toggle type="light" variant="light" target="nav-collapse"></b-navbar-toggle>
-        <b-collapse id="nav-collapse" is-nav>
+        <b-collapse id="nav-collapse" is-nav class="background-light">
           <b-navbar-nav class="container offset-2">
             <b-nav-item href="#" class="ma ml-5 "><router-link to="/" class="rou tr">Pharmacy</router-link></b-nav-item>
             <b-nav-item href="# " class="ml-5  mar ma ">
@@ -89,7 +89,7 @@ export default {
 }
 
 .bn {
-  background-color: #026640;
+  background-color: #026640 !important;
   padding-left: 0px !important;
   margin-left: 0px !important;
   color: white;
@@ -132,6 +132,10 @@ export default {
   height: 54px !important;
   width: 750px !important;
   background-image: none;
+}
+
+.background-light, #app > div.about > div > div:nth-child(1) > div > nav{
+  background-color: #026640 !important;
 }
 
 </style>
