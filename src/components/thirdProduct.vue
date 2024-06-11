@@ -102,7 +102,7 @@ export default {
 
 <style>
 .image-container {
-  height: 350px;
+  height: 150px;
   /* width:300px; Adjust the height as needed */
   overflow: hidden;
   /* Ensure images don't overflow the container */
