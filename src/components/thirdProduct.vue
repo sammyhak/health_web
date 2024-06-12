@@ -102,7 +102,7 @@ export default {
 
 <style>
 .image-container {
-  height: 150px;
+  height: 350px;
   /* width:300px; Adjust the height as needed */
   overflow: hidden;
   /* Ensure images don't overflow the container */
@@ -162,5 +162,11 @@ input {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+@media screen and (max-width: 768px){
+  .image-container{
+    height: 150px;
+  };
 }
 </style>

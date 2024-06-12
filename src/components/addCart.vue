@@ -44,12 +44,12 @@
                   <div style="color: rgba(32, 32, 32, 0.80); font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">INDICATIONS</div>
                 </div>
               </div>
-              <ul v-if="product.indications"> 
-                <div v-for="indications in product.indications" :key="indications">
-                  <li class="ea" v-for="indication in indications" :key="indication">
+              <ul v-if="indications"> 
+                <!-- <div> -->
+                  <li class="ea" v-for="(indication, index) in indications" :key="index">
                     {{ indication }}
                   </li>
-                </div>
+                <!-- </div> -->
               </ul>
             </div>
           </div>
@@ -67,11 +67,9 @@
             <b-tab style="color: #202020 !important;" title="INDICATIONS" event-key="tab2">
               <br>
               <ul v-if="product.indications"> 
-                <div v-for="indications in product.indications" :key="indications">
-                  <li class="ea">
-                    {{ indications }}
+                  <li class="ea" v-for="indication in indications" :key="indication">
+                    {{ indication }}
                   </li>
-                </div>
               </ul>
               <br>
             </b-tab>
@@ -131,6 +129,7 @@
       return {
         activeTab: 'tab2',
         product: null,
+        indications: [],
         similarProducts: null,
         cart: [],
         quantity: 0,
@@ -163,11 +162,14 @@
           axios
           .get(BASE_URL + '/' + productId).then(response => {
             this.product = response.data;
+            this.indications = response.data.indications.filter(item => item !==  "");
+
             axios
             .get(BASE_URL + '?category=' + this.product.category).then(response => {
               this.similarProducts = response.data;
               console.log(this.similarProducts);
             })
+            
           })
           .catch(error => {
             console.error('Error fetching product:', error);

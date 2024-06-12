@@ -214,7 +214,31 @@
 
 @media screen and (max-width: 1024px) {
   .chatSection {
-    display: none;
+    top: 30%;
+    .chatContainer{
+      width: 300px;
+      .sendMessage{
+        top: 85%;
+        .sendMessageContainer .textarea-container .sendMessageBtn img{
+          height: 70px;
+          width: 70px;
+          right: 2px;
+        }
+      }
+    }
+    // display: none;
+
+    img{
+      width: 70px;
+      height: 70px;
+  
+      &.reposition{
+        top: unset;
+        left: unset;
+        bottom: 50px;
+        right: 10px;
+      }
+    }
   }
 }
 
