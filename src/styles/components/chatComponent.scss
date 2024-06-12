@@ -13,7 +13,7 @@
     border: 1px solid #e0e0e0;
     border-radius: 10px 10px 0 0;
     .chatHeader {
-      background: #24A6A6;
+      background: #24a6a6;
       border: 1px;
       padding: 15px 20px 15px 20px;
       color: #fff;
@@ -213,13 +213,17 @@
 }
 
 @media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 992px) {
   .chatSection {
+    width: 50%;
     top: 30%;
-    .chatContainer{
-      width: 300px;
-      .sendMessage{
+    .chatContainer {
+      width: 100%;
+      .sendMessage {
         top: 85%;
-        .sendMessageContainer .textarea-container .sendMessageBtn img{
+        .sendMessageContainer .textarea-container .sendMessageBtn img {
           height: 70px;
           width: 70px;
           right: 2px;
@@ -228,11 +232,11 @@
     }
     // display: none;
 
-    img{
+    img {
       width: 70px;
       height: 70px;
-  
-      &.reposition{
+
+      &.reposition {
         top: unset;
         left: unset;
         bottom: 50px;
@@ -245,6 +249,30 @@
 @media (min-width: 0px) and (max-width: 576px) {
   :root {
     --size-divisor: 2;
+  }
+  .chatSection {
+    width: 90%;
+    .chatContainer {
+      .sendMessage {
+        .sendMessageContainer {
+          font-size: 16px;
+          .message-head{
+            display: none;
+            display: flex;
+            align-items: center;
+            input{
+              &::placeholder{
+                font-size: 24px !important;
+              }
+            }
+          }
+          .textarea-container .sendMessageBtn img {
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
