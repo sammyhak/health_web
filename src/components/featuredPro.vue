@@ -40,7 +40,7 @@ export default {
     },
     async fetchProducts() {
       // Alert the current ID
-      const BASE_URL = 'https://prosperc40.pythonanywhere.com/';
+      const BASE_URL = 'https://healthlineng.pythonanywhere.com/';
       let url_extension = 'products';   
       await axios.get(BASE_URL + url_extension).then(response => {
         // Handle successful response

@@ -49,7 +49,7 @@
                 searchResults: null,
                 isLoading: false,
                 searchTerm: this.$route.query.q,
-                BASE_URL: 'https://prosperc40.pythonanywhere.com/products?items=',
+                BASE_URL: 'https://healthlineng.pythonanywhere.com/products?items=',
             }
         },
         watch: {

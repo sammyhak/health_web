@@ -213,7 +213,7 @@ export default {
         .join(", ");
       axios
         .post(
-          "https://prosperc40.pythonanywhere.com/api/send-email/",
+          "https://healthlineng.pythonanywhere.com/api/send-email/",
           this.formdata
         )
         .then((response) => {

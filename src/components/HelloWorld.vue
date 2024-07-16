@@ -137,7 +137,7 @@ export default {
   },
   methods:{
     fetchCategories() {
-      axios.get('https://prosperc40.pythonanywhere.com/products')
+      axios.get('https://healthlineng.pythonanywhere.com/products')
         .then(response => {
           this.products = response.data;
           this.extractUniqueCategories();

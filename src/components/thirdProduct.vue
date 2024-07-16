@@ -46,7 +46,7 @@ export default {
     },
     async fetchProductsByCategory() {
       // Alert the current ID
-      const BASE_URL = 'https://prosperc40.pythonanywhere.com/';
+      const BASE_URL = 'https://healthlineng.pythonanywhere.com/';
       let url_extension = 'products?category=';
       let category = this.currentId;
       await axios.get(BASE_URL + url_extension + category).then(response => {

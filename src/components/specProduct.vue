@@ -80,7 +80,7 @@ export default {
 
   },
   mounted() {
-    axios.get('https://prosperc40.pythonanywhere.com/products', {
+    axios.get('https://healthlineng.pythonanywhere.com/products', {
       // headers: {
       //   'Authorization': 'Token ' + '6124bc0794931a48a4665935619ee039bb7be277'
       // }

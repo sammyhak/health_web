@@ -157,7 +157,7 @@
     methods: {
         fetchProductData() {
           let productId = this.$route.params.id;
-          const BASE_URL = 'https://prosperc40.pythonanywhere.com/products';
+          const BASE_URL = 'https://healthlineng.pythonanywhere.com/products';
 
           axios
           .get(BASE_URL + '/' + productId).then(response => {

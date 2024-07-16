@@ -178,7 +178,7 @@ export default {
       this.isMoreHeaderVisible = !this.isMoreHeaderVisible;
     },
     async sendRequest() {
-      const BASE_URL = "https://prosperc40.pythonanywhere.com/customers";
+      const BASE_URL = "https://healthlineng.pythonanywhere.com/customers";
       axios
         .post(BASE_URL, this.formdata)
         .then((response) => {
@@ -186,7 +186,7 @@ export default {
           this.formdata2.customer = response.data.id;
           axios
             .post(
-              "https://prosperc40.pythonanywhere.com/chat-requests",
+              "https://healthlineng.pythonanywhere.com/chat-requests",
               this.formdata2
             )
             .then((response) => {
@@ -205,7 +205,7 @@ export default {
     },
     async checkForRequestStatus() {
       const id = sessionStorage.getItem("requestId");
-      const url = `https://prosperc40.pythonanywhere.com/chat/status/${id}/`;
+      const url = `https://healthlineng.pythonanywhere.com/chat/status/${id}/`;
 
       try {
         const response = await axios.get(url);
@@ -241,11 +241,11 @@ export default {
       let chat_session_id = sessionStorage.getItem("chatSessionId");
       try {
         const response = await axios.get(
-          `https://prosperc40.pythonanywhere.com/chat-sessions/${chat_session_id}`
+          `https://healthlineng.pythonanywhere.com/chat-sessions/${chat_session_id}`
         );
         let adminid = response.data.backoffice_user;
         const response2 = await axios.get(
-          `https://prosperc40.pythonanywhere.com/users/${adminid}`
+          `https://healthlineng.pythonanywhere.com/users/${adminid}`
         );
         this.backofficeAdmin = response2.data.name;
       } catch (error) {
@@ -253,7 +253,7 @@ export default {
       }
       try {
         const response = await axios.get(
-          `https://prosperc40.pythonanywhere.com/chat-messages?session=${chat_session_id}`
+          `https://healthlineng.pythonanywhere.com/chat-messages?session=${chat_session_id}`
         );
         this.messages = response.data;
       } catch (error) {
@@ -266,7 +266,7 @@ export default {
 
       axios
         .post(
-          "https://prosperc40.pythonanywhere.com/chat-messages",
+          "https://healthlineng.pythonanywhere.com/chat-messages",
           this.formdata3
         )
         .then((response) => {

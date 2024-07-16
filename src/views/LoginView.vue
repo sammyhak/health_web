@@ -61,7 +61,7 @@ export default {
   /* methods:{
     async login(){
       let result =await axios.get(
-       `https://prosperc40.pythonanywhere.com/users?email=${this.email}&password=${this.password}`
+       `https://healthlineng.pythonanywhere.com/users?email=${this.email}&password=${this.password}`
       )
       console.log(result)
     }
